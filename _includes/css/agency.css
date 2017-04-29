@@ -866,3 +866,7 @@ img::-moz-selection {
 body {
     webkit-tap-highlight-color: #{{ site.data.template.color.primary }};
 }
+
+div.text-center p, div.text-center ul {
+    text-align: justify;
+}
