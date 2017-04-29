@@ -283,7 +283,9 @@ header .intro-text {
     padding-top: 100px;
     padding-bottom: 50px;
 }
-
+header .intro-text img {
+    height: 300px;
+}
 header .intro-text .intro-lead-in {
     margin-bottom: 25px;
     font-family: {{ site.data.template.font.secondary }};
@@ -306,7 +308,9 @@ header .intro-text .intro-heading {
         padding-top: 200px;
         padding-bottom: 100px;
     }
-
+    header .intro-text img {
+        height: 400px;
+    }
     header .intro-text .intro-lead-in {
         margin-bottom: 25px;
         font-family: {{ site.data.template.font.secondary }};
