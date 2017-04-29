@@ -1,11 +1,11 @@
 ---
 title: Moodic Chatbot
-subtitle: Facebook Chatbot that finds the best music on Spotify that fits your current mood. https://m.me/dabot69
+subtitle: Facebook Chatbot that finds the best music on Spotify that fits your current mood. <a href="https://m.me/dabot69">m.me/dabot69</a>
 layout: default
 modal-id: https://vimeo.com/194966196
 date: 2014-07-16
 img: moodic.jpg
-thumbnail: moodic.jpg
+thumbnail: moodic.png
 alt: image-alt
 project-date: December 2016
 client: Start Bootstrap
