@@ -13,90 +13,104 @@ people:
   pic: 1
   position: CVO, Co-founder
   social:
-    - title: twitter
-      url: #
+#    - title: twitter
+#      url: #
     - title: facebook
-      url: #
-    - title: stack-overflow
-      url: #
+      url: https://www.facebook.com/justrocknrolla
+#    - title: stack-overflow
+#      url: #
+    - title: linkedin
+      url: https://www.linkedin.com/in/shchetynin/
 
 - name: Vladislav Sikach
   pic: 2
   position: CEO, Co-Founder
   social:
-    - title: twitter
-      url: #
+#    - title: twitter
+#      url: #
     - title: facebook
-      url: #
-    - title: google-plus
-      url: #
+      url: https://www.facebook.com/Vladislav.Sikach
+#    - title: google-plus
+#      url: #
+    - title: linkedin
+      url: https://www.linkedin.com/in/vladislavsikach/
 
 - name: Volodymyr Gubarkov
   pic: 3
   position: CTO, Co-founder
   social:
-    - title: twitter
-      url: #
+#    - title: twitter
+#      url: #
     - title: facebook
-      url: #
+      url: https://www.facebook.com/volodymyr.gubarkov
     - title: linkedin
-      url: #
+      url: https://www.linkedin.com/in/vladimir-gubarkov-aa7ab156/
 
 - name: Vasiliy Gorin
   pic: 4
   position: IT Consultant, Co-founder
   social:
-    - title: twitter
-      url: #
-    - title: facebook
-      url: #
-    - title: google-plus
-      url: #
+#    - title: twitter
+#      url: #
+#    - title: facebook
+#      url: https://www.facebook.com/vasiliy.v.gorin
+#    - title: google-plus
+#      url: #
+    - title: linkedin
+      url: https://www.linkedin.com/in/gorin/
 
 - name: Oleksii Potapenko
   pic: 5
   position: Lead Data Scientist, Co-founder
   social:
-    - title: twitter
-      url: #
+#    - title: twitter
+#      url: #
     - title: facebook
-      url: #
-    - title: google-plus
-      url: #
+      url: https://www.facebook.com/oleksii.potapenko
+#    - title: google-plus
+#      url: #
+    - title: linkedin
+      url: https://www.linkedin.com/in/oleksii-potapenko-23413982/
 
 - name: Denys Nienov
   pic: 6
   position: Legal Consultant
   social:
-    - title: twitter
-      url: #
+#    - title: twitter
+#      url: #
     - title: facebook
-      url: #
-    - title: google-plus
-      url: #
+      url: https://www.facebook.com/den.nenov
+#    - title: google-plus
+#      url: #
+    - title: linkedin
+      url: https://www.linkedin.com/in/%D0%B4%D0%B5%D0%BD%D0%B8%D1%81-%D0%BD%D0%B5%D0%BD%D0%BE%D0%B2-31481978/
 
 
 - name: Sergey Sviridenko
   pic: 7
   position: Data Scientist
   social:
-    - title: twitter
-      url: #
+#    - title: twitter
+#      url: #
     - title: facebook
-      url: #
-    - title: google-plus
-      url: #
+      url: https://www.facebook.com/sergey.sviridenko.311
+#    - title: google-plus
+#      url: #
+    - title: linkedin
+      url: https://www.linkedin.com/in/sergeysviridenko/
 
 - name: Nikita Malenko
   pic: 8
   position: Software Engineer
   social:
-    - title: twitter
-      url: #
+#    - title: twitter
+#      url: #
     - title: facebook
-      url: #
-    - title: google-plus
-      url: #
+      url: https://www.facebook.com/malenik1
+#    - title: google-plus
+#      url: #
+    - title: linkedin
+      url: https://www.linkedin.com/in/nikita-malenko-b37bb5139/
 
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
