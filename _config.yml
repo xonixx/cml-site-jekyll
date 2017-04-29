@@ -20,8 +20,19 @@ people:
     - title: stack-overflow
       url: #
 
-- name: Volodymyr Gubarkov
+- name: Vladyslav Sikach
   pic: 2
+  position: CEO, Co-Founder
+  social:
+    - title: twitter
+      url: #
+    - title: facebook
+      url: #
+    - title: google-plus
+      url: #
+
+- name: Volodymyr Gubarkov
+  pic: 3
   position: CTO, Co-founder
   social:
     - title: twitter
@@ -32,8 +43,53 @@ people:
       url: #
 
 - name: Vasiliy Gorin
-  pic: 3
-  position: IT Consultant
+  pic: 4
+  position: IT Consultant, Co-founder
+  social:
+    - title: twitter
+      url: #
+    - title: facebook
+      url: #
+    - title: google-plus
+      url: #
+
+- name: Oleksii Potapenko
+  pic: 5
+  position: Lead Data Scientist, Co-founder
+  social:
+    - title: twitter
+      url: #
+    - title: facebook
+      url: #
+    - title: google-plus
+      url: #
+
+- name: Denys Nienov
+  pic: 6
+  position: Legal Consultant
+  social:
+    - title: twitter
+      url: #
+    - title: facebook
+      url: #
+    - title: google-plus
+      url: #
+
+
+- name: Sergii Sviridenko
+  pic: 7
+  position: Data Scientist
+  social:
+    - title: twitter
+      url: #
+    - title: facebook
+      url: #
+    - title: google-plus
+      url: #
+
+- name: Nikita Malenko
+  pic: 8
+  position: Software Engineer
   social:
     - title: twitter
       url: #
