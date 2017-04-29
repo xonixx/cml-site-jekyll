@@ -1,15 +1,15 @@
 ---
-title: Golden
-subtitle: Website Design
+title: Moodic Chatbot
+subtitle: Facebook Chatbot that finds the best music on Spotify that fits your current mood. https://m.me/dabot69
 layout: default
-modal-id: 3
+modal-id: https://vimeo.com/194966196
 date: 2014-07-16
-img: golden.png
-thumbnail: golden-thumbnail.png
+img: moodic.jpg
+thumbnail: moodic.jpg
 alt: image-alt
-project-date: April 2014
+project-date: December 2016
 client: Start Bootstrap
 category: Web Development
-description: Lorem ipsum dolor sit amet, usu cu alterum nominavi lobortis. At duo novum diceret. Tantas apeirian vix et, usu sanctus postulant inciderint ut, populo diceret necessitatibus in vim. Cu eum dicam feugiat noluisse.
+description: Chatbot
 
 ---
