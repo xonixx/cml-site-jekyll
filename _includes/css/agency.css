@@ -270,7 +270,7 @@ header {
     text-align: center;
     color: #fff;
     background-attachment: scroll;
-    background-image: url('{{ site.baseurl }}/img/43c038_4ad81e81714f4860b60080b8f9a15a16-mv2_d_5773_3331_s_4_2.webp');
+    background-image: url('{{ site.baseurl }}/img/header-bg-cml.jpg');
     background-position: center center;
     background-repeat: none;
     -webkit-background-size: cover;
@@ -283,7 +283,9 @@ header .intro-text {
     padding-top: 100px;
     padding-bottom: 50px;
 }
-
+header .intro-text img {
+    height: 300px;
+}
 header .intro-text .intro-lead-in {
     margin-bottom: 25px;
     font-family: {{ site.data.template.font.secondary }};
@@ -303,10 +305,12 @@ header .intro-text .intro-heading {
 
 @media(min-width:768px) {
     header .intro-text {
-        padding-top: 300px;
-        padding-bottom: 200px;
+        padding-top: 200px;
+        padding-bottom: 100px;
     }
-
+    header .intro-text img {
+        height: 400px;
+    }
     header .intro-text .intro-lead-in {
         margin-bottom: 25px;
         font-family: {{ site.data.template.font.secondary }};
