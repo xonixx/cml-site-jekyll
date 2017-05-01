@@ -35,3 +35,10 @@ $('div.modal').on('show.bs.modal', function() {
 		}
 	}
 });
+
+Typed.new("#typed-animation", {
+    strings: ["Chatbots^1500", "Data Science^1500", "IT Consulting^1500"]
+    , typeSpeed: 100
+    , startDelay: 100
+    , loop: true
+});
