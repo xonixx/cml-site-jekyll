@@ -2,7 +2,8 @@ url: https://www.cmlteam.com
 baseurl:
 
 # Site settings
-title: CML Consulting
+short-name: CML
+full-name: CML Consulting
 email: info@cmlteam.com
 description: "CML Team, CML Consulting - Chatbots, Data Science, IT-Consulting"
 
