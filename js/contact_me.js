@@ -19,6 +19,7 @@ $(function() {
             }
             $.ajax({
                 url: "https://formspree.io/info@cmlteam.com",
+                dataType: "json",
                 type: "POST",
                 data: {
                     name: name,
