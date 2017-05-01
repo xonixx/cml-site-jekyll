@@ -18,7 +18,7 @@ $(function() {
                 firstName = name.split(' ').slice(0, -1).join(' ');
             }
             $.ajax({
-                url: "https://formspree.io/info@cmlteam.com",
+                url: $('#contactForm').attr('action'),
                 dataType: "json",
                 type: "POST",
                 data: {
