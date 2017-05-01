@@ -1,6 +1,6 @@
 ---
 title: Party Bunny
-subtitle: Facebook Chatbot
+subtitle: Facebook Chatbot that allows you to find out about any parties that happen in Dubai. <a href="https://m.me/partybunny">m.me/partybunny</a>
 layout: default
 modal-id: https://m.me/partybunny
 date: 2014-07-18

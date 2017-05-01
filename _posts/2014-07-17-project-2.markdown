@@ -1,9 +1,9 @@
 ---
 title: Party Animal Chatbot
-subtitle: Facebook Chatbot that allows you to register into Kyiv parties
+subtitle: Facebook Chatbot that allows you to register into Kyiv parties. <a href="https://m.me/partyanimalsbot">m.me/partyanimalsbot</a>
 layout: default
 modal-id: https://m.me/partyanimalsbot
-date: 2014-07-15
+date: 2014-07-17
 img: treehouse.png
 thumbnail: partyanimal1.jpg
 alt: image-alt
