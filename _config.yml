@@ -128,9 +128,7 @@ social:
     url: https://github.com/CMLTeam
 
 # Postal address (add as many lines as necessary)
-address:
-  - line: 3481 Melrose Place
-  - line: Beverly Hills, CA 90210
+address: 10 Mala Zhytomyrska St, Kyiv, 01001
 
 # Build settings
 markdown: kramdown
