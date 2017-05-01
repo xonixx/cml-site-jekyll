@@ -2,7 +2,7 @@ url: https://www.cmlteam.com
 baseurl:
 
 # Site settings
-title: CML Team
+title: CML Consulting
 email: info@cmlteam.com
 description: "CML Team, CML Consulting - Chatbots, Data Science, IT-Consulting"
 
@@ -122,8 +122,6 @@ social:
 #    url:
   - title: linkedin
     url: https://www.linkedin.com/company-beta/18045280/
-  - title: bitbucket
-    url: https://bitbucket.org/chicosmuylocos/
   - title: github
     url: https://github.com/CMLTeam
 
