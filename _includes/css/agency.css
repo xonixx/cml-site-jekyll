@@ -285,6 +285,7 @@ header .intro-text {
 }
 header .intro-text img {
     height: 300px;
+    margin-bottom: 15px;
 }
 header .intro-text .intro-lead-in {
     margin-bottom: 25px;
@@ -310,6 +311,7 @@ header .intro-text .intro-heading {
     }
     header .intro-text img {
         height: 400px;
+        margin-bottom: 35px;
     }
     header .intro-text .intro-lead-in {
         margin-bottom: 25px;
