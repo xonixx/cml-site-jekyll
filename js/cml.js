@@ -13,12 +13,19 @@ $(function() {
         }, 1500, 'easeInOutExpo');
         event.preventDefault();
     });
+
+    var introText = $('.intro-text');
+    var padding = $(window).height() - introText.height();
+    if (padding < 160)
+        padding = 160;
+    introText.css('padding-top', padding / 2 + 'px');
+    introText.css('padding-bottom', padding / 2 + 'px');
 });
 
 // Highlight the top nav as scrolling occurs
 $('body').scrollspy({
     target: '.navbar-fixed-top'
-})
+});
 
 // Closes the Responsive Menu on Menu Item Click
 $('.navbar-collapse ul li a').click(function() {
