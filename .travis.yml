@@ -12,8 +12,9 @@ cache: bundler # speed up
 script: ./cibuild.sh
 
 # branch whitelist, only for GitHub Pages
-#branches:
-#  only:
+branches:
+  only:
+   - master
 #  - gh-pages     # test the gh-pages branch
 #  - /pages-(.*)/ # test every branch which starts with "pages-"
 
@@ -22,3 +23,13 @@ script: ./cibuild.sh
 #  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
 
 sudo: false # route your build to the container-based infrastructure for a faster build
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  local_dir: _site
+  repo: xonixx/xonixx.github.io
+  target_branch: master
+  github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
+  on:
+    branch: master
