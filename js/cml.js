@@ -12,6 +12,10 @@ $(function() {
             scrollTop: $($anchor.attr('href')).offset().top
         }, 1500, 'easeInOutExpo');
         event.preventDefault();
+
+        // GA track clicks
+        console.info('send', 'event', 'Link', 'click', $anchor.text());
+        ga('send', 'event', 'Link', 'click', $anchor.text())
     });
 
     var introText = $('.intro-text');
