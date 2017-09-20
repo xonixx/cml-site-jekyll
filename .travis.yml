@@ -6,7 +6,7 @@ cache: bundler # speed up
 
 # Assume bundler is being used, therefore
 # the `install` step will run `bundle install` by default.
-script: .travis.build.sh
+script: ./.travis.build.sh
 
 # branch whitelist, only for GitHub Pages
 branches:
@@ -43,4 +43,4 @@ before_deploy:
 deploy:
   provider: script
   skip_cleanup: true
-  script: .travis.deploy.sh
+  script: ./.travis.deploy.sh
