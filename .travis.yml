@@ -6,11 +6,7 @@ cache: bundler # speed up
 
 # Assume bundler is being used, therefore
 # the `install` step will run `bundle install` by default.
-script:
-- bundle exec jekyll build
-#- mv _site site # looks like deploy phase doesn't like underscores
-#- echo www.cmlteam.com > site/CNAME # custom domain
-- rm _site/*.sh _site/*.enc || true
+script: .travis.build.sh
 
 # branch whitelist, only for GitHub Pages
 branches:
@@ -47,6 +43,4 @@ before_deploy:
 deploy:
   provider: script
   skip_cleanup: true
-  script: ./.d.sh
-#  - ssh -i /tmp/deploy_rsa apps1@prod.cmlteam.com "(cd ; echo \"\$(date) www.cmlteam.com \$(pwd)\" ; rm -rf www.cmlteam.com ; mkdir www.cmlteam.com) >> /tmp/.deploy 2>&1"
-#  - cd _site ; scp -i /tmp/deploy_rsa -C -r * apps1@prod.cmlteam.com:~/www.cmlteam.com
+  script: .travis.deploy.sh
