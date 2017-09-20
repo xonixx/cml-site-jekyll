@@ -10,6 +10,7 @@ script:
 - bundle exec jekyll build
 - mv _site site # looks like deploy phase doesn't like underscores
 - echo www.cmlteam.com > site/CNAME # custom domain
+- cd site ; rm *.sh *.enc
 
 # branch whitelist, only for GitHub Pages
 branches:
@@ -47,4 +48,5 @@ deploy:
   provider: script
   skip_cleanup: true
   script:
+  - ssh -i /tmp/deploy_rsa apps1@prod.cmlteam.com "cd ~/www.cmlteam.com ; rm -r *"
   - cd site ; scp -i /tmp/deploy_rsa -C -r * apps1@prod.cmlteam.com:~/www.cmlteam.com
