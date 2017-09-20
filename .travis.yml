@@ -48,5 +48,5 @@ deploy:
   provider: script
   skip_cleanup: true
   script:
-  - ssh -i /tmp/deploy_rsa apps1@prod.cmlteam.com "cd ~/www.cmlteam.com ; (rm -r * || true)"
+  - ssh -i /tmp/deploy_rsa apps1@prod.cmlteam.com "rm -rf ~/www.cmlteam.com ; mkdir ~/www.cmlteam.com"
   - cd site ; scp -i /tmp/deploy_rsa -C -r * apps1@prod.cmlteam.com:~/www.cmlteam.com
