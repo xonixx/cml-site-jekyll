@@ -5,8 +5,7 @@ baseurl:
 short-name: CML
 full-name: CML Consulting
 email: info@cmlteam.com
-description: "CML Team, CML Consulting - Chatbots, Data Science, IT-Consulting"
-
+description: "CML Team, CML Consulting, Chatbots, Data Science, IT-Consulting, Blockchain"
 
 # Team names, titles and social links
 people:
@@ -125,6 +124,8 @@ social:
     url: https://www.linkedin.com/company-beta/18045280/
   - title: github
     url: https://github.com/CMLTeam
+  - title: instagram
+    url: https://www.instagram.com/cmlteam/
 
 # Postal address (add as many lines as necessary)
 address: 10 Mala Zhytomyrska St, Kyiv, 01001

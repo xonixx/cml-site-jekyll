@@ -12,6 +12,10 @@ $(function() {
             scrollTop: $($anchor.attr('href')).offset().top
         }, 1500, 'easeInOutExpo');
         event.preventDefault();
+
+        // GA track clicks
+        console.info('send', 'event', 'Link', 'click', $anchor.text());
+        ga('send', 'event', 'Link', 'click', $anchor.text())
     });
 
     var introText = $('.intro-text');
@@ -44,7 +48,7 @@ $('div.modal').on('show.bs.modal', function() {
 });
 
 Typed.new("#typed-animation", {
-    strings: ["Chatbots^1500", "Data Science^1500", "IT Consulting^1500"]
+    strings: ["Chatbots^1500", "Data Science^1500", "Blockchain^1500", "IT Consulting^1500"]
     , typeSpeed: 100
     , startDelay: 100
     , loop: true
