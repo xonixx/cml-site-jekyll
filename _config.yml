@@ -3,9 +3,9 @@ baseurl:
 
 # Site settings
 short-name: CML
-full-name: CML Consulting
+full-name: CML Team
 email: info@cmlteam.com
-description: "CML Team, CML Consulting, Chatbots, Data Science, IT-Consulting, Blockchain"
+description: "CML Team, Full-Stack Development, IT-Consulting for Startups and Enterprises, Blockchain"
 
 # Team names, titles and social links
 people:
