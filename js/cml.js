@@ -54,10 +54,10 @@ Typed.new("#typed-animation", {
     , loop: true
 });
 
-particlesJS("header", {
+particlesJS("particles", {
     "particles": {
         "number": {
-            "value": 380,
+            "value": 200,
             "density": {
                 "enable": true,
                 "value_area": 800
@@ -92,8 +92,8 @@ particlesJS("header", {
             }
         },
         "size": {
-            "value": 3,
-            "random": true,
+            "value": 2,
+            "random": false,
             "anim": {
                 "enable": false,
                 "speed": 40,
@@ -110,7 +110,7 @@ particlesJS("header", {
         },
         "move": {
             "enable": true,
-            "speed": 6,
+            "speed": 3,
             "direction": "none",
             "random": false,
             "straight": false,
@@ -128,7 +128,7 @@ particlesJS("header", {
         "events": {
             "onhover": {
                 "enable": true,
-                "mode": "grab"
+                "mode": "repulse"
             },
             "onclick": {
                 "enable": true,
