@@ -61,7 +61,7 @@ people:
 
 - name: Oleksii Potapenko
   pic: 5
-  position: CDO, Co-founder
+  position: Data Scientist
   social:
 #    - title: twitter
 #      url: #
@@ -71,20 +71,6 @@ people:
 #      url: #
     - title: linkedin
       url: https://www.linkedin.com/in/oleksii-potapenko-23413982/
-
-- name: Denys Nienov
-  pic: 6
-  position: Legal Consultant
-  social:
-#    - title: twitter
-#      url: #
-    - title: facebook
-      url: https://www.facebook.com/den.nenov
-#    - title: google-plus
-#      url: #
-    - title: linkedin
-      url: https://www.linkedin.com/in/%D0%B4%D0%B5%D0%BD%D0%B8%D1%81-%D0%BD%D0%B5%D0%BD%D0%BE%D0%B2-31481978/
-
 
 - name: Sergey Sviridenko
   pic: 7
@@ -98,6 +84,19 @@ people:
 #      url: #
     - title: linkedin
       url: https://www.linkedin.com/in/sergeysviridenko/
+
+- name: Denys Nienov
+  pic: 6
+  position: Legal Consultant
+  social:
+#    - title: twitter
+#      url: #
+    - title: facebook
+      url: https://www.facebook.com/den.nenov
+#    - title: google-plus
+#      url: #
+    - title: linkedin
+      url: https://www.linkedin.com/in/%D0%B4%D0%B5%D0%BD%D0%B8%D1%81-%D0%BD%D0%B5%D0%BD%D0%BE%D0%B2-31481978/
 
 - name: Nikita Malenko
   pic: 8
