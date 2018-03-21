@@ -274,14 +274,24 @@ background-color: #{{ site.data.template.color.secondary }};
 header {
 text-align: center;
 color: #fff;
-background-attachment: scroll;
-background-image: url('{{ site.baseurl }}/img/header-bg-cml.jpg');
-background-position: center center;
-background-repeat: none;
--webkit-background-size: cover;
--moz-background-size: cover;
-background-size: cover;
--o-background-size: cover;
+/*background-attachment: scroll;*/
+/*background-image: url('{{ site.baseurl }}/img/header-bg-cml.jpg');*/
+/*background-position: center center;*/
+/*background-repeat: none;*/
+/*-webkit-background-size: cover;*/
+/*-moz-background-size: cover;*/
+/*background-size: cover;*/
+/*-o-background-size: cover;*/
+    background-color: #333333;
+}
+
+header .container {
+    position: relative;
+}
+
+.particles-js-canvas-el {
+    position: absolute;
+    top: 0; left: 0;
 }
 
 header .intro-text {
