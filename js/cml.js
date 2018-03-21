@@ -57,7 +57,7 @@ Typed.new("#typed-animation", {
 particlesJS("particles", {
     "particles": {
         "number": {
-            "value": 200,
+            "value": 120,
             "density": {
                 "enable": true,
                 "value_area": 800
@@ -151,7 +151,7 @@ particlesJS("particles", {
                 "speed": 3
             },
             "repulse": {
-                "distance": 200,
+                "distance": 150,
                 "duration": 0.4
             },
             "push": {

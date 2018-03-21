@@ -277,11 +277,6 @@ header {
     background-color: #333333;
 }
 
-header .container {
-    position: relative;
-    /*pointer-events: none;*/
-}
-
 .particles-js-canvas-el {
     position: absolute;
     top: 0; left: 0;

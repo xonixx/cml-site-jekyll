@@ -49,9 +49,13 @@
         <div class="container">
             <div class="intro-text">
                 <!-- <div class="intro-lead-in">Welcome To CML!</div> -->
-                <img src="img/cml/transparent-logo-1.png">
+                <img src="img/cml/transparent-logo-1.png" style="
+                    position: relative;/*make above canvas */
+                    pointer-events: none/* but events-transparent */">
                 <div class="intro-heading"><span id="typed-animation"></span></div>
-                <a href="#services" class="page-scroll btn btn-xl">Tell Me More</a>
+                <a href="#services"
+                   style="position: relative/* make clickable over canvas */"
+                   class="page-scroll btn btn-xl">Tell Me More</a>
             </div>
         </div>
     </header>
