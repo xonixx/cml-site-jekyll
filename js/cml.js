@@ -54,6 +54,7 @@ Typed.new("#typed-animation", {
     , loop: true
 });
 
+var particleColor = "#ffffff";
 particlesJS("particles", {
     "particles": {
         "number": {
@@ -64,7 +65,7 @@ particlesJS("particles", {
             }
         },
         "color": {
-            "value": "#ffffff"
+            "value": particleColor
         },
         "shape": {
             "type": "circle",
@@ -104,7 +105,7 @@ particlesJS("particles", {
         "line_linked": {
             "enable": true,
             "distance": 150,
-            "color": "#ffffff",
+            "color": particleColor,
             "opacity": 0.4,
             "width": 1
         },
