@@ -1,22 +1,9 @@
 # Color settings (hex-codes without the leading hash-tag)
 color:
-#  primary: 'a5c603'
-#  primary: '2a65ff'
-#  primary: '67ab49'
-#  primary: '0d8bd9'
   primary: 'ecb204'
-
-#  secondary: '8faa06'
-#  secondary: '449'
-#  secondary: '63a047'
-#  secondary: '0d8bd9'
   secondary: 'ecb204'
-
-#  primary1: '2222ee'
-  primary1: '1da1f2'
-
+  primary-bg: '1da1f2'
   secondary-dark: '333'
-
   muted: '777'
 
 # Font Families
