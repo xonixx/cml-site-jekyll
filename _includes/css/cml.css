@@ -662,7 +662,8 @@ background: rgba(254,209,54,.9); /* Fallback when no plugin support */
 }
 
 .team-member p {
-    margin-top: 0;
+    width: 310px;
+    margin: 0 auto;
 }
 
 aside.clients img {
