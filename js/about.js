@@ -35,21 +35,26 @@ var shuffleme = (function ($) {
                 // Filter elements
                 $grid.shuffle('shuffle', group);
 
-                console.info(111, $grid.find('li').filter(function (i, e) {
+                $grid.find('li').filter(function (i, e) {
+                    var $img = $(this).find('img');
+                    $img.removeAttr('data-bp');
                     var groups = $(e).data('groups');
                     if (!groups)
                         return false;
-                    // console.info(222,groups)
-                    return groups.indexOf(group) >= 0;
+                    var isSelectedGrp = groups.indexOf(group) >= 0;
+                    if (isSelectedGrp) {
+                        $img.attr('data-bp', $img.attr('src').replace('Converted120', 'Converted300'));
+                    }
+                    return isSelectedGrp;
                 }).find('a')
                     .off('click.bigpicture')
                     .on('click.bigpicture', function (e) {
                         e.preventDefault();
                         BigPicture({
-                            el: e.target/*,
-                            gallery: '#image_container'*/
+                            el: e.target,
+                            gallery: '#grid'
                         })    
-                    }))
+                    });
             });
 
             $btns = null;
