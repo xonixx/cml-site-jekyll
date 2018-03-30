@@ -1,9 +1,3 @@
-body 
-{
-	background-color: #f1f5f8;
-	border-top: 10px solid #2980b9;
-}
-
 .portfolio
 {
 	margin: 48px 0;
@@ -32,52 +26,4 @@ body
 .portfolio-item 
 {
 	margin-bottom: 30px;
-}
-
-
-
-/**************
-	FOOTER
-***************/
-footer
-{
-	border-top: 5px solid #2980b9;
-
-	background-color: #34495e;
-	padding: 24px;
-	font-size: 16px;
-}
-
-footer,
-footer a
-{
-	color: white;
-}
-
-footer a:hover 
-{
-	color: #2980b9;
-}
-
-footer .column ul li 
-{
-	margin-bottom: 6px;
-}
-
-footer .column h4 
-{
-	border-bottom: 2px solid #2980b9;
-	padding-bottom: 12px;
-    margin-bottom: 24px;
-}
-
-footer .column .glyphicon-chevron-right
-{
-	margin-right: 6px;
-	color: #2980b9;
-}
-
-.social-icons 
-{
-	margin-bottom: 12px;	
 }
