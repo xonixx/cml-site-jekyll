@@ -662,7 +662,7 @@ background: rgba(254,209,54,.9); /* Fallback when no plugin support */
 }
 
 .team-member p {
-    max-width: 360px;
+    max-width: 380px;
     margin: 0 auto;
 }
 

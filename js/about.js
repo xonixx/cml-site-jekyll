@@ -42,7 +42,7 @@ var shuffleme = (function ($) {
                     if (!groups)
                         return false;
                     var isSelectedGrp = groups.indexOf(group) >= 0;
-                    if (isSelectedGrp) {
+                    if (isSelectedGrp && $img.length) {
                         $img.attr('data-bp', $img.attr('src').replace('Converted120', 'Converted300'));
                     }
                     return isSelectedGrp;
