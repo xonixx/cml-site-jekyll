@@ -1,90 +1,86 @@
-var shuffleme = (function( $ ) {
-  'use strict';
-  var $grid = $('#grid'), //locate what we want to sort 
-      $filterOptions = $('.portfolio-sorting li'),  //locate the filter categories
-      $sizer = $grid.find('.shuffle_sizer'),    //sizer stores the size of the items
+var shuffleme = (function ($) {
+    'use strict';
+    var $grid = $('#grid'), //locate what we want to sort
+        $filterOptions = $('.portfolio-sorting li'),  //locate the filter categories
+        $sizer = $grid.find('.shuffle_sizer'),    //sizer stores the size of the items
 
-  init = function() {
+        init = function (onInit) {
+            // None of these need to be executed synchronously
+            setTimeout(function () {
+                listen();
+                setupFilters();
+                onInit();
+            }, 100);
 
-    // None of these need to be executed synchronously
-    setTimeout(function() {
-      listen();
-      setupFilters();
-    }, 100);
+            // instantiate the plugin
+            $grid.shuffle({
+                itemSelector: '[class*="col-"]',
+                sizer: $sizer
+            });
+        },
 
-    // instantiate the plugin
-    $grid.shuffle({
-      itemSelector: '[class*="col-"]',
-      sizer: $sizer    
-    });
-  },
+        // Set up button clicks
+        setupFilters = function () {
+            var $btns = $filterOptions.children();
+            $btns.on('click', function (e) {
+                e.preventDefault();
+                var $this = $(this),
+                    group = $this.data('group');
 
-      
+                // Hide current label, show current label in title
+                $('.portfolio-sorting li a').removeClass('active');
 
-  // Set up button clicks
-  setupFilters = function() {
-    var $btns = $filterOptions.children();
-    $btns.on('click', function(e) {
-      e.preventDefault();
-      var $this = $(this),
-          isActive = $this.hasClass( 'active' ),
-          group = isActive ? 'legalproperty' : $this.data('group');
+                $this.addClass('active');
 
-      // Hide current label, show current label in title
-      if ( !isActive ) {
-        $('.portfolio-sorting li a').removeClass('active');
-      }
+                // Filter elements
+                $grid.shuffle('shuffle', group);
+            });
 
-      $this.toggleClass('active');
+            $btns = null;
+        },
 
-      // Filter elements
-      $grid.shuffle( 'shuffle', group );
-    });
+        // Re layout shuffle when images load. This is only needed
+        // below 768 pixels because the .picture-item height is auto and therefore
+        // the height of the picture-item is dependent on the image
+        // I recommend using imagesloaded to determine when an image is loaded
+        // but that doesn't support IE7
+        listen = function () {
+            var debouncedLayout = $.throttle(300, function () {
+                $grid.shuffle('update');
+            });
 
-    $btns = null;
-  },
+            // Get all images inside shuffle
+            $grid.find('img').each(function () {
+                var proxyImage;
 
-  // Re layout shuffle when images load. This is only needed
-  // below 768 pixels because the .picture-item height is auto and therefore
-  // the height of the picture-item is dependent on the image
-  // I recommend using imagesloaded to determine when an image is loaded
-  // but that doesn't support IE7
-  listen = function() {
-    var debouncedLayout = $.throttle( 300, function() {
-      $grid.shuffle('update');
-    });
+                // Image already loaded
+                if (this.complete && this.naturalWidth !== undefined) {
+                    return;
+                }
 
-    // Get all images inside shuffle
-    $grid.find('img').each(function() {
-      var proxyImage;
+                // If none of the checks above matched, simulate loading on detached element.
+                proxyImage = new Image();
+                $(proxyImage).on('load', function () {
+                    $(this).off('load');
+                    debouncedLayout();
+                });
 
-      // Image already loaded
-      if ( this.complete && this.naturalWidth !== undefined ) {
-        return;
-      }
+                proxyImage.src = this.src;
+            });
 
-      // If none of the checks above matched, simulate loading on detached element.
-      proxyImage = new Image();
-      $( proxyImage ).on('load', function() {
-        $(this).off('load');
-        debouncedLayout();
-      });
+            // Because this method doesn't seem to be perfect.
+            setTimeout(function () {
+                debouncedLayout();
+            }, 500);
+        };
 
-      proxyImage.src = this.src;
-    });
+    return {
+        init: init
+    };
+}(jQuery));
 
-    // Because this method doesn't seem to be perfect.
-    setTimeout(function() {
-      debouncedLayout();
-    }, 500);
-  };      
-
-  return {
-    init: init
-  };
-}( jQuery ));
-
-$(document).ready(function()
-{
-  shuffleme.init(); //filter portfolio
+$(document).ready(function () {
+    shuffleme.init(function () {
+        $('a[data-group="beginning"]').click();
+    }); //filter portfolio
 });
