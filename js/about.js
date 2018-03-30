@@ -34,6 +34,22 @@ var shuffleme = (function ($) {
 
                 // Filter elements
                 $grid.shuffle('shuffle', group);
+
+                console.info(111, $grid.find('li').filter(function (i, e) {
+                    var groups = $(e).data('groups');
+                    if (!groups)
+                        return false;
+                    // console.info(222,groups)
+                    return groups.indexOf(group) >= 0;
+                }).find('a')
+                    .off('click.bigpicture')
+                    .on('click.bigpicture', function (e) {
+                        e.preventDefault();
+                        BigPicture({
+                            el: e.target/*,
+                            gallery: '#image_container'*/
+                        })    
+                    }))
             });
 
             $btns = null;
