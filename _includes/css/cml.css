@@ -14,6 +14,17 @@ body {
     color: #{{ site.data.template.color.muted }};
 }
 
+.text-services {
+    font-size: 18px;
+    color: #{{ site.data.template.color.muted }};
+}
+
+.text-team {
+    font-size: 18px;
+    text-align: center;
+    color: #{{ site.data.template.color.muted }};
+}
+
 .text-primary {
     color: #{{ site.data.template.color.primary }};
 }
@@ -753,6 +764,10 @@ footer ul.quicklinks {
     text-transform: none;
     font-family: {{ site.data.template.font.primary }};
     line-height: 40px;
+}
+
+.paddingtop_10 {
+    padding-top: 10px;
 }
 
 ul.social-buttons {
