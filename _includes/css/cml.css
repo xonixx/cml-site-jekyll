@@ -362,9 +362,9 @@ section h3.section-subheading {
 margin-bottom: 75px;
 text-transform: none;
 font-family: {{ site.data.template.font.secondary }};
-font-size: 16px;
-font-style: italic;
-font-weight: 400;
+font-size: 24px;
+/*font-style: italic;*/
+font-weight: 300;
 }
 
 @media(min-width:768px) {
