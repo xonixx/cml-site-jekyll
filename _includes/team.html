@@ -16,7 +16,8 @@
                     <div class="team-member">
                         <img src="img/team/{{ member.pic }}.jpg" class="img-responsive img-circle" alt="">
                         <h4 style="white-space: nowrap;">{{ member.name }}</h4>
-                        <p class="text-muted">{{ member.position }}</p>
+                        <b><p class="section-heading">{{ member.position }}</p></b>
+                        <p class="text-muted">{{ member.description }}</p>
                         <ul class="list-inline social-buttons paddingtop_10">
                             {% for network in member.social %}
                             <li>
