@@ -3,7 +3,7 @@ var shuffleme = (function ($) {
     var $grid = $('#grid'), //locate what we want to sort
         $filterOptions = $('.portfolio-sorting li'),  //locate the filter categories
         $sizer = $grid.find('.shuffle_sizer'),    //sizer stores the size of the items
-
+        shuffler,
         init = function (onInit) {
             // None of these need to be executed synchronously
             setTimeout(function () {
@@ -13,9 +13,9 @@ var shuffleme = (function ($) {
             }, 100);
 
             // instantiate the plugin
-            $grid.shuffle({
-                itemSelector: '[class*="col-"]',
-                sizer: $sizer
+            shuffler = new Shuffle($grid[0], {
+                itemSelector: '[class*="col-"][data-groups]',
+                sizer: $sizer[0]
             });
         },
 
@@ -33,7 +33,7 @@ var shuffleme = (function ($) {
                 $this.addClass('active');
 
                 // Filter elements
-                $grid.shuffle('shuffle', group);
+                shuffler.filter(group);
 
                 $grid.find('li').filter(function (i, e) {
                     var $img = $(this).find('img');
@@ -67,7 +67,7 @@ var shuffleme = (function ($) {
         // but that doesn't support IE7
         listen = function () {
             var debouncedLayout = $.throttle(300, function () {
-                $grid.shuffle('update');
+                shuffler.update();
             });
 
             // Get all images inside shuffle
