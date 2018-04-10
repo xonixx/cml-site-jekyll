@@ -40,7 +40,7 @@ people:
 - name: Volodymyr Gubarkov
   pic: 3
   position: CTO & CO-FOUNDER
-  description: Focused primarily on backend development and infrastructure setup. He possess solid object oriented systems design and implementation, system architectures development experience.
+  description: Focused primarily on backend development and infrastructure setup. Possesses solid object oriented systems design and implementation, system architectures development experience.
   social:
 #    - title: twitter
 #      url: #
@@ -52,7 +52,7 @@ people:
 - name: Basil Gorin
   pic: 4
   position: CO-FOUNDER
-  description: Focused primarily on smart contracts development, payments processing and security. He has strong experience with e-commerce software development and distributed storage systems.
+  description: Focused primarily on smart contracts development, payments processing and security. Has strong experience with e-commerce software development and distributed storage systems.
   social:
 #    - title: twitter
 #      url: #
