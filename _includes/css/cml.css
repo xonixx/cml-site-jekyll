@@ -74,6 +74,8 @@ h6 {
 
 .bg-light-gray {
     background-color: #f7f7f7;
+    margin-top: 0;
+    padding: 50px;
 }
 
 .bg-darkest-gray {

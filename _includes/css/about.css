@@ -1,6 +1,8 @@
 .portfolio
 {
-	margin: 48px 0;
+	margin: 0px;
+	margin-top: 0;
+	padding: 50px
 }
 
 .portfolio-sorting
