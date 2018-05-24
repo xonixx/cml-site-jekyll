@@ -102,6 +102,6 @@ var shuffleme = (function ($) {
 
 $(document).ready(function () {
     shuffleme.init(function () {
-        $('a[data-group="beginning"]').click();
+        $('a[data-group="hackbelgium"]').click();
     }); //filter portfolio
 });
