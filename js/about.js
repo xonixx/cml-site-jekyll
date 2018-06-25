@@ -102,6 +102,6 @@ var shuffleme = (function ($) {
 
 $(document).ready(function () {
     shuffleme.init(function () {
-        $('a[data-group="vivatechcrunch"]').click();
+        $('a[data-group="eoshk"]').click();
     }); //filter portfolio
 });
