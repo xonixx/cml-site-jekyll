@@ -43,4 +43,5 @@ before_deploy:
 deploy:
   provider: script
   skip_cleanup: true
-  script: ./.travis.deploy.sh
+#  script: ./.travis.deploy_prod.sh
+  script: ./.travis.deploy_test.sh
