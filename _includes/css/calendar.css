@@ -1,0 +1,68 @@
+.calendar-description
+{
+	width: 307px;
+	font-family: HelveticaNeue;
+	font-size: 18px;
+	font-weight: 500;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: normal;
+	letter-spacing: normal;
+	color: #777777;
+}
+
+.calendar-block
+{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 15px;
+}
+
+.calendar-element
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-right: 8px;
+	padding-left: 8px;
+}
+
+.calendar-table
+{
+
+	padding-right: 8px;
+	padding-left: 8px;
+}
+
+.calendar-picture
+{
+	border-radius: 100px;
+	width: 200px;
+	height: 200px;
+	border: solid 1px #00a2ff;
+}
+
+.calendar-subtitle
+{
+	font-family: HelveticaNeue;
+	font-size: 20px;
+	font-weight: bold;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: normal;
+	letter-spacing: normal;
+	color: #777777;
+}
+
+.calendar-title
+{
+	font-family: HelveticaNeue;
+	font-size: 24px;
+	font-weight: bold;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: normal;
+	letter-spacing: normal;
+	color: #000000;
+}
