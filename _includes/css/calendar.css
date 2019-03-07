@@ -3,6 +3,13 @@
 	padding-top: 150px;
 }
 
+#calendar-a
+{
+padding-top: 16px;
+padding-bottom: 12px;
+}
+
+
 .calendar-description
 {
 	max-width: 700px;
@@ -15,6 +22,19 @@
 	line-height: normal;
 	letter-spacing: normal;
 	color: #777777;
+}
+
+.calendar-button
+{
+    border: 2px solid #e8a621;
+    border-radius: 5px;
+    margin-left: 60px;
+
+}
+
+.calendar-button:hover
+{
+    background: #e8a621;
 }
 
 .calendar-block
