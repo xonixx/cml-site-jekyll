@@ -3,9 +3,10 @@
 	padding-top: 150px;
 }
 
+
 #calendar-a
 {
-padding-top: 16px;
+padding-top: 12px;
 padding-bottom: 12px;
 }
 
@@ -29,7 +30,7 @@ padding-bottom: 12px;
     border: 2px solid #e8a621;
     border-radius: 5px;
     margin-left: 60px;
-
+	margin-top: 5px;
 }
 
 .calendar-button:hover
@@ -81,7 +82,7 @@ padding-bottom: 12px;
 
 .calendar-table
 {
-	flex-grow: 7;
+	flex-grow: 0;
 	min-width: 901px;
 	padding-right: 8px;
 	padding-left: 8px;
