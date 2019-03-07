@@ -1,8 +1,12 @@
+#calendar
+{
+	padding-top: 150px;
+}
+
 .calendar-description
 {
 	max-width: 700px;
 	min-width: 300px;
-	height: 154px;
 	font-family: HelveticaNeue;
 	font-size: 18px;
 	font-weight: 500;
@@ -21,7 +25,30 @@
 	padding: 15px;
 }
 
+.calendar-story
+{
+	align-items: center;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-right: 8px;
+	padding-left: 8px;
+}
+
 .calendar-element
+{
+	align-items: center;
+	flex: 3;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: center;
+	padding-right: 8px;
+	padding-left: 8px;
+}
+
+.calendar-picture
 {
 	align-items: center;
 	flex: 1;
@@ -34,15 +61,14 @@
 
 .calendar-table
 {
-	flex-grow: 3;
+	flex-grow: 7;
 	min-width: 901px;
 	padding-right: 8px;
 	padding-left: 8px;
 }
 
-.calendar-picture
+.picture-description
 {
-
 	border-radius: 100px;
 	width: 200px;
 	height: 200px;
@@ -51,7 +77,6 @@
 
 .calendar-subtitle
 {
-
 	font-family: HelveticaNeue;
 	font-size: 20px;
 	font-weight: bold;
@@ -64,7 +89,7 @@
 
 .calendar-title
 {
-
+	text-align: center;
 	font-family: HelveticaNeue;
 	font-size: 24px;
 	font-weight: bold;
@@ -73,18 +98,4 @@
 	line-height: normal;
 	letter-spacing: normal;
 	color: #000000;
-}
-
-.overlay
-{
-	display: none;
-	visibility: visible;
-	opacity: 0.3;
-}
-
-.overlay:target
-{
-	display: block;
-	visibility: visible;
-	opacity: 1;
 }
