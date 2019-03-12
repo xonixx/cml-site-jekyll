@@ -16,7 +16,6 @@ padding-bottom: 12px;
 	padding-bottom: 12px;
 }
 
-
 .calendar-description
 {
 	max-width: 700px;
@@ -37,6 +36,11 @@ padding-bottom: 12px;
     border-radius: 5px;
     margin-left: 60px;
 	margin-top: 5px;
+}
+
+.calendar-button:hover
+{
+	background: #e8a621;
 }
 
 .calendar-button-callus
