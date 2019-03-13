@@ -52,7 +52,7 @@ padding-bottom: 12px !important;
 	display: block;
 }
 
-.calendar-button.navbar-toggle {
+.calendar-button.navbar-toggle, .calendar-button-callus.navbar-toggle {
 	margin: 9px 5% 0 5px !important;
 	font-size: 12px;
 }
