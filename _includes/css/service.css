@@ -1,0 +1,214 @@
+.service
+{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-firstblock
+{
+    padding-left: 10px;
+}
+
+.service-btn
+{
+    display: flex;
+    flex-direction: row;
+    min-width: 400px;
+    max-width: 555px;
+    height: 77px;
+    border-radius: 6px;
+    float: right;
+    background-color: #0077B5;
+    color: #000;
+    flex-grow: 1;
+    cursor: pointer;
+    padding-right: 10px;
+
+}
+
+.service-btn-image
+{
+    padding: 10px;
+}
+
+.service-btn-section
+{
+    padding-top: 30px;
+    display: flex;
+    flex-direction: row;
+}
+
+.service-subblocks
+{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+.service-elements
+{
+    justify-content: center;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.service-title
+{
+    height: 48px;
+    text-align: center;
+    align-items: center;
+    font-family: HelveticaNeue;
+    font-size: 40px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #000000;
+    padding-bottom: 20px;
+
+}
+
+.service-subtitle
+{
+    height: 23px;
+    align-items: center;
+    font-family: HelveticaNeue;
+    text-transform: capitalize;
+    font-size: 19px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #777777;
+}
+
+.block-services
+{
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.service-heading
+{
+    align-items: center;
+    height: 38px;
+    font-family: HelveticaNeue;
+    font-size: 32px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #000000;
+}
+
+.service-images
+{
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: column;
+    width: 115px;
+    height: 306.9px;
+    border-radius: 5px;
+    border: solid 1px #0077b5;
+    background-color: #ffffff;
+    padding: 3px;
+    align-items: center;
+}
+
+.service-naming
+{
+    width: 100px;
+    height: 24px;
+    font-family: HelveticaNeue;
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #777777;
+}
+
+.image-text
+{
+    font-family: HelveticaNeue;
+    font-size: 20px;
+    color: #000000;
+}
+
+.image-icon
+{
+    padding: 3px;
+}
+
+.service-btn-name
+{
+    width: 318px;
+    height: 26px;
+    font-family: HelveticaNeue;
+    text-transform: capitalize;
+    font-size: 22px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ffffff;
+}
+
+.fa-btc.fa-inverse
+{
+    color: white;
+}
+
+.fa-laptop.fa-inverse
+{
+    color: white;
+}
+
+.fas.fa-caret-right
+{
+    color: gold;
+    font-size: 50px;
+}
+
+.fas.fa-caret-left
+{
+    color: gold;
+    font-size: 50px;
+}
+
+.text-primary
+{
+    color: gold !important;
+}
+
+.hidden-elements-section
+{
+    justify-content: space-evenly;
+    flex-direction: column;
+    display: none;
+}
+
+.hidden-icon-left
+{
+    transform: rotate(270deg);
+}
+
+.hidden-icon-right
+{
+    transform: rotate(90deg);
+}
+
+
