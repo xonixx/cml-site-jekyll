@@ -57,6 +57,7 @@
     list-style-type: none;
     display: flex;
     flex-direction: row;
+    padding: 0;
 }
 
 .service-title
@@ -64,7 +65,6 @@
     height: 48px;
     text-align: center;
     align-items: center;
-    font-family: HelveticaNeue;
     font-size: 40px;
     font-weight: bold;
     font-style: normal;
@@ -80,7 +80,6 @@
 {
     height: 23px;
     align-items: center;
-    font-family: HelveticaNeue;
     text-transform: capitalize;
     font-size: 19px;
     font-weight: bold;
@@ -101,7 +100,6 @@
 {
     align-items: center;
     height: 38px;
-    font-family: HelveticaNeue;
     font-size: 32px;
     font-weight: bold;
     font-style: normal;
@@ -129,7 +127,6 @@
 {
     width: 100px;
     height: 24px;
-    font-family: HelveticaNeue;
     text-transform: capitalize;
     font-size: 20px;
     font-weight: 500;
@@ -142,21 +139,14 @@
 
 .image-text
 {
-    font-family: HelveticaNeue;
     font-size: 20px;
     color: #000000;
-}
-
-.image-icon
-{
-    padding: 3px;
 }
 
 .service-btn-name
 {
     width: 318px;
     height: 26px;
-    font-family: HelveticaNeue;
     text-transform: capitalize;
     font-size: 22px;
     font-weight: bold;
