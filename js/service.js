@@ -1,5 +1,76 @@
+$(function() {
 
+    // use let, we don't need global variables now.
+
+    let lisFirst = document.getElementsByClassName("first-section");
+    let lisSecond = document.getElementsByClassName("second-section");
+    let lisHidden = document.getElementsByClassName("hidden-elements-section");
+
+
+    // going to display elements from currentElementFirst to currentElementFirst + showElementsNumber;
+    // showElementsNumber is supposed to change on window resize to 2,3 or 5
+    let currentElementFirst = 0;
+    let currentElementSecond = 0;
+
+    // check initial clientWidth and set showElementsNumber here :
+    let showElementsNumber; // = ...
+
+
+    // create callback functions on arrows clicked
+    // you dont need to change these functions on window resize. Only showElementsNumber is changed;
+    $(".left-button-first").on('click', function () {
+        console.log('Left first clicked!');
+
+        if (document.body.clientWidth <= 720 && document.body.clientWidth > 480) {
+            console.log("720*480 currentEementFirst " + currentEementFirst);
+
+            if (currentElementFirst > 0) {   // now we start counting from zero
+                $(".first-section").css({
+                    "display": "none"
+                });
+
+                currentElementFirst -= 1;
+
+                // set display:flex on elements from [currentElementFirst] to
+                // [currentElementFirst + showElementsNumber - 1] of lisFirst
+                // look at .slice() jquery function and examples;
+
+            } else {
+                return;
+            }
+        }
+    });
+
+
+    //other callbacks ...
+
+
+    $(window).resize(function () {
+
+        // set showElementsNumberNew based on new clientWidth;
+
+        // if showElementsNumberNew === showElementsNumber do nothing, leave all as is;
+
+        console.log('Current element first is', currentElementFirst);
+        console.log('Nothing to change');
+        return;
+
+        // else (i.e. if showElementsNumberNew !== showElementsNumber) set showElementsNumber = showElementsNumberNew
+        currentElementFirst = 0;
+        currentElementSecond = 0;
+        // set display:flex on elements from [0] to [showElementsNumber-1] of lisFirst and lisSecond
+        // display:none on elements from [showElementsNumber] to [4];
+
+
+    });
+});
+
+
+//YOUR OLD CODE
 $(window).resize(function () {
+
+    return;   //doesn't work now, returns immediately
+
     var lisFirst = document.getElementsByClassName("first-section");
     var lisSecond = document.getElementsByClassName("second-section");
     var lisHidden = document.getElementsByClassName("hidden-elements-section");
