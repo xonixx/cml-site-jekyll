@@ -7,9 +7,9 @@
     flex-direction: column;
 }
 
-.service-firstblock
+.service-firstblock, .service-secondblock
 {
-    padding-left: 10px;
+    margin: 0 15px;
 }
 
 .service-btn
@@ -46,9 +46,10 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
     padding-top: 30px;
     padding-bottom: 20px;
+    width: 100%;
 }
 
 .service-elements
@@ -57,6 +58,7 @@
     list-style-type: none;
     display: flex;
     flex-direction: row;
+    padding: 0;
 }
 
 .service-title
@@ -140,11 +142,6 @@
 {
     font-size: 20px;
     color: #000000;
-}
-
-.image-icon
-{
-    padding: 3px;
 }
 
 .service-btn-name

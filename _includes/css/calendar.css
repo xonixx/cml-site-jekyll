@@ -3,11 +3,22 @@
 	padding-top: 100px;
 }
 
+@media(max-width:995px) {
+	.nav .calendar-button {
+		display: none !important;
+	}
+}
 
-#calendar-a
+@media(min-width:996px) {
+	.calendar-button.navbar-toggle {
+		display: none !important;
+	}
+}
+
+.calendar-a
 {
-padding-top: 12px;
-padding-bottom: 12px;
+padding-top: 12px !important;
+padding-bottom: 12px !important;
 }
 
 #calendar-a-callus
@@ -30,12 +41,20 @@ padding-bottom: 12px;
 	text-align: justify;
 }
 
-.calendar-button
+.calendar-button, .calendar-button.navbar-toggle
 {
     border: 2px solid #e8a621;
     border-radius: 5px;
     margin-left: 60px;
 	margin-top: 5px;
+	background-color: transparent;
+	color: white;
+	display: block;
+}
+
+.calendar-button.navbar-toggle, .calendar-button-callus.navbar-toggle {
+	margin: 9px 5% 0 5px !important;
+	font-size: 12px;
 }
 
 .calendar-button:hover
