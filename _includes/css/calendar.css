@@ -1,10 +1,11 @@
 #calendar
 {
 	padding-top: 100px;
+	padding-bottom: 50px;
 }
 
 @media(max-width:995px) {
-	.nav .calendar-button {
+	.nav .calendar-button, .nav .calendar-button-callus {
 		display: none !important;
 	}
 }
@@ -12,6 +13,31 @@
 @media(min-width:996px) {
 	.calendar-button.navbar-toggle {
 		display: none !important;
+	}
+}
+
+@media(max-width:900px) {
+	.calendly-inline-widget {
+		position: relative;
+		height: 560px;
+		min-width: 480px;
+	}
+	.calendar-table {
+		flex: 1;
+	}
+	.calendar-table {
+		padding: 0 15px 60px;
+	}
+}
+
+@media(min-width:901px) {
+	.calendly-inline-widget {
+		position: relative;
+		min-width: 901px;
+		height: 560px;
+	}
+	.calendar-table {
+		width:901px;
 	}
 }
 
@@ -30,7 +56,7 @@ padding-bottom: 12px !important;
 .calendar-description
 {
 	max-width: 700px;
-	min-width: 300px;
+	min-width: 350px;
 	font-size: 18px;
 	font-weight: 500;
 	font-style: normal;
@@ -117,16 +143,12 @@ padding-bottom: 12px !important;
 
 .calendar-table
 {
-	flex-grow: 0;
-	min-width: 901px;
-	padding-right: 8px;
-	padding-left: 8px;
     position: relative;
 }
 
 .calendar-table:after {
     display: block;
-    width:901px;
+    width: 100%;
     height:5px;
     background-color: white;
     position: absolute;
