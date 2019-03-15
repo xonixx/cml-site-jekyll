@@ -15,23 +15,23 @@
 .service-btn
 {
     display: flex;
-    flex-direction: row;
     min-width: 400px;
-    max-width: 555px;
-    height: 77px;
+    max-width: 400px;
     border-radius: 6px;
-    float: right;
     background-color: #0077B5;
     color: #000;
     flex-grow: 1;
     cursor: pointer;
-    justify-content: space-evenly;
-
+    justify-content: stretch;
+    margin-bottom: 0px;
+    margin-bottom: 0px;
 }
 
 .service-btn-image
 {
     padding: 10px;
+    width: 64px;
+    height: 70px;
 }
 
 .service-btn-section
@@ -142,6 +142,13 @@
     color: #777777;
 }
 
+.bottom-text-element
+{
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+
 .image-text
 {
     font-size: 20px;
@@ -150,16 +157,16 @@
 
 .service-btn-name
 {
-    width: 318px;
-    height: 26px;
     text-transform: capitalize;
-    font-size: 22px;
-    font-weight: bold;
+    font-size: 20px;
     font-style: normal;
     font-stretch: normal;
     line-height: normal;
     letter-spacing: normal;
     color: #ffffff;
+    padding-left: 10px;
+    align-items: center;
+    font-weight: 200;
 }
 
 .fa-btc.fa-inverse
@@ -174,19 +181,19 @@
 
 .fas.fa-caret-right
 {
-    color: gold;
+    color: #E8A621;
     font-size: 50px;
 }
 
 .fas.fa-caret-left
 {
-    color: gold;
+    color: #E8A621;
     font-size: 50px;
 }
 
 .text-primary
 {
-    color: gold !important;
+    color: #E8A621; !important;
 }
 
 .hidden-elements-section

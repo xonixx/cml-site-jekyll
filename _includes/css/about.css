@@ -49,7 +49,6 @@
 
 @media(min-height:768px) {
 	.subheader-section {
-		position: fixed;
 		display: block;
 	}
 }
