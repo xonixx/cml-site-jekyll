@@ -30,3 +30,74 @@
 {
 	margin-bottom: 30px;
 }
+
+.portfolio-subheader
+{
+	padding-top: 75px;
+}
+
+.subheader-section
+{
+	height: 60px;
+	background-color: #66ccff;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	display: none;
+
+}
+
+@media(min-height:768px) {
+	.subheader-section {
+		position: fixed;
+		display: block;
+	}
+}
+
+.subheader-list
+{
+	display: flex;
+	flex-direction: row;
+	text-align: center;
+	height: 33px;
+	font-size: 24px;
+	font-weight: bold;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: normal;
+	letter-spacing: normal;
+	color: #fff;
+	text-transform: capitalize;
+}
+
+.subheader-a
+{
+	padding: 10px 0;
+	color: #fff;
+	display: inline-block;
+
+}
+
+.subheader-li
+{
+	list-style-type: none;
+	flex-basis: auto;
+	flex-grow: 1;
+}
+
+.subheader-a:hover
+{
+	color: #fff;
+	display: inline-block;
+	border-bottom: 17px solid;
+	padding-bottom: 2px;
+	text-decoration: none;
+}
+
+@media(max-width:996px) {
+	.subheader-a {
+		font-size: 18px;
+
+	}
+}
+

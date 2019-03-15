@@ -100,7 +100,25 @@ var shuffleme = (function ($) {
     };
 }(jQuery));
 
+    //Set up subheader
+    function displaySubHeader(){
+
+        $(window).scroll(function(){
+            if($(window).scrollTop() >= $('#about').offset().top && $(window).scrollTop() < $('#team').offset().top)
+            {
+                $(".subheader-section").css({
+                    "display": "block"
+                });
+            } else {
+                $(".subheader-section").css({
+                    "display": "none"
+                });
+            }
+        });
+    }
+
 $(document).ready(function () {
+    displaySubHeader();
     shuffleme.init(function () {
         $('a[data-group="eoshk"]').click();
     }); //filter portfolio
