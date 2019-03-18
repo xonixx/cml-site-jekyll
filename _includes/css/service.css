@@ -15,23 +15,17 @@
 .service-btn
 {
     display: flex;
-    min-width: 400px;
-    max-width: 400px;
+    min-width: 480px;
+    max-width: 480px;
     border-radius: 6px;
     background-color: #0077B5;
     color: #000;
     flex-grow: 1;
     cursor: pointer;
     justify-content: stretch;
-    margin-bottom: 0px;
-    margin-bottom: 0px;
-}
-
-.service-btn-image
-{
-    padding: 10px;
-    width: 64px;
-    height: 70px;
+    margin-bottom: 0;
+    align-items: center;
+    padding: 10px 0 10px 20px;
 }
 
 .service-btn-section
@@ -40,7 +34,7 @@
     display: flex;
     flex-direction: row;
     align-self: stretch;
-    justify-content: space-evenly;
+    justify-content: center;
     padding-left: 10px;
     padding-right: 10px;
 }
@@ -164,9 +158,8 @@
     line-height: normal;
     letter-spacing: normal;
     color: #ffffff;
-    padding-left: 10px;
-    align-items: center;
-    font-weight: 200;
+    padding-left: 35px;
+    font-weight: bold;
 }
 
 .fa-btc.fa-inverse
