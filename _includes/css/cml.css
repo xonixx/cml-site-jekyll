@@ -12,6 +12,7 @@ body {
 
 .text-muted {
     color: #{{ site.data.template.color.muted }};
+
 }
 
 .text-services {
@@ -282,7 +283,7 @@ background-color: #{{ site.data.template.color.secondary }};
 }
 
 .navbar-default.navbar-shrink {
-    padding: 10px 0;
+    padding: 0px 0;
     background-color: #{{ site.data.template.color.primary-bg }};
 }
 
@@ -929,5 +930,11 @@ div.text-center p, div.text-center ul {
     0% { opacity:1; }
     50% { opacity:0; }
     100% { opacity:1; }
+}
+
+.container
+{
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 /* end typed cursor animation */

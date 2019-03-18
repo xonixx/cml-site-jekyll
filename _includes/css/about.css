@@ -47,12 +47,6 @@
 
 }
 
-@media(min-height:768px) {
-	.subheader-section {
-		display: block;
-	}
-}
-
 .subheader-list
 {
 	display: flex;
@@ -88,7 +82,7 @@
 {
 	color: #fff;
 	display: inline-block;
-	border-bottom: 17px solid;
+	border-bottom: 17.2px solid;
 	padding-bottom: 2px;
 	text-decoration: none;
 }
@@ -96,7 +90,14 @@
 @media(max-width:996px) {
 	.subheader-a {
 		font-size: 18px;
-
 	}
-}
+	.subheader-a:hover {
+		border-bottom: 15.2px solid;
+	}
+	.subheader-section
+	{
+		height: 50px;
+	}
+	}
+
 
