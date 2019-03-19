@@ -1,3 +1,4 @@
+var filtersChosen = [];
 var shuffleme = (function ($) {
     'use strict';
     var $grid = $('#grid'), //locate what we want to sort
@@ -27,34 +28,68 @@ var shuffleme = (function ($) {
                 var $this = $(this),
                     group = $this.data('group');
 
-                // Hide current label, show current label in title
-                $('.portfolio-sorting li a').removeClass('active');
 
-                $this.addClass('active');
+                console.log("group " + group);
 
-                // Filter elements
-                shuffler.filter(group);
-
-                $grid.find('li').filter(function (i, e) {
-                    var $img = $(this).find('img');
-                    $img.removeAttr('data-bp');
-                    var groups = $(e).data('groups');
-                    if (!groups)
-                        return false;
-                    var isSelectedGrp = groups.indexOf(group) >= 0;
-                    if (isSelectedGrp && $img.length) {
-                        $img.attr('data-bp', $img.attr('src').replace('Converted120', 'Converted300'));
-                    }
-                    return isSelectedGrp;
-                }).find('a')
-                    .off('click.bigpicture')
-                    .on('click.bigpicture', function (e) {
-                        e.preventDefault();
-                        BigPicture({
-                            el: e.target,
-                            gallery: '#grid'
-                        })    
+                if ($this.hasClass('active')) {
+                    // Hide current label, show current label in title
+                    filtersChosen = filtersChosen.filter(function (value, index, arr) {
+                        if (group === value)
+                            return false;
                     });
+                    $this.removeClass('active');
+                } else {
+                    $this.addClass('active');
+                    if(Array.isArray(group)) {
+                        filtersChosen = filtersChosen.concat(group);
+                    } else {
+                        filtersChosen.push(group);
+                    }
+                }
+
+                console.log("arrayss " + filtersChosen);
+
+                /*
+                 // Hide current label, show current label in title
+                 $('.portfolio-sorting li a').removeClass('active');
+
+                 $this.addClass('active');
+                */
+                // Filter elements
+                shuffler.filter((element, shuffle) => {
+                    //console.log("elem: ", element);
+                    for (let j = 0; j < filtersChosen.length; j++) {
+                        console.log('j: ' + j + "; f: " + filtersChosen[j]);
+                        if ($(element).data('groups').indexOf(filtersChosen[j]) >= 0) return true;
+                    }
+                    return false;
+                })
+
+                // $grid.find('li').filter(function (i, e) {
+                //     var $img = $(this).find('img');
+                //     $img.removeAttr('data-bp');
+                //     let groups = $(e).data('groups');
+                //     console.log("groups lalala " + groups);
+                //     if (!groups)
+                //         return false;
+                //
+                //     for(let j = 0; j < filtersChosen.length; j++) {
+                //         console.log('j: '+j+"; f: "+ filtersChosen[j]);
+                //         if(groups.indexOf(filtersChosen[j]) === -1) return false;
+                //     }
+                //     // if ($img.length) {
+                //     //     $img.attr('data-bp', $img.attr('src').replace('Converted120', 'Converted300'));
+                //     // }
+                //     return true;
+                // }).find('a')
+                //     .off('click.bigpicture')
+                //     .on('click.bigpicture', function (e) {
+                //         e.preventDefault();
+                //         BigPicture({
+                //             el: e.target,
+                //             gallery: '#grid'
+                //         })
+                //     });
             });
 
             $btns = null;
@@ -100,25 +135,35 @@ var shuffleme = (function ($) {
     };
 }(jQuery));
 
-    //Set up subheader
-    function displaySubHeader(){
-        $(window).scroll(function(){
-            if(($(window).scrollTop() + 20 >= $('#about').offset().top) && ($(window).scrollTop() + 100 < $('#team').offset().top))
-            {
-                $(".subheader-section").css({
-                    "display": "block"
-                });
-            } else {
-                $(".subheader-section").css({
-                    "display": "none"
-                });
-            }
-        });
-    }
+//Set up subheader
+function displaySubHeader() {
+    $(window).scroll(function () {
+        if (($(window).scrollTop() + 20 >= $('#about').offset().top) && ($(window).scrollTop() + 100 < $('#team').offset().top)) {
+            $(".subheader-section").css({
+                "display": "block"
+            });
+            $("#portfolio-a").css({
+                "border-bottom": "17.2px solid",
+                "padding-bottom": "2px"
+            });
+        } else {
+            $(".subheader-section").css({
+                "display": "none"
+            });
+            $("#portfolio-a").css({
+                "border-bottom": "none",
+                "padding-bottom": "10px 0"
+            });
+        }
 
-    $(document).ready(function () {
-        displaySubHeader();
+
+
+    });
+}
+
+$(document).ready(function () {
+    displaySubHeader();
     shuffleme.init(function () {
         $('a[data-group="eoshk"]').click();
     }); //filter portfolio
-    });
+});

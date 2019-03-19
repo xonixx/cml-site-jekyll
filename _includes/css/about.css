@@ -8,9 +8,9 @@
 
 .portfolio-sorting
 {
-	text-transform: uppercase;	
 	font-size: 16px;
 	margin-bottom: 48px;
+	padding-bottom: 20px;
 }
 
 .portfolio-sorting li a 
@@ -19,21 +19,76 @@
 	text-decoration: none;
 	padding: 6px;
 }
+
 .portfolio-sorting li a:hover,
 .portfolio-sorting li a.active
 {
 	color: #2980b9;
-	border-bottom: 2px solid #2980b9;
+	text-decoration: none;
 }
 
 .portfolio-item 
 {
+	display: flex;
+	flex-direction: row;
 	margin-bottom: 30px;
+}
+
+.portfolio-item-solution
+{
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+.portfolio-item-description
+{
+	width: 564px;
+	font-size: 20px;
+	font-weight: 500;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: normal;
+	letter-spacing: normal;
+	color: #777777;
+}
+
+.portfolio-item-first-section
+{
+	padding: 5px;
+	display: flex;
+	flex-direction: column;
+	justify-content: stretch;
+}
+
+.portfolio-item-second-section
+{
+	padding: 5px;
+	padding-left: 50px;
+}
+
+.portfolio-item-name
+{
+	width: 65px;
+	font-size: 24px;
+	font-weight: 500;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: normal;
+	letter-spacing: normal;
+	color: #777777;
 }
 
 .portfolio-subheader
 {
 	padding-top: 75px;
+}
+
+.list-inline>li
+{
+	display: inline-block;
+	padding-left: 0px;
+	padding-right: 0px;
+	margin: 5px;
 }
 
 .subheader-section
@@ -87,7 +142,34 @@
 	text-decoration: none;
 }
 
-@media(max-width:996px) {
+.portfolio-main-title
+{
+	font-size: 28px;
+	font-weight: bold;
+	font-stretch: normal;
+	line-height: normal;
+	letter-spacing: normal;
+	color: #000000;
+	text-transform: capitalize;
+	text-align: center;
+	padding-bottom: 20px;
+}
+
+.portfolio-title
+{
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.portfolio-title:hover
+{
+	font-size: 20px;
+	font-weight: bold;
+	color: #2980b9;
+}
+
+@media(max-width:996px)
+{
 	.subheader-a {
 		font-size: 18px;
 	}
@@ -98,6 +180,6 @@
 	{
 		height: 50px;
 	}
-	}
+}
 
 
