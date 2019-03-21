@@ -28,21 +28,31 @@ var shufflemePortfolio = (function ($) {
                 let $this = $(this),
                     group = $this.data('group');
 
-                console.log("group " + group);
+                console.log($this);
 
                 if ($this.hasClass('active')) {
+                    if(Array.isArray(group)) return;
                     // Hide current label, show current label in title
                     portfolioFiltersChosen = portfolioFiltersChosen.filter(function (value) {
                         return group !== value;
                     });
                     $this.removeClass('active');
+                    if ($(".portfolio-title a.active").length === 0) {
+                        $("#filter-all").click();
+                    }
+
                 } else {
-                    $this.addClass('active');
                     if(Array.isArray(group)) {
-                        portfolioFiltersChosen = portfolioFiltersChosen.concat(group);
+                        portfolioFiltersChosen = group;
+                        $(".portfolio-title a").removeClass('active');
                     } else {
+                        if ($("#filter-all").hasClass("active")) {
+                            $("#filter-all").removeClass("active");
+                            portfolioFiltersChosen = [];
+                        }
                         portfolioFiltersChosen.push(group);
                     }
+                    $this.addClass('active');
                 }
 
                 console.log("arrayss " + portfolioFiltersChosen);
@@ -154,9 +164,6 @@ function displaySubHeader() {
                 "padding-bottom": "10px 0"
             });
         }
-
-
-
     });
 }
 */
@@ -220,6 +227,6 @@ $(document).ready(function () {
     showPortfolioContent();
     displaySubHeader();
     shufflemePortfolio.init(function () {
-        //$('a[data-group="eoshk"]').click();
+        $("#filter-all").click();
     }); //filter portfolio
 });
