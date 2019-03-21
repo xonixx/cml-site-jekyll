@@ -133,6 +133,7 @@ var shufflemePortfolio = (function ($) {
     };
 }(jQuery));
 
+/*
 //Set up subheader
 function displaySubHeader() {
     $(window).scroll(function () {
@@ -158,8 +159,65 @@ function displaySubHeader() {
 
     });
 }
+*/
+
+//Show content for hportfolio section
+function showPortfolioContent() {
+
+    $(".projects").on('click',function () {
+        console.log("e "+this);
+        let id = this.id;
+        console.log("id "+id);
+        if($("." + id).css("display") === "none" ) {
+            $("." + id).css({"display": "flex"});
+        } else {
+            $("." + id).css({"display": "none"});
+        }
+    });
+}
+
+//Set up subheader for portfolio section
+function displaySubHeader() {
+    $(window).scroll(function () {
+
+        if (($(window).scrollTop() + 20 >= $('#about-portfolio').offset().top) && ($(window).scrollTop() + 100 < $('#team').offset().top)) {
+            $(".subheader-section").css({
+                "display": "block"
+            });
+        } else {
+            $(".subheader-section").css({
+                "display": "none"
+            });
+        }
+
+        if (($(window).scrollTop() + 20 >= $('#about-portfolio').offset().top) && ($(window).scrollTop() + 100 < $('#about-hackathons').offset().top)) {
+            $("#portfolio-a").css({
+                "border-bottom": "17.2px solid",
+                "padding-bottom": "2px"
+            });
+        } else {
+            $("#portfolio-a").css({
+                "border-bottom": "none",
+                "padding-bottom": "10px 0"
+            });
+        }
+
+        if (($(window).scrollTop() + 20 >= $('#about-hackathons').offset().top) && ($(window).scrollTop() + 100 < $('#team').offset().top)) {
+            $("#hackathon-a").css({
+                "border-bottom": "17.2px solid",
+                "padding-bottom": "2px"
+            });
+        } else {
+            $("#hackathon-a").css({
+                "border-bottom": "none",
+                "padding-bottom": "10px 0"
+            });
+        }
+    });
+}
 
 $(document).ready(function () {
+    showPortfolioContent();
     displaySubHeader();
     shufflemePortfolio.init(function () {
         //$('a[data-group="eoshk"]').click();
