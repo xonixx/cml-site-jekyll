@@ -2,127 +2,116 @@
 
 <section id="about-portfolio" class="portfolio">
     <section id="portfolio">
-        <div class="container">
-            <div class="row" style="padding-top: 10px;">
-                <section id="about_photos_only" style="padding: 0"></section> <!-- just to jump exactly to photos -->
-            </div>
-            <h2 class="portfolio-main-title">Meet our customers</h2>
+    <div class="container">
+        <div class="row" style="padding-top: 10px;">
+            <section id="about_photos_only" style="padding: 0"></section> <!-- just to jump exactly to photos -->
+        </div>
+        <h2 class="portfolio-main-title">Meet our customers</h2>
+            <ul class="portfolio-display-mobile-list">
+                <li class="portfolio-display-mobile-element">Filter:
+
+                </li>
+                <li class="portfolio-display-mobile-element filter-elements">
+
+                </li>
+                <li class="portfolio-display-mobile-element">
+                    <i class="fas fa-filter"></i>
+                </li>
+            </ul>
             <ul class="portfolio-sorting list-inline text-center" style="margin-bottom: 5px">
-                <li class="portfolio-title"><a href="#" id="filter-all"
-                                               data-group='["java", "reactjs", "nodejs", "aws", "solidity", "eos", "vuejs", "google_app_script", "postgresql", "kibana", "elastic_search", "react_native", "facebook_bot_api", "flutter"]'
-                                               style="padding-bottom: 1px">All</a></li>
-                <li class="portfolio-title"><a href="#" data-group="java" style="padding-bottom: 1px">Java</a></li>
-                <li class="portfolio-title"><a href="#" data-group="reactjs" style="padding-bottom: 1px">ReactJS</a>
-                </li>
-                <li class="portfolio-title"><a href="#" data-group="vuejs" style="padding-bottom: 1px">VueJS</a></li>
-                <li class="portfolio-title"><a href="#" data-group="nodejs" style="padding-bottom: 1px">NodeJS</a></li>
-                <li class="portfolio-title"><a href="#" data-group="aws" style="padding-bottom: 1px">AWS</a></li>
-                <li class="portfolio-title"><a href="#" data-group="solidity" style="padding-bottom: 1px">Solidity</a>
-                </li>
-                <li class="portfolio-title"><a href="#" data-group="google_app_script" style="padding-bottom: 1px">Google
-                    App Script</a></li>
-                <li class="portfolio-title"><a href="#" data-group="postgresql"
-                                               style="padding-bottom: 1px">Postgresql</a></li>
-                <li class="portfolio-title"><a href="#" data-group="kibana" style="padding-bottom: 1px">Kibana</a></li>
-                <li class="portfolio-title"><a href="#" data-group="elastic_search" style="padding-bottom: 1px">Elastic
-                    Search</a></li>
-                <li class="portfolio-title"><a href="#" data-group="eos" style="padding-bottom: 1px">EOS</a></li>
-                <li class="portfolio-title"><a href="#" data-group="react_native" style="padding-bottom: 1px">React
-                    Native</a></li>
-                <li class="portfolio-title"><a href="#" data-group="facebook_bot_api" style="padding-bottom: 1px">Facebook
-                    Bot API</a></li>
-                <li class="portfolio-title"><a href="#" data-group="flutter" style="padding-bottom: 1px">Flutter</a>
-                </li>
+                <li class="portfolio-title"><a href="#" data-group='["java", "reactJS", "nodeJS", "aws", "solidity", "eos", "vueJS", "google app script", "postgresql", "kibana", "elastic search", "react native", "facebook bot api", "flutter"]' >All</a></li>
+                <li class="portfolio-title"><a href="#" data-group="java" >Java</a></li>
+                <li class="portfolio-title"><a href="#" data-group="reactJS" >ReactJS</a></li>
+                <li class="portfolio-title"><a href="#" data-group="vueJS" >VueJS</a></li>
+                <li class="portfolio-title"><a href="#" data-group="nodeJS" >NodeJS</a></li>
+                <li class="portfolio-title"><a href="#" data-group="aws" >AWS</a></li>
+                <li class="portfolio-title"><a href="#" data-group="solidity" >Solidity</a></li>
+                <li class="portfolio-title"><a href="#" data-group="google app script" >Google App Script</a></li>
+                <li class="portfolio-title"><a href="#" data-group="postgresql" >Postgresql</a></li>
+                <li class="portfolio-title"><a href="#" data-group="kibana" >Kibana</a></li>
+                <li class="portfolio-title"><a href="#" data-group="elastic search" >Elastic Search</a></li>
+                <li class="portfolio-title"><a href="#" data-group="eos" >EOS</a></li>
+                <li class="portfolio-title"><a href="#" data-group="react native" >React Native</a></li>
+                <li class="portfolio-title"><a href="#" data-group="facebook bot api" >Facebook Bot Api</a></li>
+                <li class="portfolio-title"><a href="#" data-group="flutter" >Flutter</a></li>
             </ul> <!--end portfolio sorting -->
-            <ul class="portfolio-items list-unstyled" id="grid-portfolio">
-                <li class="col-md-6 col-sm-6 col-xs-12" data-groups='["nodejs", "aws", "solidity", "eos", "vuejs"]'>
+            <ul class="portfolio-items" id="grid-portfolio">
+                <!-- eoshk section started -->
+                <li class="col-md" data-groups='["nodejs", "aws", "solidity", "eos", "vuejs"]'>
                     <div class="portfolio-item">
-                        <div class="portfolio-item-first-section">
-                            <div class="portfolio-image-wrap">
-                                <div class="projects" id="first-project">
-                                    <img src="/img/portfolio/dreams.png" alt=""
-                                         class="img-responsive">
-                                </div>
-                            </div>
-                            <h2 class="portfolio-item-solution hidden first-project">
-                                Solution:
-                            </h2>
-                            <div class="portfolio-item-description hidden first-project">
-                                This is long-term project
-                            </div>
+                       <div class="portfolio-item-first-section">
+                        <a class="projects" id="first-project">
+                            <img src="/img/portfolio/dreams.png" alt=""
+                                 class="img-responsive">
+                        </a>
+                        <h2 class="portfolio-item-solution first-project">
+                            Solution:
+                        </h2>
+                        <div class="portfolio-item-description first-project">
+                            This is long-term project
                         </div>
-                        <div class="portfolio-item-second-section hidden first-project">
-                            <h2 class="portfolio-item-name">
-                                Client:
-                            </h2>
-                            <div class="portfolio-item-description">
-                                Company
-                            </div>
-                            <h2 class="portfolio-item-name">
-                                Description:
-                            </h2>
-                            <div class="portfolio-item-description">
-                                Information technology is concerned with improvements in a variety of human and
-                                organizational problem-solving endeavors, through the design, development and use of
-                                technologically based systems and processes that enhance the efficiency and
-                                effectiveness of information in a variety of strategic, tactical and operational
-                                situations. Ideally, this is accomplished through critical attention to the information
-                                needs of humans in problem-solving tasks and the provision of technological aids,
-                                including electronic communication and computer-based systems of hardware and software
-                                and associated processes. Information technology complements and enhances traditional
-                                engineering through emphasis on the information basis for engineering.
-                            </div>
-                            <h2 class="portfolio-item-name">
-                                Role:
-                            </h2>
-                            <div class="portfolio-item-description">
-                                Single
-                            </div>
-                            <h2 class="portfolio-item-name">
-                                Team and duration:
-                            </h2>
-                            <div class="portfolio-item-description">
-                                Small team
-                            </div>
-                            <h2 class="portfolio-item-name">
-                                Industries:
-                            </h2>
-                            <div class="portfolio-item-description">
-                                IT
-                            </div>
-                            <h2 class="portfolio-item-name">
-                                Country:
-                            </h2>
-                            <div class="portfolio-item-description">
-                                England
-                            </div>
-                            <h2 class="portfolio-item-name">
-                                Technologies:
-                            </h2>
-                            <div class="portfolio-item-description">
-                                "NodeJS", "AWS", "Solidity", "EOS", "VueJS".
-                            </div>
+                           </div>
+                        <div class="portfolio-item-second-section first-project">
+                    <h2 class="portfolio-item-name">
+                        Client:
+                    </h2>
+                    <div class="portfolio-item-description">
+                        Company
+                    </div>
+                    <h2 class="portfolio-item-name">
+                        Description:
+                    </h2>
+                    <div class="portfolio-item-description">
+                        Information technology is concerned with improvements in a variety of human and organizational problem-solving endeavors, through the design, development and use of technologically based systems and processes that enhance the efficiency and effectiveness of information in a variety of strategic, tactical and operational situations. Ideally, this is accomplished through critical attention to the information needs of humans in problem-solving tasks and the provision of technological aids, including electronic communication and computer-based systems of hardware and software and associated processes. Information technology complements and enhances traditional engineering through emphasis on the information basis for engineering.
+                    </div>
+                    <h2 class="portfolio-item-name">
+                        Role:
+                    </h2>
+                    <div class="portfolio-item-description">
+                        Single
+                    </div>
+                    <h2 class="portfolio-item-name">
+                        Team and duration:
+                    </h2>
+                    <div class="portfolio-item-description">
+                        Small team
+                    </div>
+                    <h2 class="portfolio-item-name">
+                        Industries:
+                    </h2>
+                    <div class="portfolio-item-description">
+                        IT
+                    </div>
+                    <h2 class="portfolio-item-name">
+                        Country:
+                    </h2>
+                    <div class="portfolio-item-description">
+                       England
+                    </div >
+                    <h2 class="portfolio-item-name">
+                        Technologies:
+                    </h2>
+                    <div class="portfolio-item-description">
+                        "NodeJS", "AWS", "Solidity", "EOS", "VueJS".
+                    </div>
                         </div>
                     </div>
                 </li>
-                <li class="col-md-6 col-sm-6 col-xs-12"
-                    data-groups='["reactjs", "react_native", "java", "kibana", "google_app_script"]'>
+                <li class="col-md" data-groups='["reactjs", "react_native", "java", "kibana", "google_app_script"]'>
                     <div class="portfolio-item">
                         <div class="portfolio-item-first-section">
-                            <div class="portfolio-image-wrap">
-                                <div class="projects" id="second-project">
-                                    <img src="/img/portfolio/dreams.png" alt=""
-                                         class="img-responsive">
-                                </div>
-                            </div>
-                            <h2 class="portfolio-item-solution hidden second-project">
+                            <a class="projects" id="second-project">
+                                <img src="/img/portfolio/dreams.png" alt=""
+                                     class="img-responsive">
+                            </a>
+                            <h2 class="portfolio-item-solution second-project">
                                 Solution:
                             </h2>
-                            <div class="portfolio-item-description hidden second-project">
+                            <div class="portfolio-item-description second-project">
                                 This is long-term project
                             </div>
                         </div>
-                        <div class="portfolio-item-second-section hidden second-project">
+                        <div class="portfolio-item-second-section second-project">
                             <h2 class="portfolio-item-name">
                                 Client:
                             </h2>
@@ -133,15 +122,7 @@
                                 Description:
                             </h2>
                             <div class="portfolio-item-description">
-                                Information technology is concerned with improvements in a variety of human and
-                                organizational problem-solving endeavors, through the design, development and use of
-                                technologically based systems and processes that enhance the efficiency and
-                                effectiveness of information in a variety of strategic, tactical and operational
-                                situations. Ideally, this is accomplished through critical attention to the information
-                                needs of humans in problem-solving tasks and the provision of technological aids,
-                                including electronic communication and computer-based systems of hardware and software
-                                and associated processes. Information technology complements and enhances traditional
-                                engineering through emphasis on the information basis for engineering.
+                                Information technology is concerned with improvements in a variety of human and organizational problem-solving endeavors, through the design, development and use of technologically based systems and processes that enhance the efficiency and effectiveness of information in a variety of strategic, tactical and operational situations. Ideally, this is accomplished through critical attention to the information needs of humans in problem-solving tasks and the provision of technological aids, including electronic communication and computer-based systems of hardware and software and associated processes. Information technology complements and enhances traditional engineering through emphasis on the information basis for engineering.
                             </div>
                             <h2 class="portfolio-item-name">
                                 Role:
@@ -166,7 +147,7 @@
                             </h2>
                             <div class="portfolio-item-description">
                                 England
-                            </div>
+                            </div >
                             <h2 class="portfolio-item-name">
                                 Technologies:
                             </h2>
@@ -176,24 +157,21 @@
                         </div>
                     </div>
                 </li>
-                <li class="col-md-6 col-sm-6 col-xs-12"
-                    data-groups='["react_native", "elastic_search", "java", "flutter", "postgresql", "facebook_bot_api"]'>
+                <li class="col-md" data-groups='["react_native", "elastic_search", "java", "flutter", "postgresql", "facebook_bot_api"]'>
                     <div class="portfolio-item">
                         <div class="portfolio-item-first-section">
-                            <div class="portfolio-image-wrap">
-                                <div class="projects" id="third-project">
-                                    <img src="/img/portfolio/dreams.png" alt=""
-                                         class="img-responsive">
-                                </div>
-                            </div>
-                            <h2 class="portfolio-item-solution hidden third-project">
+                            <a class="projects" id="third-project">
+                                <img src="/img/portfolio/escape.png" alt=""
+                                     class="img-responsive">
+                            </a>
+                            <h2 class="portfolio-item-solution third-project">
                                 Solution:
                             </h2>
-                            <div class="portfolio-item-description hidden third-project">
+                            <div class="portfolio-item-description third-project">
                                 This is long-term project
                             </div>
                         </div>
-                        <div class="portfolio-item-second-section hidden third-project">
+                        <div class="portfolio-item-second-section third-project">
                             <h2 class="portfolio-item-name">
                                 Client:
                             </h2>
@@ -204,15 +182,7 @@
                                 Description:
                             </h2>
                             <div class="portfolio-item-description">
-                                Information technology is concerned with improvements in a variety of human and
-                                organizational problem-solving endeavors, through the design, development and use of
-                                technologically based systems and processes that enhance the efficiency and
-                                effectiveness of information in a variety of strategic, tactical and operational
-                                situations. Ideally, this is accomplished through critical attention to the information
-                                needs of humans in problem-solving tasks and the provision of technological aids,
-                                including electronic communication and computer-based systems of hardware and software
-                                and associated processes. Information technology complements and enhances traditional
-                                engineering through emphasis on the information basis for engineering.
+                                Information technology is concerned with improvements in a variety of human and organizational problem-solving endeavors, through the design, development and use of technologically based systems and processes that enhance the efficiency and effectiveness of information in a variety of strategic, tactical and operational situations. Ideally, this is accomplished through critical attention to the information needs of humans in problem-solving tasks and the provision of technological aids, including electronic communication and computer-based systems of hardware and software and associated processes. Information technology complements and enhances traditional engineering through emphasis on the information basis for engineering.
                             </div>
                             <h2 class="portfolio-item-name">
                                 Role:
@@ -237,7 +207,7 @@
                             </h2>
                             <div class="portfolio-item-description">
                                 England
-                            </div>
+                            </div >
                             <h2 class="portfolio-item-name">
                                 Technologies:
                             </h2>
@@ -247,10 +217,10 @@
                         </div>
                     </div>
                 </li>
-                <li class="col-md-6 col-sm-6 col-xs-12 shuffle_sizer"></li>
+                <li class="col-md-4 col-sm-4 col-xs-12 shuffle_sizer"></li>
             </ul>
-            <!--end row -->
-            <h3 class="section-heading text-muted text-center">Be Part Of Our Story!</h3>
-        </div> <!-- end container-->
+       <!--end row -->
+        <h3 class="section-heading text-muted text-center">Be Part Of Our Story!</h3>
+    </div> <!-- end container-->
     </section>
 </section>

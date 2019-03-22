@@ -36,7 +36,7 @@
 {
 	font-size: 16px;
 	margin-bottom: 48px;
-	padding-bottom: 20px;
+
 }
 
 #about-portfolio .portfolio-sorting li a:hover,
@@ -44,6 +44,7 @@
 {
 	color: #2980b9;
 	text-decoration: none;
+	padding-bottom: 6px;
 }
 
 #about-portfolio .portfolio-item
@@ -193,6 +194,8 @@ h2.portfolio-item-name:nth-child(1) {
 {
 	font-size: 20px;
 	font-weight: bold;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 
 .portfolio-title:hover
@@ -201,6 +204,28 @@ h2.portfolio-item-name:nth-child(1) {
 	font-weight: bold;
 	color: #2980b9;
 }
+
+#grid-portfolio
+{
+    list-style-type: none;
+}
+
+.fa-filter
+{
+    color: #e8a621;
+}
+
+.portfolio-display-mobile-list
+{
+    display: none;
+	font-weight: bold;
+}
+
+.subheader-a-hidden
+{
+	display: none;
+}
+
 
 @media(max-width:996px)
 {
@@ -213,6 +238,90 @@ h2.portfolio-item-name:nth-child(1) {
 	.subheader-section
 	{
 		height: 50px;
+	}
+}
+
+@media(max-width:480px)
+{
+
+	.subheader-list
+	{
+		padding-left: 0;
+	}
+	.subheader-a {
+		font-size: 18px;
+
+	}
+	.subheader-a:hover {
+		border-bottom: 15.2px solid;
+	}
+	.subheader-section
+	{
+		height: 52px;
+	}
+
+    .portfolio-sorting li a
+    {
+        color: black;
+        border-radius: 5px;
+        border: solid 1px #e8a621;
+        background-color: #e8e8e8;
+        padding: 5px;
+    }
+
+    #about-portfolio .portfolio-sorting li a:hover,
+    #about-portfolio .portfolio-sorting li a.active
+    {
+        color: #ffffff;
+        border-radius: 5px;
+        border: solid 1px #e8a621;
+        background-color: #e8a621;
+        padding: 5px;
+    }
+
+    .portfolio-sorting
+    {
+        border-radius: 5px;
+        border: solid 1px #0077b5;
+        background-color: #e8e8e8;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        text-align: justify;
+    }
+
+    .portfolio-display-mobile-list
+    {
+        display: flex;
+        flex-direction: row;
+        list-style-type: none;
+        justify-content: space-between;
+        color: #0077b5;
+        padding-inline-start: 0px;
+		font-size: 22px;
+    }
+
+	.subheader-a-hidden
+	{
+		font-size: 24px;
+		padding: 10px 0;
+		color: #fff;
+		display: inline-block;
+	}
+
+	.subheader-a-hidden:hover
+	{
+		font-size: 24px;
+		padding: 10px 0;
+		color: #fff;
+		display: inline-block;
+		border-bottom: 12px solid;
+		padding-bottom: 2px;
+		text-decoration: none;
+	}
+
+	.subheader-a
+	{
+		display: none;
 	}
 }
 

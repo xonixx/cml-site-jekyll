@@ -57,7 +57,20 @@ var shufflemePortfolio = (function ($) {
                   $this.addClass('active');
               }
 
-              console.log("arrayss " + portfolioFiltersChosen);
+                //console.log("arrayss " + portfolioFiltersChosen);
+                let portfolioFilterChosenConcat = portfolioFiltersChosen.join(", ");
+                //console.log("portfolioFilterChosenConcat "+portfolioFilterChosenConcat);
+                //console.log("portfolioFilterChosenConcat.length "+portfolioFilterChosenConcat.length);
+
+                if(portfolioFilterChosenConcat.length <= 20) {
+                    $(".filter-elements").text(portfolioFilterChosenConcat);
+                } else {
+                    let newportfolioFilterChosenConcat= portfolioFilterChosenConcat.substr(0,20);
+                    $(".filter-elements").text(newportfolioFilterChosenConcat+"...");
+                }
+                $(".filter-elements").css({
+                    "text-transform": "capitalize"
+                });
 
               /*
                // Hide current label, show current label in title
