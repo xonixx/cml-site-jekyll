@@ -3,4 +3,5 @@
 {% include css/about.css %}
 {% include css/calendar.css %}
 {% include css/service.css %}
+{% include css/events.css %}
 {{ content }}
