@@ -107,7 +107,7 @@ function currentSlide(dotStep){
 function createDots(){
     if(document.body.clientWidth > 1200) {
         console.log("we create dots");
-        $(".event-dots").append("<span class='dot dotactive' onclick='currentSlide(" + 0 + ")'></span>");
+        $(".event-dots").append("<span class='dot dotactive' onclick=currentSlide(" + 0 + ")></span>");
         if (firstSection.length > 4) {
             console.log("yes more than 4", firstSection.length);
             for (let i = 1; i <= firstSection.length - 4; i++) {

@@ -9,6 +9,7 @@ var shufflemePortfolio = (function ($) {
             // None of these need to be executed synchronously
             setTimeout(function () {
                 //listenPortfolioFilters();
+                showPortfolioContent();
                 setupPortfolioFilters();
                 onInit();
             }, 100);
@@ -21,7 +22,7 @@ var shufflemePortfolio = (function ($) {
         };
 
         // Set up button clicks
-        var setupPortfolioFilters = function () {
+        let setupPortfolioFilters = function () {
             let $btns = $filterOptions.children();
             $btns.on('click', function (e) {
                 e.preventDefault();
@@ -32,18 +33,27 @@ var shufflemePortfolio = (function ($) {
                 console.log("group " + group);
 
                 if ($this.hasClass('active')) {
+                    if (Array.isArray(group)) return;
                     // Hide current label, show current label in title
                     portfolioFiltersChosen = portfolioFiltersChosen.filter(function (value) {
                         return group !== value;
                     });
                     $this.removeClass('active');
+                    if ($("#about-portfolio .portfolio-title a.active").length === 0) {
+                        $("#filter-all").click();
+                    }
                 } else {
-                    $this.addClass('active');
-                    if(Array.isArray(group)) {
-                        portfolioFiltersChosen = portfolioFiltersChosen.concat(group);
+                    if (Array.isArray(group)) {
+                        portfolioFiltersChosen = group;
+                        $("#about-portfolio .portfolio-title a").removeClass('active');
                     } else {
+                        if ($("#filter-all").hasClass("active")) {
+                            $("#filter-all").removeClass("active");
+                            portfolioFiltersChosen = [];
+                        }
                         portfolioFiltersChosen.push(group);
                     }
+                    $this.addClass('active');
                 }
 
                 //console.log("arrayss " + portfolioFiltersChosen);
@@ -51,15 +61,14 @@ var shufflemePortfolio = (function ($) {
                 //console.log("portfolioFilterChosenConcat "+portfolioFilterChosenConcat);
                 //console.log("portfolioFilterChosenConcat.length "+portfolioFilterChosenConcat.length);
 
-                if(portfolioFilterChosenConcat.length <= 20) {
-                    $(".filter-elements").text(portfolioFilterChosenConcat);
+                if (portfolioFilterChosenConcat.indexOf("all") >= 0) {
+                    portfolioFilterChosenConcat = "All";
                 } else {
-                    let newportfolioFilterChosenConcat= portfolioFilterChosenConcat.substr(0,20);
-                    $(".filter-elements").text(newportfolioFilterChosenConcat+"...");
+                    if(portfolioFilterChosenConcat.length > 20) {
+                        portfolioFilterChosenConcat = portfolioFilterChosenConcat.substr(0,20);
+                    }
                 }
-                $(".filter-elements").css({
-                    "text-transform": "capitalize"
-                });
+                $("#about-portfolio .filter-elements").text(portfolioFilterChosenConcat);
 
                 /*
                  // Hide current label, show current label in title
@@ -108,7 +117,24 @@ var shufflemePortfolio = (function ($) {
         };
 
 
+        let showPortfolioContent = function () {
+            $(".projects").on('click', function (e) {
+                console.log("e " + this);
 
+                let id = this.id;
+                console.log("id " + $("." + id).hasClass("hidden"));
+                if ($("." + id).hasClass("hidden")) {
+                    $("." + id).removeClass("hidden");
+                    $(this).closest("li").css({"width": "100%"});
+                } else {
+                    $("." + id).addClass("hidden");
+                    $(this).closest("li").css({"width": ""});
+                }
+
+                shuffler.update();
+
+            });
+        }
 
         // Re layout shuffle when images load. This is only needed
         // below 768 pixels because the .picture-item height is auto and therefore
@@ -178,48 +204,6 @@ function displaySubHeader() {
 }
 */
 
-//Show content for portfolio section
-function showPortfolioContent() {
-
-    $(".projects").on('click',function () {
-        console.log("e "+this);
-        let id = this.id;
-        console.log("id "+id);
-        if($("." + id).css("display") === "none" ) {
-            $("." + id).css({"display": "flex"});
-        } else {
-            $("." + id).css({"display": "none"});
-        }
-    });
-}
-
-//Show content for filter for mobile version
-function showFilterContent() {
-
-    /*
-    $('#about-portfolio .portfolio-sorting li a').on('click',function () {
-        var new_project = this.innerText;
-        if($(".portfolio-display-mobile-list li").length <=4 && !this.classList.contains('active')){
-        $(".portfolio-display-mobile-list li:eq(1)").after('<li class="portfolio-display-mobile-list-hidden">'+new_project+'</li>');
-        } else if($(".portfolio-display-mobile-list li").length === 5){
-            $(".portfolio-display-mobile-list li:eq(1)").after('<li class="portfolio-display-mobile-list-hidden">'+new_project+'</li>');
-            $(".portfolio-display-mobile-list-hidden").css({
-                "display": "none"
-            });
-            $(".portfolio-display-mobile-list li:eq(1)").after('<li>...</li>');
-        } else if(this.classList.contains('active')){
-           $(".portfolio-display-mobile-list li").parentNode.removeChild(this);
-        } else{
-            $(".portfolio-display-mobile-list li:eq(1)").after('<li class="portfolio-display-mobile-list-hidden">'+new_project+'</li>');
-            $(".portfolio-display-mobile-list-hidden").css({
-                "display": "none"
-            });
-        }
-    });
-    */
-}
-
-
 //Set up subheader for portfolio section
 function displaySubHeader() {
     $(window).scroll(function () {
@@ -235,35 +219,32 @@ function displaySubHeader() {
         }
 
         if (($(window).scrollTop() + 20 >= $('#about-portfolio').offset().top) && ($(window).scrollTop() + 100 < $('#about-hackathons').offset().top)) {
-            $("#portfolio-a").css({
-                "border-bottom": "17.2px solid",
-                "padding-bottom": "2px"
-            });
+            $("#portfolio-a").addClass("selected-a");
+            $("#portfolio-a-mobile").addClass("selected-a");
         } else {
-            $("#portfolio-a").css({
-                "border-bottom": "none",
-                "padding-bottom": "10px 0"
-            });
+            $("#portfolio-a").removeClass("selected-a");
+            $("#portfolio-a-mobile").removeClass("selected-a");
         }
 
         if (($(window).scrollTop() + 20 >= $('#about-hackathons').offset().top) && ($(window).scrollTop() + 100 < $('#team').offset().top)) {
-            $("#hackathon-a").css({
-                "border-bottom": "17.2px solid",
-                "padding-bottom": "2px"
-            });
+            $("#hackathon-a").addClass("selected-a");
+            $("#hackathon-a-mobile").addClass("selected-a");
         } else {
-            $("#hackathon-a").css({
-                "border-bottom": "none",
-                "padding-bottom": "10px 0"
-            });
+            $("#hackathon-a").removeClass("selected-a");
+            $("#hackathon-a-mobile").removeClass("selected-a");
         }
     });
 }
 
 $(document).ready(function () {
-    showPortfolioContent();
     displaySubHeader();
+
+    $("#about-portfolio .portfolio-display-mobile-list").on('click', function() {
+        $("#about-portfolio .portfolio-sorting").toggleClass("mobile-hidden");
+        $("#about-portfolio .portfolio-display-mobile-element").toggleClass("selected");
+    })
+
     shufflemePortfolio.init(function () {
-        //$('a[data-group="eoshk"]').click();
-    }); //filter portfolio
+        $("#filter-all").click();
+    });
 });

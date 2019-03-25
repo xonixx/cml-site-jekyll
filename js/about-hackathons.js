@@ -19,8 +19,8 @@ var shufflemeHackathons = (function ($) {
             });
         };
 
-        // Set up button clicks
-        var setupHackathonsFilters = function () {
+        // Set up button click
+        let setupHackathonsFilters = function () {
             let $btns = $filterOptions.children();
             $btns.on('click', function (e) {
                 e.preventDefault();
@@ -29,11 +29,15 @@ var shufflemeHackathons = (function ($) {
 
                 // Hide current label, show current label in title
                 $('#about-hackathons .portfolio-sorting li a').removeClass('active');
-
                 $this.addClass('active');
 
+                $("#about-hackathons .filter-elements").text(group);
+
+                $("#about-hackathons .portfolio-sorting").addClass("mobile-hidden");
+                $("#about-hackathons .portfolio-display-mobile-element").removeClass("selected");
                 // Filter elements
                 shuffler.filter(group);
+
 
                 $grid.find('li').filter(function (i, e) {
                     let $img = $(this).find('img');
@@ -101,6 +105,13 @@ var shufflemeHackathons = (function ($) {
 }(jQuery));
 
 $(document).ready(function () {
+
+    $("#about-hackathons .portfolio-display-mobile-list").on('click', function() {
+        console.log('Clicked on', this);
+        $("#about-hackathons .portfolio-sorting").toggleClass("mobile-hidden");
+        $("#about-hackathons .portfolio-display-mobile-element").toggleClass("selected");
+    })
+
     shufflemeHackathons.init(function () {
         $('#about-hackathons a[data-group="eoshk"]').click();
     }); //filter portfolio
