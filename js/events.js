@@ -48,6 +48,7 @@ $(".event-schedule").on('click', function () {
 );
 
 $(".events-popup").on('click', function () {
+    $(".events-popup .pop-up-events").remove();
     $(".events-popup").css({"display": "none"});
     $(".pop-up-events").css({"display": "none"});
     }
