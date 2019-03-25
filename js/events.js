@@ -10,8 +10,10 @@ $(".event-left-button").on('click', function () {
     console.log("currentIndexFirst"+currentIndexFirst);
     console.log("step"+step);
         if (currentIndexFirst > 0) {
-            dotsArray.removeClass('dotactive');
-            dotsArray[currentIndexFirst-1].classList.add('dotactive');
+            if(document.body.clientWidth > 1200) {
+                dotsArray.removeClass('dotactive');
+                dotsArray[currentIndexFirst - 1].classList.add('dotactive');
+            }
             currentIndexFirst -= 1;
             showElementsFirstBlock(currentIndexFirst, step);
         }
@@ -22,8 +24,10 @@ $(".event-right-button").on('click', function () {
     console.log("currentIndexFirst"+currentIndexFirst);
     console.log("step"+step);
         if (currentIndexFirst + step < firstSection.length) {
-            dotsArray.removeClass('dotactive');
-            dotsArray[currentIndexFirst+1].classList.add('dotactive');
+            if(document.body.clientWidth > 1200) {
+                dotsArray.removeClass('dotactive');
+                dotsArray[currentIndexFirst + 1].classList.add('dotactive');
+            }
             currentIndexFirst += 1;
             showElementsFirstBlock(currentIndexFirst, step);
         }
@@ -74,11 +78,11 @@ function displayButtonsFirstBlock(currentIndexFirst, step) {
 }
 
 function calculateStep(width) {
-    if (width <= 480) {
+    if (width <= 600) {
         return 1;
-    } else if (width <= 720 && width > 480) {
+    } else if (width <= 900 && width > 600) {
         return 2;
-    } else if (width <= 1020 && width > 720) {
+    } else if (width <= 1200 && width > 900) {
         return 3;
     } else {
         return 4;
@@ -94,13 +98,19 @@ function currentSlide(dotStep){
 }
 
 function createDots(){
-    $(".event-dots").append("<span class='dot dotactive' onclick='currentSlide("+ 0 +")'></span>");
-    if(firstSection.length>4) {
-        for (let i = 1; i <= firstSection.length - 4; i++) {
-            $(".event-dots").append("<span class='dot' onclick='currentSlide(" + i + ")'></span>");
+    if(document.body.clientWidth > 1200) {
+        console.log("we create dots");
+        $(".event-dots").append("<span class='dot dotactive' onclick='currentSlide(" + 0 + ")'></span>");
+        if (firstSection.length > 4) {
+            console.log("yes more than 4", firstSection.length);
+            for (let i = 1; i <= firstSection.length - 4; i++) {
+                $(".event-dots").append("<span class='dot' onclick='currentSlide(" + i + ")'></span>");
+            }
         }
+        dotsArray = $(".dot");
+    } else {
+        $(".event-dots .dot").remove(); // innerHTML = "";
     }
-    dotsArray = $(".dot");
 }
 
 $(document).ready(function () {
@@ -111,6 +121,7 @@ $(window).resize(function () {
     let newStep = calculateStep(document.body.clientWidth);
 
     if (newStep !== step) {
+        createDots();
         currentIndexFirst = 0;
         step = newStep;
         showElementsFirstBlock(currentIndexFirst, step);
