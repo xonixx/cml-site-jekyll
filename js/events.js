@@ -1,6 +1,9 @@
 
 let firstSection = $(".event-slides");
 let currentIndexFirst = 0;
+let calendlyArray = new Map([["event-asia-conference","https://calendly.com/shchetynin/30min?month-view=disabled"],["event-asiasecond-conference","https://calendly.com/shchetynin/30min?month-view=disabled"],
+    ["event-asiathird-conference","https://calendly.com/shchetynin/30min?month-view=disabled"],["event-asiaforth-conference","https://calendly.com/shchetynin/30min?month-view=disabled"],
+    ["event-asiafifth-conference","https://calendly.com/shchetynin/30min?month-view=disabled"],["event-asiasix-conference","https://calendly.com/shchetynin/30min?month-view=disabled"]]);
 var dotsArray;
 let step = calculateStep(document.body.clientWidth);
 showElementsFirstBlock(currentIndexFirst, step);
@@ -35,13 +38,16 @@ $(".event-right-button").on('click', function () {
 );
 
 $(".event-schedule").on('click', function () {
+    let id = this.id;
+    console.log("id is "+id);
+    let eventCalendly = calendlyArray.get(id);
+    $(".events-popup").append("<div class='pop-up-events'><div class='calendly-inline-widget hide-pop-up-events' data-url=' "+eventCalendly+"'></div><script type='text/javascript' src='https://assets.calendly.com/assets/external/widget.js'></script>");
     $(".events-popup").css({"display": "block"});
     $(".pop-up-events").css({"display": "block"});
     }
 );
 
 $(".events-popup").on('click', function () {
-    console.log("ghdrighrid");
     $(".events-popup").css({"display": "none"});
     $(".pop-up-events").css({"display": "none"});
     }
