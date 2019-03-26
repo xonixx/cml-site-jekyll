@@ -224,6 +224,10 @@ h2.portfolio-item-name:nth-child(1) {
     list-style-type: none;
 }
 
+.shuffle-item.expanded {
+	width: 100% !important;
+}
+
 #grid-portfolio li.col-xs-12, #grid li.col-xs-12 {
 	padding: 0;
 }
@@ -318,7 +322,7 @@ h2.portfolio-item-name:nth-child(1) {
     }
 
 	.mobile-hidden {
-		display: none;
+		display: none !important;
 	}
 
     .portfolio-sorting
