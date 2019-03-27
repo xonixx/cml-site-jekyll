@@ -238,6 +238,8 @@ color: #fff;
 -webkit-transition: all ease .35s;
 -moz-transition: all ease .35s;
 transition: all ease .35s;
+transition-delay: .6s;
+-webkit-transition-delay: .6s;
 }
 
 .navbar-default .nav li a:hover,
