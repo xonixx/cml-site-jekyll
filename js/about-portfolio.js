@@ -148,12 +148,19 @@ var shufflemePortfolio = (function ($) {
 
 //Set up subheader for portfolio section
 function displaySubHeader() {
+
+    let inAboutSection = () => ($(window).scrollTop() + 20 >= $('#about-portfolio').offset().top) && ($(window).scrollTop() + 100 < $('#team').offset().top);
+
     $(window).scroll(function () {
 
-        if (($(window).scrollTop() + 20 >= $('#about-portfolio').offset().top) && ($(window).scrollTop() + 100 < $('#team').offset().top)) {
-            $(".subheader-section").css({
-                "display": "block"
-            });
+        if (inAboutSection()) {
+            setTimeout(function() {
+                if (inAboutSection()) {
+                    $(".subheader-section").css({
+                        "display": "block"
+                    })
+                }
+            }, 1000);
         } else {
             $(".subheader-section").css({
                 "display": "none"
@@ -176,6 +183,7 @@ function displaySubHeader() {
             $("#hackathon-a-mobile").removeClass("selected-a");
         }
     });
+
 }
 
 $(document).ready(function () {

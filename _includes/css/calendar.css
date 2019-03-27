@@ -186,3 +186,24 @@ padding-bottom: 12px !important;
 	letter-spacing: normal;
 	color: #000000;
 }
+
+@media(max-width: 480px) {
+	.icon-bar {
+		width: 20px;
+	}
+
+	.calendar-button {
+		font-size: 11px !important;
+	}
+
+	.navbar-brand {
+		padding-right: 10px;
+		padding-left: 10px;
+		font-size: 14px;
+	}
+	.navbar-toggle {
+		padding-right: 8px;
+		padding-left: 8px;
+		margin-top: 11px;
+	}
+}
