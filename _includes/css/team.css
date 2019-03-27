@@ -47,6 +47,7 @@
         background-color: #0077b5;
         order: 3;
         margin-top: 10px;
+        cursor: pointer;
     }
 
     .order-top {
@@ -66,6 +67,13 @@
         letter-spacing: normal;
         color: #ffffff;
         padding-top: 7px;
+    }
+    .right-button-team{
+        visibility: hidden;
+    }
+
+    .left-button-team{
+        visibility: hidden;
     }
 }
 
@@ -116,6 +124,7 @@
         border-radius: 5px;
         background-color: #0077b5;
         order: 2;
+        cursor: pointer;
     }
 
     .team-btn-title {
@@ -135,6 +144,13 @@
 
     .order-bottom {
         order: 2;
+    }
+    .right-button-team{
+    visibility: hidden;
+    }
+
+    .left-button-team{
+    visibility: hidden;
     }
 }
 
@@ -183,6 +199,7 @@
         border-radius: 5px;
         background-color: #0077b5;
         order: 2;
+        cursor: pointer;
     }
 
     .team-btn-title {
@@ -204,4 +221,81 @@
         order: 3;
     }
 
+    .right-button-team{
+        visibility: hidden;
+    }
+
+    .left-button-team{
+        visibility: hidden;
+    }
+}
+
+@media(max-width:559px) {
+
+    .team-photoes-list {
+        max-width: 300px;
+        min-width: 200px;
+    }
+
+    .team-photoes-mobile-section {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+    }
+
+    .right-button-team{
+        width: 50px;
+        padding-left: 10px;
+        align-self: center;
+        text-align: center;
+    }
+
+    .left-button-team{
+        width: 50px;
+        padding-right: 10px;
+        align-self: center;
+        text-align: center;
+    }
+
+    .team-photoes {
+        padding: 5px;
+        max-width: 400px;
+        width: 50%;
+        height: auto;
+    }
+
+    .team-photo-img {
+        max-width: 400px;
+        width: 100%;
+        height: auto;
+        padding-bottom: 10px;
+    }
+
+    .team-btn {
+        margin: auto;
+        width: 260px;
+        height: 54px;
+        border-radius: 5px;
+        background-color: #0077b5;
+        order: 2;
+        cursor: pointer;
+    }
+
+    .team-btn-title {
+        text-align: center;
+        font-size: 15px;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #ffffff;
+        margin-top: 10px;
+        padding-top: 15px;
+    }
+
+}
+
+.team-btn-click{
+    cursor: pointer;
 }
