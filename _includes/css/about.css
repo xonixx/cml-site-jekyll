@@ -228,8 +228,12 @@ h2.portfolio-item-name:nth-child(1) {
 	width: 100% !important;
 }
 
-#grid-portfolio li.col-xs-12, #grid li.col-xs-12 {
-	padding: 0;
+#grid-portfolio li.col-md-4 {
+	padding: 5px;
+}
+
+#grid-portfolio li.col-xs-12{
+    padding: 0;
 }
 
 .fa-filter

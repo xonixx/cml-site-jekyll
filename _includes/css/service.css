@@ -206,6 +206,12 @@
     transform: rotate(90deg);
 }
 
+.hidden-elements-block{
+    width: 60px;
+    height: 100px;
+    padding-top: 40px;
+}
+
 
 @media(max-width: 480px) {
     .service-btn {
