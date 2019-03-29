@@ -175,13 +175,22 @@ function displaySubHeader() {
             $("#portfolio-a-mobile").removeClass("selected-a");
         }
 
-        if (($(window).scrollTop() + 20 >= $('#about-hackathons').offset().top) && ($(window).scrollTop() + 100 < $('#team').offset().top)) {
+        if (($(window).scrollTop() + 20 >= $('#about-hackathons').offset().top) && ($(window).scrollTop() + 100 < $('#about-customers').offset().top)) {
             $("#hackathon-a").addClass("selected-a");
             $("#hackathon-a-mobile").addClass("selected-a");
         } else {
             $("#hackathon-a").removeClass("selected-a");
             $("#hackathon-a-mobile").removeClass("selected-a");
         }
+
+        if (($(window).scrollTop() + 20 >= $('#about-customers').offset().top) && ($(window).scrollTop() + 100 < $('#team').offset().top)) {
+            $("#customers-a").addClass("selected-a");
+            $("#customers-a-mobile").addClass("selected-a");
+        } else {
+            $("#customers-a").removeClass("selected-a");
+            $("#customers-a-mobile").removeClass("selected-a");
+        }
+
     });
 
 }
