@@ -126,14 +126,13 @@
 
 .pop-up-events
 {
-
     display: none;
     position: fixed;
     top: 0;
     bottom: 0;
-    margin: auto;
-    left: 100px;
-    right: 100px;
+    left: 0;
+    right: 0;
+    margin: 60px auto auto;
     max-height: 560px;
     min-height: 500px;
 }
@@ -143,3 +142,18 @@
     position: absolute;
 }
 
+@media( max-width: 900px) {
+    .pop-up-events {
+        max-width: 700px;
+        max-height: 942px;
+    }
+}
+
+
+@media( min-width: 900px) {
+    .pop-up-events {
+        max-width: 1000px;
+        top: 80px;
+        margin: auto auto;
+    }
+}

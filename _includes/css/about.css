@@ -214,8 +214,6 @@ h2.portfolio-item-name:nth-child(1) {
 
 .portfolio-title:hover
 {
-	font-size: 20px;
-	font-weight: bold;
 	color: #2980b9;
 }
 
@@ -309,6 +307,7 @@ h2.portfolio-item-name:nth-child(1) {
 
 	.portfolio-title {
 		padding-top: 10px;
+		font-size: 14px;
 	}
 
 	.portfolio-sorting li a:hover,

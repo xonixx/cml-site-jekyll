@@ -41,16 +41,23 @@ $(".event-schedule").on('click', function () {
     let id = this.id;
     console.log("id is "+id);
     let eventCalendly = calendlyArray.get(id);
-    $(".events-popup").append("<div class='pop-up-events'><div class='calendly-inline-widget hide-pop-up-events' data-url=' "+eventCalendly+"'></div><script type='text/javascript' src='https://assets.calendly.com/assets/external/widget.js'></script>");
+    $(".events-popup").append("<div class='pop-up-events'>" +
+      "<div class='calendly-inline-widget hide-pop-up-events' data-url=' "+eventCalendly+"'></div>" +
+      "<script type='text/javascript' src='https://assets.calendly.com/assets/external/widget.js'></script>" +
+      "</div>");
     $(".events-popup").css({"display": "block"});
     $(".pop-up-events").css({"display": "block"});
+    $(".navbar-header .calendar-button").addClass("hidden");
+    $(".back-button-header").removeClass("hidden");
     }
 );
 
-$(".events-popup").on('click', function () {
+$(".events-popup, .back-button-header").on('click', function () {
     $(".events-popup .pop-up-events").remove();
     $(".events-popup").css({"display": "none"});
     $(".pop-up-events").css({"display": "none"});
+    $(".navbar-header .calendar-button").removeClass("hidden");
+    $(".back-button-header").addClass("hidden");
     }
 );
 
