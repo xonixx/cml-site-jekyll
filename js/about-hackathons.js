@@ -50,7 +50,7 @@ var shufflemeHackathons = (function ($) {
                         $img.attr('data-bp', $img.attr('src').replace('Converted120', 'Converted300'));
                     }
                     return isSelectedGrp;
-                }).find('a')
+                }).find('.portfolio-item a')
                     .off('click.bigpicture')
                     .on('click.bigpicture', function (e) {
                         e.preventDefault();
