@@ -52,6 +52,24 @@
 	.back-button-header {
 		display: none !important;
 	}
+	.close-button-calendar {
+		position: fixed;
+		top: -536px;
+		bottom: 0;
+		margin: auto;
+		height: 49px;
+		left: 0;
+		right: -772px;
+		width: 120px;
+		cursor: pointer;
+		color: white;
+		font-size: 24px;
+		text-transform: uppercase;
+	}
+	.close-button-calendar i {
+		vertical-align: bottom;
+		font-size: 40px;
+	}
 }
 
 .calendar-a, .back-button-a
