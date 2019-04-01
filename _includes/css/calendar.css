@@ -25,9 +25,13 @@
 	}
 	.calendar-table {
 		flex: 1;
+		height: 940px;
 	}
 	.calendar-table {
-		padding: 0 15px 60px;
+		padding: 0;
+	}
+	.calendar-story {
+		align-self: self-start !important;
 	}
 	.back-button-a {
 		text-transform: uppercase;
@@ -48,6 +52,7 @@
 	}
 	.calendar-table {
 		width:901px;
+		height: 600px;
 	}
 	.back-button-header {
 		display: none !important;
@@ -87,7 +92,6 @@ padding-bottom: 12px !important;
 .calendar-description
 {
 	max-width: 700px;
-	min-width: 350px;
 	font-size: 18px;
 	font-weight: 500;
 	font-style: normal;
@@ -176,7 +180,6 @@ padding-bottom: 12px !important;
 .calendar-table
 {
     position: relative;
-	height: 600px;
 }
 
 .calendar-table:after {

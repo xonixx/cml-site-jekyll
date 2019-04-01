@@ -437,9 +437,8 @@ h2.portfolio-item-name:nth-child(1) {
 .customers-picture
 {
 	min-width: 170px;
-	max-width: 171px;
+	max-width: 170px;
 	align-items: center;
-	flex: 2;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -451,7 +450,12 @@ h2.portfolio-item-name:nth-child(1) {
 .customers-logo
 {
 	text-align: center;
-	padding-bottom: 30px;
+	margin-bottom: 10px;
+	width: 100%;
+}
+
+.customers-logo img {
+	width: 100%;
 }
 
 .customers-name
@@ -469,7 +473,6 @@ h2.portfolio-item-name:nth-child(1) {
 
 .customers-position
 {
-	height: 38px;
 	font-size: 24px;
 	font-weight: bold;
 	font-style: normal;
@@ -484,11 +487,12 @@ h2.portfolio-item-name:nth-child(1) {
 {
 	position: relative;
 	max-width: 700px;
-	flex: 2;
+	min-width: 450px;
 	padding-left: 20px;
-	width: 95%;
+	width: 100%;
 	text-align: center;
 	display: flex;
+	flex: 2;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
@@ -497,16 +501,15 @@ h2.portfolio-item-name:nth-child(1) {
 .customers-list
 {
 	align-items: center;
-	flex: 3;
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: column;
 	justify-content: center;
 	padding-right: 8px;
 	padding-left: 8px;
-	min-width: 250px;
-	max-width: 251px;
-	padding-bottom: 30px;
+	min-width: 230px;
+	align-self: flex-start;
+	margin: 20px 0;
 }
 
 .customers-main
@@ -516,19 +519,24 @@ h2.portfolio-item-name:nth-child(1) {
 }
 
 .customers-text{
-
+	font-size: 18px;
 }
 
 @media(min-width:768px){
 
 	.customers-image
 	{
-		width: 95%;
+		width: 100%;
 	}
 
-
-
-
+	.customers-section
+	{
+		background-color: #F7F7F7;
+		padding: 20px;
+		margin: 20px 0;
+		width: 98%;
+		max-width: 1200px;
+	}
 }
 
 @media(max-width:768px){
@@ -537,6 +545,7 @@ h2.portfolio-item-name:nth-child(1) {
 		min-width: 500px;
 		max-width: 750px;
 		justify-content: space-evenly;
+		margin: 10px 0;
 	}
 
 	.customers-subsection
@@ -559,26 +568,34 @@ h2.portfolio-item-name:nth-child(1) {
 	}
 
 	.customers-list {
-		padding-top: 50px;
+		min-width: 230px;
+		align-self: center;
+		max-width: 400px;
 	}
 
 	.customers-image
 	{
 		padding-bottom: 10px;
-		width: 95%;
+		width: 100%;
 	}
 
 	.customers-main
 	{
 		border-radius: 5px;
 		border: solid 1px #0077b5;
+		padding: 10px;
 	}
 
 	.customers-media
 	{
-		padding-left: 5px;
 		min-width: 540px;
+		padding: 0 2px;
+	}
 
+	.customers-logo {
+		max-width: 350px;
+		margin: auto;
+		padding: 10px 0;
 	}
 
 }
@@ -587,7 +604,7 @@ h2.portfolio-item-name:nth-child(1) {
 
 	.customers-main
 	{
-		margin: 10px;
+		margin: 25px 10px;
 	}
 
 	.customers-name
@@ -601,7 +618,6 @@ h2.portfolio-item-name:nth-child(1) {
 
 	}
 	.customers-list {
-		padding-bottom: 80px;
 	}
 }
 
