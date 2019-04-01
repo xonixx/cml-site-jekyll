@@ -122,6 +122,12 @@ h2.portfolio-item-name:nth-child(1) {
 	color: #777777;
 }
 
+.customers-text-title
+{
+	font-size: 28px;
+	text-align: center;
+}
+
 
 .portfolio-subheader
 {
@@ -516,6 +522,7 @@ h2.portfolio-item-name:nth-child(1) {
 {
 	display: flex;
 	justify-content: center;
+	padding-bottom: 20px;
 }
 
 .customers-text{
