@@ -149,7 +149,7 @@ var shufflemePortfolio = (function ($) {
 //Set up subheader for portfolio section
 function displaySubHeader() {
 
-    let inAboutSection = () => ($(window).scrollTop() + 20 >= $('#about-portfolio').offset().top) && ($(window).scrollTop() + 100 < $('#team').offset().top);
+    let inAboutSection = () => ($(window).scrollTop() + 101 >= $('#about-portfolio').offset().top) && ($(window).scrollTop() + 160 < $('#team').offset().top);
 
     $(window).scroll(function () {
 
