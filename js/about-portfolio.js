@@ -167,28 +167,28 @@ function displaySubHeader() {
             });
         }
 
-        if (($(window).scrollTop() + 20 >= $('#about-portfolio').offset().top) && ($(window).scrollTop() + 100 < $('#about-hackathons').offset().top)) {
+        if (($(window).scrollTop() + 120 >= $('#about-portfolio').offset().top) && ($(window).scrollTop() + 200 < $('#about-hackathons').offset().top)) {
             $("#portfolio-a").addClass("selected-a");
             $("#portfolio-a-mobile").addClass("selected-a");
         } else {
-            $("#portfolio-a").removeClass("selected-a");
-            $("#portfolio-a-mobile").removeClass("selected-a");
+            $("#portfolio-a").removeClass("selected-a").blur();
+            $("#portfolio-a-mobile").removeClass("selected-a").blur();
         }
 
-        if (($(window).scrollTop() + 20 >= $('#about-hackathons').offset().top) && ($(window).scrollTop() + 100 < $('#about-customers').offset().top)) {
+        if (($(window).scrollTop() + 120 >= $('#about-hackathons').offset().top) && ($(window).scrollTop() + 200 < $('#about-customers').offset().top)) {
             $("#hackathon-a").addClass("selected-a");
             $("#hackathon-a-mobile").addClass("selected-a");
         } else {
-            $("#hackathon-a").removeClass("selected-a");
-            $("#hackathon-a-mobile").removeClass("selected-a");
+            $("#hackathon-a").removeClass("selected-a").blur();
+            $("#hackathon-a-mobile").removeClass("selected-a").blur();
         }
 
-        if (($(window).scrollTop() + 20 >= $('#about-customers').offset().top) && ($(window).scrollTop() + 100 < $('#team').offset().top)) {
+        if (($(window).scrollTop() + 180 >= $('#about-customers').offset().top) && ($(window).scrollTop() + 200 < $('#team').offset().top)) {
             $("#customers-a").addClass("selected-a");
             $("#customers-a-mobile").addClass("selected-a");
         } else {
-            $("#customers-a").removeClass("selected-a");
-            $("#customers-a-mobile").removeClass("selected-a");
+            $("#customers-a").removeClass("selected-a").blur();
+            $("#customers-a-mobile").removeClass("selected-a").blur();
         }
 
     });
