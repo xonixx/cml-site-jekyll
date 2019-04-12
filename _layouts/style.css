@@ -5,4 +5,5 @@
 {% include css/service.css %}
 {% include css/events.css %}
 {% include css/team.css %}
+{% include css/portfolio.css %}
 {{ content }}
