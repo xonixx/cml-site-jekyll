@@ -38,6 +38,17 @@ Install all required gems:
 ```bash
 bundle install
 ```
+If you encounter an error like 
+```
+'in find_spec_for_exe': can't find gem bundler (>= 0.a) (Gem::GemNotFoundException)
+```
+It is most likely that `Gemfile.lock` was built with a 
+different version than you have installed. Look up the lock 
+file for `BUNDLED WITH` text and install that Bundler version 
+(as this text is written, it is `1.16.1` in the lock file):
+```bash
+gem install bundler -v 1.16.1
+```
 
 ## Run  
 
