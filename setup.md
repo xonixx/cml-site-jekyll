@@ -35,8 +35,9 @@ bundle install
 ```bash
 bundle exec jekyll serve -w
 ```
-##RubyMine
-Configure a new Gem Command run configuration:
+##RubyMine  
+Configure a new Gem Command run configuration:  
+
 Configuration | Value
 ------------- | -----
 | Gem name | `jekyll` |
