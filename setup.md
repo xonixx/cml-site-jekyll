@@ -1,10 +1,10 @@
-#How to run this project  
+# How to run this project  
 
 This guide focuses Linux machines, Ubuntu in particular, 
 but should be no issue to port it to another distro/OS as
 long as it is compatible with Ruby.  
 
-##Prerequisites  
+## Prerequisites  
 Install a few packages from apt:
 ```bash
 sudo apt-get install ruby-full build-essential zlib1g-dev
@@ -24,12 +24,12 @@ Install Bundler and Jekyll:
 gem install jekyll bundler
 ```  
 
-#Clone  
+## Clone  
 ```bash
 git clone git@github.com:xonixx/cml-site-jekyll.git
 ```  
 
-#Build    
+## Build    
 Switch to project folder:
 ```bash
 cd cml-site-jekyll
@@ -39,14 +39,14 @@ Install all required gems:
 bundle install
 ```
 
-#Run  
+## Run  
 
-##Console  
+### Console  
 ```bash
 bundle exec jekyll serve -w
 ```  
 
-##RubyMine  
+### RubyMine  
 Configure a new Gem Command run configuration:  
 
 Configuration | Value
