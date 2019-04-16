@@ -60,12 +60,12 @@ var shufflemePortfolio = (function ($) {
               let portfolioFilterChosenConcat = portfolioFiltersChosen.join(", ");
               //console.log("portfolioFilterChosenConcat "+portfolioFilterChosenConcat);
               //console.log("portfolioFilterChosenConcat.length "+portfolioFilterChosenConcat.length);
-
               if (portfolioFilterChosenConcat.indexOf("all") >= 0) {
                   portfolioFilterChosenConcat = "All";
               } else {
-                  if (portfolioFilterChosenConcat.length > 20) {
-                      portfolioFilterChosenConcat = portfolioFilterChosenConcat.substr(0, 20);
+                  if (portfolioFilterChosenConcat.length > 14) {
+                      portfolioFilterChosenConcat = portfolioFilterChosenConcat.substr(0, 14);
+                      portfolioFilterChosenConcat = portfolioFilterChosenConcat + "..."
                   }
               }
               $("#about-portfolio .filter-elements").text(portfolioFilterChosenConcat);
