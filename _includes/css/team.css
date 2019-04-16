@@ -12,6 +12,10 @@
         height: auto;
     }
 
+    .team-photoes-mobile-section {
+        display: none;
+    }
+
     .team-photo-img {
         max-width: 400px;
         width: 100%;
@@ -88,6 +92,10 @@
         height: auto;
     }
 
+    .team-photoes-mobile-section {
+        display: none;
+    }
+
     .team-photo-img {
         width: 100%;
         max-width: 340px;
@@ -160,6 +168,10 @@
 
     .team-photoes {
         max-width: 450px;
+    }
+
+    .team-photoes-mobile-section {
+        display: none;
     }
 
     .team-photo-img {
