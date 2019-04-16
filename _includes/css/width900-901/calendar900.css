@@ -1,0 +1,60 @@
+@media(max-width:900px) {
+    .calendly-inline-widget {
+        position: relative;
+        height: 100%;
+        max-width: 700px;
+        min-width: 320px;
+    }
+    .calendar-table {
+        flex: 1;
+        height: 940px;
+    }
+    .calendar-table {
+        padding: 0;
+    }
+    .calendar-story {
+        align-self: self-start !important;
+    }
+    .back-button-a {
+        text-transform: uppercase;
+        text-decoration: none;
+        font-family: Montserrat, "Helvetica Neue", Helvetica,Arial, sans-serif;
+        letter-spacing: 1px;
+        color: white;
+        padding: 0 10px;
+        font-weight: bold;
+    }
+}
+
+@media(min-width:901px) {
+    .calendly-inline-widget {
+        position: relative;
+        min-width: 901px;
+        height: 560px;
+    }
+    .calendar-table {
+        width:901px;
+        height: 600px;
+    }
+    .back-button-header {
+        display: none !important;
+    }
+    .close-button-calendar {
+        position: fixed;
+        top: -536px;
+        bottom: 0;
+        margin: auto;
+        height: 49px;
+        left: 0;
+        right: -772px;
+        width: 120px;
+        cursor: pointer;
+        color: white;
+        font-size: 24px;
+        text-transform: uppercase;
+    }
+    .close-button-calendar i {
+        vertical-align: bottom;
+        font-size: 40px;
+    }
+}
