@@ -164,6 +164,7 @@ h2.portfolio-item-name:nth-child(1) {
 
 .subheader-a
 {
+	font-family: {{ site.data.template.font.primary }};
 	padding: 10px 0;
 	color: #fff;
 	display: inline-block;
