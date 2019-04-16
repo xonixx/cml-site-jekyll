@@ -1,5 +1,10 @@
 @media (max-width: 320px) {
     #helicopter {
-
+        width: 280px;
+        height: auto;
+    }
+    .fb-customerchat {
+        width: 280px;
+        height: auto;
     }
 }
