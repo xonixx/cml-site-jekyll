@@ -164,6 +164,7 @@ h2.portfolio-item-name:nth-child(1) {
 
 .subheader-a
 {
+	font-family: {{ site.data.template.font.primary }};
 	padding: 10px 0;
 	color: #fff;
 	display: inline-block;
@@ -182,14 +183,14 @@ h2.portfolio-item-name:nth-child(1) {
 {
 	color: #fff;
 	display: inline-block;
-	border-bottom: 16px solid;
+	border-bottom: 5px solid;
 	padding-bottom: 2px;
 	text-decoration: none;
 }
 
 
 .subheader-a-hidden.selected-a {
-	border-bottom: 17px solid white;
+	border-bottom: 5px solid white;
 	padding-bottom: 2px;
 }
 
@@ -257,11 +258,11 @@ h2.portfolio-item-name:nth-child(1) {
 		font-size: 18px;
 	}
 	.subheader-a:hover, .subheader-a.selected-a {
-		border-bottom: 15px solid;
+		border-bottom: 4px solid;
 		padding-bottom: 2px;
 	}
 	.subheader-a-hidden.selected-a {
-		border-bottom: 15px solid white;
+		border-bottom: 4px solid white;
 		padding-bottom: 2px;
 	}
 	.subheader-section

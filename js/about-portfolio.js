@@ -33,25 +33,13 @@ var shufflemePortfolio = (function ($) {
               console.log("group " + group);
 
               if ($this.hasClass('active')) {
-                  if (Array.isArray(group)) return;
-                  // Hide current label, show current label in title
-                  portfolioFiltersChosen = portfolioFiltersChosen.filter(function (value) {
-                      return group !== value;
-                  });
-                  $this.removeClass('active');
-                  if ($("#about-portfolio .portfolio-title a.active").length === 0) {
-                      $("#filter-all").click();
-                  }
+                  return;
               } else {
+                  $("#about-portfolio .portfolio-title a").removeClass('active');
                   if (Array.isArray(group)) {
                       portfolioFiltersChosen = group;
-                      $("#about-portfolio .portfolio-title a").removeClass('active');
                   } else {
-                      if ($("#filter-all").hasClass("active")) {
-                          $("#filter-all").removeClass("active");
-                          portfolioFiltersChosen = [];
-                      }
-                      portfolioFiltersChosen.push(group);
+                      portfolioFiltersChosen = [group];
                   }
                   $this.addClass('active');
               }
