@@ -290,7 +290,7 @@ h2.portfolio-item-name:nth-child(1) {
 
 	}
 	.subheader-a:hover {
-		border-bottom: 15px solid;
+		border-bottom: 4px solid;
 	}
 	.subheader-section
 	{
@@ -393,7 +393,7 @@ h2.portfolio-item-name:nth-child(1) {
 
 	.subheader-a-hidden:hover
 	{
-		border-bottom: 12px solid;
+		border-bottom: 4px solid;
 		padding-bottom: 2px;
 		text-decoration: none;
 		color: #fff;
