@@ -10,7 +10,7 @@
 
     }
     .subheader-a:hover {
-        border-bottom: 15px solid;
+        border-bottom: 4px solid white;
     }
     .subheader-section
     {
@@ -107,13 +107,13 @@
     }
 
     .subheader-a-hidden.selected-a {
-        border-bottom: 12px solid white;
+        border-bottom: 4px solid white;
         padding-bottom: 2px;
     }
 
     .subheader-a-hidden:hover
     {
-        border-bottom: 12px solid;
+        border-bottom: 4px solid;
         padding-bottom: 2px;
         text-decoration: none;
         color: #fff;
