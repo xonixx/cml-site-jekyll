@@ -60,11 +60,16 @@ var shufflemePortfolio = (function ($) {
               let portfolioFilterChosenConcat = portfolioFiltersChosen.join(", ");
               //console.log("portfolioFilterChosenConcat "+portfolioFilterChosenConcat);
               //console.log("portfolioFilterChosenConcat.length "+portfolioFilterChosenConcat.length);
+              let symbolCount;
+              const windowWidth = $(window).width()
+              if(windowWidth < 320) symbolCount = 10;
+              else if(windowWidth <= 375) symbolCount = 18;
+              else symbolCount = 20;
               if (portfolioFilterChosenConcat.indexOf("all") >= 0) {
                   portfolioFilterChosenConcat = "All";
               } else {
-                  if (portfolioFilterChosenConcat.length > 14) {
-                      portfolioFilterChosenConcat = portfolioFilterChosenConcat.substr(0, 14);
+                  if (portfolioFilterChosenConcat.length > symbolCount) {
+                      portfolioFilterChosenConcat = portfolioFilterChosenConcat.substr(0, symbolCount);
                       portfolioFilterChosenConcat = portfolioFilterChosenConcat + "..."
                   }
               }
