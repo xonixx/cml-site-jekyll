@@ -214,18 +214,3 @@
 }
 
 
-@media(max-width: 480px) {
-    .service-btn {
-        padding: 10px !important;
-        min-width: 318px;
-        max-width: 420px;
-    }
-    .service-btn-image {
-        height: 37px;
-    }
-    .service-btn-name {
-        font-size: 17px;
-        padding-left: 15px;
-        margin: auto;
-    }
-}

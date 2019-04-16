@@ -6,4 +6,5 @@
 {% include css/events.css %}
 {% include css/team.css %}
 {% include css/portfolio.css %}
+{% include css/width-480.css %}
 {{ content }}
