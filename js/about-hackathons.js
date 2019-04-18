@@ -110,7 +110,11 @@ $(document).ready(function () {
         $("#about-hackathons .portfolio-display-mobile-element").toggleClass("selected");
     });
 
-    shufflemeHackathons.init(function () {
-        $('#about-hackathons a[data-group="eoshk"]').click();
-    }); //filter portfolio
+    $('#about-hackathons').bind('inview', () => {
+        $(this).find('.container').show();
+
+        shufflemeHackathons.init(function () {
+            $('#about-hackathons a[data-group="eoshk"]').click();
+        }); //filter portfolio
+    });
 });
