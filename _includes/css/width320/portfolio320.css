@@ -2,4 +2,9 @@
     .img-portfolio {
         max-width: 90%;
     }
+
+    .img-portfolio.third-project {
+        max-width: 100%;
+    }
+
 }
