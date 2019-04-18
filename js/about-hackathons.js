@@ -7,7 +7,6 @@ var shufflemeHackathons = (function ($) {
         init = function (onInit) {
             // None of these need to be executed synchronously
             setTimeout(function () {
-                listenHackathons();
                 setupHackathonsFilters();
                 onInit();
             }, 100);
@@ -19,13 +18,15 @@ var shufflemeHackathons = (function ($) {
             });
         };
 
-        // Set up button click
-        let setupHackathonsFilters = function () {
+    // Set up button click
+    let setupHackathonsFilters = function () {
             let $btns = $filterOptions.children();
             $btns.on('click', function (e) {
                 e.preventDefault();
                 let $this = $(this),
                     group = $this.data('group');
+
+                loadImages(group);
 
                 // Hide current label, show current label in title
                 $('#about-hackathons .portfolio-sorting li a').removeClass('active');
@@ -38,7 +39,6 @@ var shufflemeHackathons = (function ($) {
                 // Filter elements
                 shuffler.filter(group);
 
-
                 $grid.find('li').filter(function (i, e) {
                     let $img = $(this).find('img');
                     $img.removeAttr('data-bp');
@@ -47,7 +47,7 @@ var shufflemeHackathons = (function ($) {
                         return false;
                     let isSelectedGrp = groups.indexOf(group) >= 0;
                     if (isSelectedGrp && $img.length) {
-                        $img.attr('data-bp', $img.attr('src').replace('Converted120', 'Converted300'));
+                        $img.attr('data-bp', ($img.attr('src') || $img.data('src')).replace('Converted120', 'Converted300'));
                     }
                     return isSelectedGrp;
                 }).find('.portfolio-item a')
@@ -57,7 +57,7 @@ var shufflemeHackathons = (function ($) {
                         BigPicture({
                             el: e.target,
                             gallery: '#grid'
-                        })    
+                        })
                     });
             });
 
@@ -69,28 +69,26 @@ var shufflemeHackathons = (function ($) {
         // the height of the picture-item is dependent on the image
         // I recommend using imagesloaded to determine when an image is loaded
         // but that doesn't support IE7
-        listenHackathons = function () {
+        loadImages = function (insideGroup) {
             let debouncedLayout = $.throttle(300, function () {
                 shuffler.update();
             });
 
-            // Get all images inside shuffle
-            $grid.find('img').each(function () {
-                let proxyImage;
-
-                // Image already loaded
-                if (this.complete && this.naturalWidth !== undefined) {
-                    return;
-                }
-
+            // Get all images inside shuffle selected group
+            $grid.find('li').filter(function (i, e) {
+                let groups = $(e).data('groups');
+                if (!groups)
+                    return false;
+                return groups.indexOf(insideGroup) >= 0;
+            }).find('img').each(function () {
                 // If none of the checks above matched, simulate loading on detached element.
-                proxyImage = new Image();
-                $(proxyImage).on('load', function () {
+                $(this).on('load', function () {
                     $(this).off('load');
                     debouncedLayout();
+
                 });
 
-                proxyImage.src = this.src;
+                this.src = $(this).data('src');
             });
 
             // Because this method doesn't seem to be perfect.
@@ -106,11 +104,11 @@ var shufflemeHackathons = (function ($) {
 
 $(document).ready(function () {
 
-    $("#about-hackathons .portfolio-display-mobile-list").on('click', function() {
+    $("#about-hackathons .portfolio-display-mobile-list").on('click', function () {
         console.log('Clicked on', this);
         $("#about-hackathons .portfolio-sorting").toggleClass("mobile-hidden");
         $("#about-hackathons .portfolio-display-mobile-element").toggleClass("selected");
-    })
+    });
 
     shufflemeHackathons.init(function () {
         $('#about-hackathons a[data-group="eoshk"]').click();
