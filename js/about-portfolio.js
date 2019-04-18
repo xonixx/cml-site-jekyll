@@ -128,7 +128,7 @@ var shufflemePortfolio = (function ($) {
               }
               $("html, body").animate({
                   scrollTop: gridOffset + inGridOffset - 250
-              }, 1000);
+              }, 500);
               shuffler.update();
           });
       }
