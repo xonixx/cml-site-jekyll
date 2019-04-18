@@ -2,4 +2,9 @@
     .img-portfolio {
         max-width: 90%;
     }
+
+    .img-portfolio.img-full-width-320 {
+        max-width: 100%;
+    }
+
 }
