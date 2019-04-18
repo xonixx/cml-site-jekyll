@@ -7,6 +7,7 @@
 {% include css/team.css %}
 {% include css/portfolio.css %}
 {% include css/width320/header320.css %}
+{% include css/width320/portfolio320.css %}
 {% include css/width480/calendar480.css %}
 {% include css/width480/service480.css %}
 {% include css/width560/about560.css %}

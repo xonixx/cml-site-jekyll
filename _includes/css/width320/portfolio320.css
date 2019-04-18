@@ -1,0 +1,5 @@
+@media (max-width: 320px) {
+    .img-portfolio {
+        max-width: 90%;
+    }
+}
