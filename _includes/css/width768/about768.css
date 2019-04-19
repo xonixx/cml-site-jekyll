@@ -18,10 +18,10 @@
 @media(max-width:768px){
 
     .customers-information {
-        min-width: 500px;
-        max-width: 750px;
-        justify-content: space-evenly;
-        margin: 10px 0;
+        min-width: 300px;
+        max-width: 80vw;
+        justify-content: center;
+        margin: auto;
     }
 
     .customers-subsection
@@ -64,14 +64,16 @@
 
     .customers-media
     {
-        min-width: 540px;
-        padding: 0 2px;
+        min-width: 260px;
+        max-width: 80vw;
+        margin: auto;
+        padding: 0;
     }
 
     .customers-logo {
         max-width: 350px;
         margin: auto;
-        padding: 10px 0;
+        padding: 10px;
     }
 
 }
