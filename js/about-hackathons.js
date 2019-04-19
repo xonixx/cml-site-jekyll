@@ -115,6 +115,6 @@ $(document).ready(function () {
 
         shufflemeHackathons.init(function () {
             $('#about-hackathons a[data-group="eoshk"]').click();
-        }); //filter portfolio
+        });
     });
 });
