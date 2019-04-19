@@ -64,8 +64,10 @@
 
     .customers-media
     {
-        min-width: 540px;
-        padding: 0 2px;
+        min-width: 260px;
+        max-width: 80vw;
+        margin: auto;
+        padding: 0;
     }
 
     .customers-logo {
