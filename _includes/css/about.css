@@ -358,12 +358,14 @@ h2.portfolio-item-name:nth-child(1) {
 	min-width: 450px;
 	padding-left: 20px;
 	width: 100%;
-	text-align: center;
+	text-align: justify;
 	display: flex;
 	flex: 2;
 	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+}
+
+.customers-media p {
+	margin-top: 10px;
 }
 
 .customers-list
