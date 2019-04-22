@@ -1,0 +1,26 @@
+{
+  "name": "cml-site-jekyll",
+  "version": "1.0.0",
+  "description": "CML Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xonixx/cml-site-jekyll.git"
+  },
+  "author": "CML",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xonixx/cml-site-jekyll/issues"
+  },
+  "homepage": "https://github.com/xonixx/cml-site-jekyll#readme",
+  "devDependencies": {
+    "prettier": "^1.17.0"
+  },
+  "prettier": {
+    "tabWidth": 2,
+    "printWidth": 100
+  }
+}
