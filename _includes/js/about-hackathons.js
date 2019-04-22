@@ -110,7 +110,7 @@ $(document).ready(function () {
         $("#about-hackathons .portfolio-display-mobile-element").toggleClass("selected");
     });
 
-    $('#about-hackathons').bind('inview', () => {
+    $('#about-hackathons').one('inview', () => {
         $(this).find('.container').show();
 
         shufflemeHackathons.init(function () {
