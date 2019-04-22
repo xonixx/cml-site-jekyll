@@ -3,7 +3,86 @@
     flex-direction: column;
 }
 
-@media(min-width:992px) {
+@media (min-width: 560px) {
+
+    .team-photoes {
+        padding: 5px;
+        max-width: 400px;
+        width: 50%;
+        height: auto;
+    }
+
+    .team-photo-img {
+        max-width: 400px;
+        width: 100%;
+        height: auto;
+        padding-bottom: 10px;
+    }
+
+    .team-photoes-column {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        padding: 5px;
+        justify-content: center;
+    }
+
+    .team-photoes-section {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        float: left;
+        justify-content: center;
+    }
+
+    .team-photo-img-btn {
+        max-width: 360px;
+    }
+
+    .team-btn-section {
+        padding-bottom: 1px;
+    }
+
+    .team-btn {
+        width: 400px;
+        border-radius: 5px;
+        background-color: #0077b5;
+        order: 3;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+
+    .order-top {
+        order: 1;
+    }
+
+    .order-bottom {
+        order: 2;
+    }
+
+    .team-btn-title {
+        text-align: center;
+        font-size: 22px;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #ffffff;
+        padding: 14px 0;
+    }
+
+    .right-button-team {
+        visibility: hidden;
+    }
+
+    .left-button-team {
+        visibility: hidden;
+    }
+}
+
+
+@media (min-width: 992px) {
 
     .team-photoes {
         width: 100%;
@@ -74,16 +153,17 @@
     .order-bottom {
         order: 2;
     }
-    .right-button-team{
-    visibility: hidden;
+
+    .right-button-team {
+        visibility: hidden;
     }
 
-    .left-button-team{
-    visibility: hidden;
+    .left-button-team {
+        visibility: hidden;
     }
 }
 
-@media(min-width:1200px) {
+@media (min-width: 1200px) {
 
     .team-photoes {
         max-width: 450px;
@@ -100,7 +180,7 @@
 
     .team-photoes-column {
         display: flex;
-        flex-wrap:  wrap;
+        flex-wrap: wrap;
         flex-direction: column;
         align-items: center;
         padding: 5px;
@@ -152,15 +232,15 @@
         order: 3;
     }
 
-    .right-button-team{
+    .right-button-team {
         visibility: hidden;
     }
 
-    .left-button-team{
+    .left-button-team {
         visibility: hidden;
     }
 }
 
-.team-btn-click{
+.team-btn-click {
     cursor: pointer;
 }
