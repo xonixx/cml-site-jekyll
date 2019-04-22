@@ -124,8 +124,9 @@ h2.portfolio-item-name:nth-child(1) {
 
 .customers-text-title
 {
-	font-size: 28px;
-	text-align: center;
+	font-size: 18px;
+	font-weight: bold;
+	color: #777;
 }
 
 .list-inline>li
@@ -362,6 +363,7 @@ h2.portfolio-item-name:nth-child(1) {
 	display: flex;
 	flex: 2;
 	flex-direction: column;
+	margin-left: 30px;
 }
 
 .customers-media p {
@@ -391,6 +393,7 @@ h2.portfolio-item-name:nth-child(1) {
 
 .customers-text{
 	font-size: 18px;
+	color: #777;
 }
 
 @media(max-width:996px){
