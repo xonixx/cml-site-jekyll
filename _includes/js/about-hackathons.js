@@ -108,7 +108,7 @@ var shufflemeHackathons = (function($) {
   };
 })(jQuery);
 
-$(document).ready(function() {
+$(function() {
   $("#about-hackathons .portfolio-display-mobile-list").on("click", function() {
     console.log("Clicked on", this);
     $("#about-hackathons .portfolio-sorting").toggleClass("mobile-hidden");

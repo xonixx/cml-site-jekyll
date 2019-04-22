@@ -64,11 +64,11 @@ var shufflemePortfolio = (function($) {
       $("#about-portfolio .filter-elements").text(portfolioFilterChosenConcat);
 
       /*
-               // Hide current label, show current label in title
-               $('.portfolio-sorting li a').removeClass('active');
-
-               $this.addClass('active');
-              */
+                     // Hide current label, show current label in title
+                     $('.portfolio-sorting li a').removeClass('active');
+      
+                     $this.addClass('active');
+                    */
       // Filter elements
       shuffler.filter((element, shuffle) => {
         //console.log("elem: ", element);
@@ -119,10 +119,11 @@ var shufflemePortfolio = (function($) {
       let gridOffset = $("#grid-portfolio").offset().top;
       let inGridOffset = 0;
       let id = this.id;
-      if ($("." + id).hasClass("hidden")) {
+      let $elt = $("." + id);
+      if ($elt.hasClass("hidden")) {
         $('[class*="-project"]').addClass("hidden");
         $("li.shuffle-item").removeClass("expanded");
-        $("." + id).removeClass("hidden");
+        $elt.removeClass("hidden");
         $(this)
           .closest("li")
           .addClass("expanded");
@@ -133,7 +134,7 @@ var shufflemePortfolio = (function($) {
               .index() / 2
           ) * 480;
       } else {
-        $("." + id).addClass("hidden");
+        $elt.addClass("hidden");
         $(this)
           .closest("li")
           .removeClass("expanded");
@@ -227,7 +228,7 @@ function displaySubHeader() {
   });
 }
 
-$(document).ready(function() {
+$(function() {
   displaySubHeader();
 
   $("#about-portfolio .portfolio-display-mobile-list").on("click", function() {
