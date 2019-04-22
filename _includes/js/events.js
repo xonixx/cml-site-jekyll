@@ -1,19 +1,18 @@
-
 let firstSection = $(".event-slides");
 let currentIndexFirst = 0;
-let calendlyArray = new Map([["event-asia-conference","https://calendly.com/shchetynin/30min?month-view=disabled"],["event-asiasecond-conference","https://calendly.com/shchetynin/30min?month-view=disabled"],
-    ["event-asiathird-conference","https://calendly.com/shchetynin/30min?month-view=disabled"],["event-asiaforth-conference","https://calendly.com/shchetynin/30min?month-view=disabled"],
-    ["event-asiafifth-conference","https://calendly.com/shchetynin/30min?month-view=disabled"],["event-asiasix-conference","https://calendly.com/shchetynin/30min?month-view=disabled"]]);
+let calendlyArray = new Map([["event-asia-conference", "https://calendly.com/shchetynin/30min?month-view=disabled"], ["event-asiasecond-conference", "https://calendly.com/shchetynin/30min?month-view=disabled"],
+    ["event-asiathird-conference", "https://calendly.com/shchetynin/30min?month-view=disabled"], ["event-asiaforth-conference", "https://calendly.com/shchetynin/30min?month-view=disabled"],
+    ["event-asiafifth-conference", "https://calendly.com/shchetynin/30min?month-view=disabled"], ["event-asiasix-conference", "https://calendly.com/shchetynin/30min?month-view=disabled"]]);
 var dotsArray;
 let step = calculateStep(document.body.clientWidth);
 showElementsFirstBlock(currentIndexFirst, step);
 
 
 $(".event-left-button").on('click', function () {
-    console.log("currentIndexFirst"+currentIndexFirst);
-    console.log("step"+step);
+        console.log("currentIndexFirst" + currentIndexFirst);
+        console.log("step" + step);
         if (currentIndexFirst > 0) {
-            if(document.body.clientWidth > 1200) {
+            if (document.body.clientWidth > 1200) {
                 dotsArray.removeClass('dotactive');
                 dotsArray[currentIndexFirst - 1].classList.add('dotactive');
             }
@@ -24,10 +23,10 @@ $(".event-left-button").on('click', function () {
 );
 
 $(".event-right-button").on('click', function () {
-    console.log("currentIndexFirst"+currentIndexFirst);
-    console.log("step"+step);
+        console.log("currentIndexFirst" + currentIndexFirst);
+        console.log("step" + step);
         if (currentIndexFirst + step < firstSection.length) {
-            if(document.body.clientWidth > 1200) {
+            if (document.body.clientWidth > 1200) {
                 dotsArray.removeClass('dotactive');
                 dotsArray[currentIndexFirst + 1].classList.add('dotactive');
             }
@@ -38,26 +37,26 @@ $(".event-right-button").on('click', function () {
 );
 
 $(".event-schedule").on('click', function () {
-    let id = this.id;
-    console.log("id is "+id);
-    let eventCalendly = calendlyArray.get(id);
-    $(".events-popup").append("<div class='pop-up-events'>" +
-      "<div class='calendly-inline-widget hide-pop-up-events' data-url=' "+eventCalendly+"'></div>" +
-      "<script type='text/javascript' src='https://assets.calendly.com/assets/external/widget.js'></script>" +
-      "</div>");
-    $(".events-popup").css({"display": "block"});
-    $(".pop-up-events").css({"display": "block"});
-    $(".navbar-header .calendar-button").addClass("hidden");
-    $(".back-button-header").removeClass("hidden");
+        let id = this.id;
+        console.log("id is " + id);
+        let eventCalendly = calendlyArray.get(id);
+        $(".events-popup").append("<div class='pop-up-events'>" +
+            "<div class='calendly-inline-widget hide-pop-up-events' data-url=' " + eventCalendly + "'></div>" +
+            "<script type='text/javascript' src='https://assets.calendly.com/assets/external/widget.js'></script>" +
+            "</div>");
+        $(".events-popup").css({"display": "block"});
+        $(".pop-up-events").css({"display": "block"});
+        $(".navbar-header .calendar-button").addClass("hidden");
+        $(".back-button-header").removeClass("hidden");
     }
 );
 
 $(".events-popup, .back-button-header").on('click', function () {
-    $(".events-popup .pop-up-events").remove();
-    $(".events-popup").css({"display": "none"});
-    $(".pop-up-events").css({"display": "none"});
-    $(".navbar-header .calendar-button").removeClass("hidden");
-    $(".back-button-header").addClass("hidden");
+        $(".events-popup .pop-up-events").remove();
+        $(".events-popup").css({"display": "none"});
+        $(".pop-up-events").css({"display": "none"});
+        $(".navbar-header .calendar-button").removeClass("hidden");
+        $(".back-button-header").addClass("hidden");
     }
 );
 
@@ -103,7 +102,7 @@ function calculateStep(width) {
     }
 }
 
-function currentSlide(dotStep){
+function currentSlide(dotStep) {
     dotsArray.removeClass('dotactive');
     console.log(dotStep);
     dotsArray[dotStep].classList.add('dotactive');
@@ -111,8 +110,8 @@ function currentSlide(dotStep){
     showElementsFirstBlock(dotStep, step);
 }
 
-function createDots(){
-    if(document.body.clientWidth > 1200) {
+function createDots() {
+    if (document.body.clientWidth > 1200) {
         console.log("we create dots");
         $(".event-dots").append("<span class='dot dotactive' onclick=currentSlide(" + 0 + ")></span>");
         if (firstSection.length > 4) {
@@ -141,3 +140,13 @@ $(window).resize(function () {
         showElementsFirstBlock(currentIndexFirst, step);
     }
 });
+
+$(window).resize(function () {
+    const width = $(window).width();
+    const mobileScreen = 900;
+    if (width <= mobileScreen) {
+        $('.event-image-links').click(function (e) {
+            e.preventDefault();
+        })
+    }
+}).resize();
