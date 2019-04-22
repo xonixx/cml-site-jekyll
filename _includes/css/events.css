@@ -22,9 +22,15 @@
     margin: 5px;
 }
 
-.event-image
+.event-image-div
 {
     border-bottom: solid 1px #0077b5;
+}
+
+.event-image {
+    padding-bottom: 10px;
+    height: 90px;
+    width: auto;
 }
 
 .event-date
