@@ -67,6 +67,10 @@
 	/*background-color: lightblue;*/
 }
 
+.projects {
+	cursor: pointer;
+}
+
 .portfolio-item-description
 {
 	font-size: 16px;
