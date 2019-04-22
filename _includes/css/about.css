@@ -64,7 +64,7 @@
 
 .portfolio-image-wrap {
 	align-self: center;
-	background-color: lightblue;
+	/*background-color: lightblue;*/
 }
 
 .portfolio-item-description
@@ -113,13 +113,13 @@ h2.portfolio-item-name:nth-child(1) {
 
 .portfolio-item-name
 {
-	font-size: 20px;
-	font-weight: 500;
+	font-size: 16px;
+	font-weight: bold;
 	font-style: normal;
 	font-stretch: normal;
 	line-height: normal;
 	letter-spacing: normal;
-	color: #555;
+	color: #777;
 }
 
 .customers-text-title
