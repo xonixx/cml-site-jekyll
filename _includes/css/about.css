@@ -67,6 +67,32 @@
 	background-color: lightblue;
 }
 
+.projects span {
+	opacity: 0;
+    position: relative;
+    bottom: 3rem;
+    right: -3rem;
+	height: 46px;
+    padding: 1.5rem;
+    border-radius: 5px;
+    background-color: #e8a621;
+    font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+	transition: opacity .2s ease-in-out;
+    z-index: 2000;
+}
+
+.projects:hover {
+	cursor: pointer;
+}
+
+.projects:hover span {
+    opacity: 1;
+    transition: opacity .3s ease-in-out;
+}
+
 .portfolio-item-description
 {
 	font-size: 20px;
