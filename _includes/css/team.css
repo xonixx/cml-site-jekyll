@@ -16,6 +16,15 @@
     justify-content: center;
 }
 
+.team-btn {
+    width: 400px;
+    border-radius: 5px;
+    background-color: #0077b5;
+    order: 3;
+
+    cursor: pointer;
+}
+
 @media (min-width: 560px) {
 
     .team-photoes {
@@ -47,11 +56,7 @@
     }
 
     .team-btn {
-        width: 400px;
-        border-radius: 5px;
-        background-color: #0077b5;
         order: 3;
-        margin-top: 10px;
         cursor: pointer;
     }
 
@@ -120,8 +125,6 @@
 
     .team-btn {
         width: 90%;
-        border-radius: 5px;
-        background-color: #0077b5;
         order: 2;
         cursor: pointer;
     }
@@ -186,11 +189,8 @@
     }
 
     .team-btn {
-        width: 90%;
         max-width: 320px;
         height: 54px;
-        border-radius: 5px;
-        background-color: #0077b5;
         order: 2;
         cursor: pointer;
     }
@@ -221,8 +221,4 @@
     .left-button-team {
         visibility: hidden;
     }
-}
-
-.team-btn-click {
-    cursor: pointer;
 }

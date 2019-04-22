@@ -30,10 +30,7 @@
         margin: auto;
         width: 310px;
         height: 54px;
-        border-radius: 5px;
-        background-color: #0077b5;
         order: 2;
-        cursor: pointer;
     }
 
     .team-btn-title {
