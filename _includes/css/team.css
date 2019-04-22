@@ -10,6 +10,12 @@
     padding: 5px;
 }
 
+.team-photoes-mobile-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
 @media (min-width: 560px) {
 
     .team-photoes {
@@ -152,10 +158,6 @@
 
     .team-photoes {
         max-width: 450px;
-    }
-
-    .team-photoes-mobile-section {
-        display: none;
     }
 
     .team-photo-img {

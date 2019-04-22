@@ -5,13 +5,6 @@
         min-width: 200px;
     }
 
-    .team-photoes-mobile-section {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-
-    }
-
     .right-button-team{
         width: 50px;
         padding-left: 10px;
