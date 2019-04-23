@@ -109,6 +109,7 @@ var shufflemePortfolio = (function($) {
       //             gallery: '#grid'
       //         })
       //     });
+      $("#about-portfolio .portfolio-display-mobile-list").click();
     });
 
     $btns = null;
@@ -231,12 +232,14 @@ function displaySubHeader() {
 $(function() {
   displaySubHeader();
 
-  $("#about-portfolio .portfolio-display-mobile-list").on("click", function() {
-    $("#about-portfolio .portfolio-sorting").toggleClass("mobile-hidden");
-    $("#about-portfolio .portfolio-display-mobile-element").toggleClass("selected");
-  });
-
   shufflemePortfolio.init(function() {
+    $("#about-portfolio .portfolio-display-mobile-list")
+      .on("click", function() {
+        $("#about-portfolio .portfolio-sorting").toggleClass("mobile-hidden");
+        $("#about-portfolio .portfolio-display-mobile-element").toggleClass("selected");
+      })
+      .click();
+
     $("#filter-all").click();
   });
 });
