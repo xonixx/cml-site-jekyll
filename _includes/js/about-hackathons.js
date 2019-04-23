@@ -121,7 +121,7 @@ $(function() {
       .show();
 
     shufflemeHackathons.init(function() {
-      $('#about-hackathons a[data-group="eoshk"]').click();
+      $('#about-hackathons a[data-group="EOS HK"]').click();
     });
   });
 });
