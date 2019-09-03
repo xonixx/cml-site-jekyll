@@ -95,6 +95,7 @@ padding-bottom: 12px !important;
 {
 	align-items: center;
 	display: flex;
+	flex: 3;
 	flex-wrap: wrap;
 	flex-direction: row;
 	justify-content: center;
