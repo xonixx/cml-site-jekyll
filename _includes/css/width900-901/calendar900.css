@@ -32,11 +32,11 @@
     .calendly-inline-widget {
         position: relative;
         min-width: 901px;
-        height: 560px;
+        height: 860px;
     }
     .calendar-table {
         width:901px;
-        height: 600px;
+        height: 764px;
     }
     .back-button-header {
         display: none !important;
