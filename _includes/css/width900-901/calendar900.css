@@ -1,3 +1,7 @@
+.calendar-table {
+    position: relative;
+}
+
 @media(max-width:900px) {
     .calendly-inline-widget {
         position: relative;
@@ -8,8 +12,6 @@
     .calendar-table {
         flex: 1;
         height: 940px;
-    }
-    .calendar-table {
         padding: 0;
     }
     .calendar-story {
