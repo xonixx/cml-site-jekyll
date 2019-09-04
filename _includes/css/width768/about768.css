@@ -11,8 +11,7 @@
     flex-direction: column;
     margin-left: 30px;
     font-family: 'Special Elite', cursive;
-    background: #fffdf5;
-    color: #3f3f5a;
+
     align-items: center;
     justify-content: center;
 }
@@ -42,13 +41,13 @@
 
 .customers-text:before {
     content: '“';
-    left: -5rem;
+    left: -4rem;
     top: -2rem;
 }
 
 .customers-text:after {
     content: '”';
-    right: -5rem;
+    right: -4rem;
     bottom: 1rem;
 }
 

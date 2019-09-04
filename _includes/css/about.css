@@ -281,6 +281,8 @@ h2.portfolio-item-name:nth-child(1) {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
+	background: #fffdf5;
+	color: #3f3f5a;
 }
 
 .customers-subsection
