@@ -1,5 +1,4 @@
-.customers-media
-{
+.customers-media {
     position: relative;
     max-width: 700px;
     min-width: 450px;
@@ -9,7 +8,7 @@
     display: flex;
     flex: 2;
     flex-direction: column;
-    margin-left: 30px;
+    margin: 0 30px;
     font-family: 'Special Elite', cursive;
 
     align-items: center;
@@ -20,7 +19,7 @@
     margin-top: 10px;
 }
 
-.customers-text{
+.customers-text {
     font-weight: 100;
     font-size: 1rem;
     max-width: 600px;
@@ -51,24 +50,40 @@
     bottom: 1rem;
 }
 
-@media(min-width:768px){
+.customers-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    color: #3f3f5a;
+}
 
-    .customers-image
-    {
+.customers-main {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+    color: #3f3f5a;
+}
+
+@media (min-width: 768px) {
+
+    .customers-image {
         width: 100%;
     }
 
-    .customers-section
-    {
-        background-color: #F7F7F7;
+    .customers-section {
         padding: 20px;
         margin: 20px 0;
         width: 98%;
         max-width: 1200px;
+        background: #fffdf5;
+    }
+
+    .customers-main {
+        background: #ffffff;
     }
 }
 
-@media(max-width:768px){
+@media (max-width: 768px) {
 
     .customers-information {
         min-width: 300px;
@@ -77,20 +92,17 @@
         margin: auto;
     }
 
-    .customers-subsection
-    {
+    .customers-subsection {
         max-width: none;
     }
 
-    .customers-name
-    {
+    .customers-name {
         font-size: 18px;
         min-width: 280px;
         max-width: 750px;
     }
 
-    .customers-position
-    {
+    .customers-position {
         font-size: 18px;
         min-width: 280px;
         max-width: 750px;
@@ -102,17 +114,14 @@
         max-width: 400px;
     }
 
-    .customers-image
-    {
+    .customers-image {
         padding-bottom: 10px;
         width: 100%;
     }
 
-    .customers-media
-    {
+    .customers-media {
         min-width: 260px;
         max-width: 80vw;
-        margin: auto;
         padding: 0;
     }
 
@@ -120,6 +129,14 @@
         max-width: 350px;
         margin: auto;
         padding: 10px;
+    }
+
+    .customers-main {
+        border-radius: 5px;
+        border: solid 1px #0077b5;
+        padding: 10px;
+        margin: 25px 10px;
+        background: #fffdf5;
     }
 
 }

@@ -276,15 +276,6 @@ h2.portfolio-item-name:nth-child(1) {
 	}
 }
 
-.customers-section
-{
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	background: #fffdf5;
-	color: #3f3f5a;
-}
-
 .customers-subsection
 {
 	display: flex;
@@ -371,35 +362,7 @@ h2.portfolio-item-name:nth-child(1) {
 	margin: 20px 0;
 }
 
-.customers-main
-{
-	display: flex;
-	justify-content: center;
-	padding-bottom: 20px;
-}
 
 
 
-@media(max-width:996px){
 
-	.customers-main
-	{
-		border-radius: 5px;
-		border: solid 1px #0077b5;
-		padding: 10px;
-		margin: 25px 10px;
-	}
-
-	.customers-name
-	{
-		font-size: 18px;
-	}
-
-	.customers-position
-	{
-		font-size: 18px;
-
-	}
-	.customers-list {
-	}
-}
