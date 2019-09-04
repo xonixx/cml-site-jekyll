@@ -270,8 +270,7 @@ h2.portfolio-item-name:nth-child(1) {
 
 }
 
-@media(max-width: 945px)
-{
+@media(max-width: 945px) {
 	.portfolio-item-second-section {
 		padding-left: 5px !important;
 	}
