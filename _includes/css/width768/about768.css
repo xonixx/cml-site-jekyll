@@ -109,13 +109,6 @@
         width: 100%;
     }
 
-    .customers-main
-    {
-        border-radius: 5px;
-        border: solid 1px #0077b5;
-        padding: 10px;
-    }
-
     .customers-media
     {
         min-width: 260px;

@@ -382,6 +382,9 @@ h2.portfolio-item-name:nth-child(1) {
 
 	.customers-main
 	{
+		border-radius: 5px;
+		border: solid 1px #0077b5;
+		padding: 10px;
 		margin: 25px 10px;
 	}
 
