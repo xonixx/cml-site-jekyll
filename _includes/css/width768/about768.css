@@ -140,3 +140,22 @@
     }
 
 }
+
+@media (max-width: 500px) {
+    .customers-text:before {
+        left: -6vw;
+        top: 0;
+    }
+
+    .customers-text:after {
+        right: -5vw;
+        bottom: 19px;
+    }
+
+    .customers-text:before,
+    .customers-text:after {
+        font-size: 5rem;
+        width: 2rem;
+        height: 2rem;
+    }
+}
