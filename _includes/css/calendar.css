@@ -2,6 +2,9 @@
 {
 	padding-top: 100px;
 	padding-bottom: 50px;
+	justify-content: space-around;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 @media(max-width:995px) {
@@ -89,19 +92,7 @@ padding-bottom: 12px !important;
 	min-width: 318px;
 }
 
-.calendar-element
-{
-	align-items: center;
-	display: flex;
-	flex: 3;
-	flex-wrap: wrap;
-	flex-direction: row;
-	justify-content: center;
-	padding-right: 8px;
-	padding-left: 8px;
-	max-width: 917px;
-	padding-bottom: 30px;
-}
+
 
 .calendar-picture
 {
