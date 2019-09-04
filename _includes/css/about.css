@@ -356,24 +356,6 @@ h2.portfolio-item-name:nth-child(1) {
 	text-align: center;
 }
 
-.customers-media
-{
-	position: relative;
-	max-width: 700px;
-	min-width: 450px;
-	padding-left: 20px;
-	width: 100%;
-	text-align: justify;
-	display: flex;
-	flex: 2;
-	flex-direction: column;
-	margin-left: 30px;
-}
-
-.customers-media p {
-	margin-top: 10px;
-}
-
 .customers-list
 {
 	align-items: center;
@@ -395,10 +377,7 @@ h2.portfolio-item-name:nth-child(1) {
 	padding-bottom: 20px;
 }
 
-.customers-text{
-	font-size: 18px;
-	color: #777;
-}
+
 
 @media(max-width:996px){
 
