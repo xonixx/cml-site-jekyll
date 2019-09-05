@@ -6,6 +6,7 @@
 {% include js/cbpAnimatedHeader.js %};
 {% include js/about-hackathons.js %};
 {% include js/about-portfolio.js %};
+{% include js/about.js %};
 {% include js/contact_me.js %};
 {% include js/cml.js %};
 {% include js/service.js %};
