@@ -58,8 +58,7 @@
 }
 
 .customers-main {
-    display: flex;
-    justify-content: center;
+
     padding-bottom: 20px;
     color: #3f3f5a;
 }
@@ -68,7 +67,7 @@
 
     .customers-section {
         padding: 20px;
-        margin: 20px 0;
+        margin: 20px auto;
         width: 98%;
         max-width: 1200px;
         background: #fffdf5;
