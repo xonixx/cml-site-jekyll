@@ -303,10 +303,6 @@ h2.portfolio-item-name:nth-child(1) {
 {
 	min-width: 170px;
 	max-width: 170px;
-	align-items: center;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
 	padding-right: 8px;
 	padding-left: 8px;
 }
@@ -358,7 +354,6 @@ h2.portfolio-item-name:nth-child(1) {
 	padding-right: 8px;
 	padding-left: 8px;
 	min-width: 230px;
-	align-self: flex-start;
 	margin: 20px 0;
 }
 
