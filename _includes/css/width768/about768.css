@@ -90,6 +90,10 @@
         width: 98%;
         max-width: 1200px;
         background: #fffdf5;
+        height: 100%;
+        height: -moz-available;          /* WebKit-based browsers will ignore this. */
+        height: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+        height: fill-available;
     }
 
     .customers-main {
