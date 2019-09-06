@@ -64,6 +64,24 @@
     color: #3f3f5a;
 }
 
+.customers-list
+{
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 8px;
+    padding-left: 8px;
+    min-width: 230px;
+    margin: 20px 0;
+}
+
+.customers-logo
+{
+    width: 100%;
+}
+
 @media (min-width: 768px) {
 
     .customers-section {
@@ -76,6 +94,10 @@
 
     .customers-main {
         background: #ffffff;
+    }
+
+    .customers-logo {
+        margin-bottom: 15px;
     }
 }
 
@@ -114,7 +136,7 @@
     .customers-logo {
         width: 90%;
         max-width: 350px;
-        padding: 10px;
+        padding-bottom: 10px;
     }
 
     .customers-main {
@@ -130,5 +152,9 @@
     .customers-text:before,
     .customers-text:after{
         content: '';
+    }
+
+    .customers-list {
+        margin: 0;
     }
 }

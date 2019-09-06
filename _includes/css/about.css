@@ -308,54 +308,36 @@ h2.portfolio-item-name:nth-child(1) {
 }
 
 
-.customers-logo
-{
-	text-align: center;
-	margin-bottom: 10px;
-	width: 100%;
-}
+
 
 .customers-logo img {
 	width: 100%;
 }
 
-.customers-name
+.customers-name,
+.customers-position
 {
-	height: 38px;
+	padding: 3px;
 	font-size: 24px;
 	font-weight: bold;
 	font-style: normal;
 	font-stretch: normal;
 	line-height: normal;
 	letter-spacing: normal;
-	color: #000000;
+
 	text-align: center;
+}
+
+.customers-name {
+	color: #000000;
 }
 
 .customers-position
 {
-	font-size: 24px;
-	font-weight: bold;
-	font-style: normal;
-	font-stretch: normal;
-	line-height: normal;
-	letter-spacing: normal;
 	color: #777777;
-	text-align: center;
 }
 
-.customers-list
-{
-	align-items: center;
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: column;
-	justify-content: center;
-	padding-right: 8px;
-	padding-left: 8px;
-	min-width: 230px;
-	margin: 20px 0;
-}
+
 
 
 
