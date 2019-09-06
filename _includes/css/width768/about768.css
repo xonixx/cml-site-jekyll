@@ -108,6 +108,7 @@
         min-width: 260px;
         max-width: 80vw;
         padding: 0;
+        margin: 0;
     }
 
     .customers-logo {
@@ -120,27 +121,14 @@
         border-radius: 5px;
         border: solid 1px #0077b5;
         padding: 10px;
-        margin: 25px 10px;
+        margin: 25px auto;
+        width: 90% !important;
         background: #fffdf5;
     }
 
-}
-
-@media (max-width: 500px) {
-    .customers-text:before {
-        left: -6vw;
-        top: 0;
-    }
-
-    .customers-text:after {
-        right: -5vw;
-        bottom: 19px;
-    }
 
     .customers-text:before,
-    .customers-text:after {
-        font-size: 5rem;
-        width: 2rem;
-        height: 2rem;
+    .customers-text:after{
+        content: '';
     }
 }
