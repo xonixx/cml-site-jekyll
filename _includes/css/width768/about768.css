@@ -82,6 +82,10 @@
     width: 100%;
 }
 
+.customers-logo img {
+    max-height: 100px;
+}
+
 @media (min-width: 768px) {
 
     .customers-section {
@@ -90,10 +94,11 @@
         width: 98%;
         max-width: 1200px;
         background: #fffdf5;
-        height: 100%;
-        height: -moz-available;          /* WebKit-based browsers will ignore this. */
-        height: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
-        height: fill-available;
+    }
+
+    .customers-main .owl-stage {
+        display: flex;
+        align-items: center;
     }
 
     .customers-main {
@@ -156,6 +161,14 @@
     .customers-text:before,
     .customers-text:after{
         content: '';
+    }
+
+    .customers-text {
+        padding: 0;
+    }
+
+    .customers-text p {
+        margin: 0;
     }
 
     .customers-list {
