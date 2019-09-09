@@ -1,4 +1,4 @@
-let firstSection = $(".event-slides");
+let firstSection = $(".event-slide");
 let currentIndexFirst = 0;
 let calendlyArray = new Map([
   ["event-1", "https://calendly.com/shchetynin/jeeconf?month-view=disabled"],
@@ -154,3 +154,7 @@ $(window)
     }
   })
   .resize();
+
+$(document).ready(function() {
+  createDots();
+});
