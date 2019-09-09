@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  $('.owl-carousel').owlCarousel({
+  $('#customers-main').owlCarousel({
     items: 1,
       navigation: true,
       slideSpeed: 300,
