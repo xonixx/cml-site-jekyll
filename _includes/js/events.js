@@ -156,5 +156,30 @@ $(window)
   .resize();
 
 $(document).ready(function() {
-  createDots();
+  $(".event-date").each(function () {
+    const parsedDate = parseDate($( this ).text());
+/*
+    if(new Date(`${parsedDate.month} ${parsedDate.endDate} ${parsedDate.year}`) < new Date()) {
+      $(this).parent().remove()
+    }
+*/
+  })
+
+  $('#event-slides-section').owlCarousel({
+      items: calculateStep(document.body.clientWidth),
+      navigation: true,
+      slideSpeed: 300,
+      paginationSpeed: 400,
+    }
+  );
 });
+
+function parseDate(date) {
+  const monthEndIndex = date.indexOf(" ");
+  const yearStartIndex = date.lastIndexOf(" ");
+  const startDate = date.substring(monthEndIndex + 1, date.indexOf("-"));
+  const endDate = date.substring(date.indexOf("-") + 1, yearStartIndex);
+  const month = date.substring(0, monthEndIndex);
+  const year = date.substring(yearStartIndex + 1);
+  return {startDate, endDate, month, year}
+}
