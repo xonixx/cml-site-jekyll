@@ -47,12 +47,12 @@ $(window)
 $(document).ready(function() {
   $(".event-date").each(function () {
     const parsedDate = parseDate($( this ).text());
-/*
-    if(new Date(`${parsedDate.month} ${parsedDate.endDate} ${parsedDate.year}`) < new Date()) {
-      $(this).parent().remove()
+    const today = new Date();
+    const dayBeforeYesterday = today.setDate(today.getDate() - 2);
+    if(new Date(`${parsedDate.month} ${parsedDate.endDate} ${parsedDate.year}`) < dayBeforeYesterday) {
+      $(this).parent().remove();
     }
-*/
-  })
+  });
 
   $('#event-slides-section').owlCarousel({
       items: calculateEventsOnPage(document.body.clientWidth),
