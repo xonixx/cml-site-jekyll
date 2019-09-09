@@ -1,15 +1,14 @@
 let calendlyArray = new Map([
-  ["event-1", "https://calendly.com/shchetynin/jeeconf?month-view=disabled"],
-  ["event-2", "https://calendly.com/shchetynin/piratesummit?month-view=disabled"],
-  ["event-3", "https://calendly.com/shchetynin/rise?month-view=disabled"],
-  ["event-4", "https://calendly.com/shchetynin/websummit?month-view=disabled"],
+  ["event-1", "https://calendly.com/shchetynin/websummit?month-view=disabled"],
+  ["event-2", ""],
+  ["event-3", ""],
+  ["event-4", ""],
   ["event-5", ""],
   ["event-6", ""]
 ]);
 
 $(".event-schedule").on("click", function() {
   let id = this.id;
-  console.log("id is " + id);
   let eventCalendly = calendlyArray.get(id);
   $(".events-popup").append(
     "<div class='pop-up-events'>" +
