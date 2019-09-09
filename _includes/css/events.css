@@ -47,12 +47,12 @@
     border-top: solid 1px #0077b5;
     font-size: 24px;
     color: #000000;
-    padding: 10px 0;
+    padding-top: 10px;
 }
 
 .event-place
 {
-    height: 19px;
+    height: 35px;
     font-size: 16px;
     font-weight: 500;
     font-style: normal;
