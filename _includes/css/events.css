@@ -27,6 +27,10 @@
     justify-content: center;
 }
 
+#event-slides-section .owl-stage {
+    margin: 0 auto;
+}
+
 .event-image-div
 {
     border-bottom: solid 1px #0077b5;
