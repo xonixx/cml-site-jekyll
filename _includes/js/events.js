@@ -1,6 +1,6 @@
 let calendlyArray = new Map([
   ["event-1", "https://calendly.com/shchetynin/websummit?month-view=disabled"],
-  ["event-2", ""],
+  ["event-2", "https://calendly.com/shchetynin/southsummit"],
   ["event-3", ""],
   ["event-4", ""],
   ["event-5", ""],
