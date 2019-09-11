@@ -34,12 +34,12 @@ var shufflemeHackathons = (function ($) {
     });
     $minorButtons.on("click", function (e) {
       e.preventDefault();
-      let $this = $(this);
-      let group = $this.data("group");
+      const $this = $(this);
+      const group = $this.data("group");
 
       loadImages(group);
 
-      $(".portfolio-hackathon-minor-label").removeClass("active");
+      $("#portfolio-hackathon-minor-sorting a").removeClass("active");
       $this.addClass("active");
 
       // Filter elements
