@@ -38,10 +38,6 @@ var shufflemeHackathons = (function ($) {
 
         loadImages(group);
 
-        // Hide current label, show current label in title
-        $(".portfolio-hackathon-minor-label").removeClass("active");
-        $this.addClass("active");
-
         // Filter elements
         shuffler.filter(group);
 
