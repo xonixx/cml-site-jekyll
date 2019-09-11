@@ -1,7 +1,8 @@
 var shufflemeHackathons = (function ($) {
   "use strict";
   let $grid = $("#about-hackathons #grid"); //locate what we want to sort
-  let $filterOptions = $("#about-hackathons .portfolio-minor-sorting li"); //locate the filter categories
+  let $filterMajorOptions = $("#about-hackathons .portfolio-major-sorting li"); //locate the filter categories
+  let $filterMinorOptions = $("#about-hackathons .portfolio-minor-sorting li"); //locate the filter categories
   let $sizer = $grid.find(".shuffle_sizer"); //sizer stores the size of the items
   let shuffler;
   let init = function (onInit) {
@@ -20,8 +21,8 @@ var shufflemeHackathons = (function ($) {
 
   // Set up button click
   let setupHackathonsFilters = function () {
-      let $btns = $filterOptions.children();
-      $btns.on("click", function (e) {
+      let $minorButtons = $filterMinorOptions.children();
+      $minorButtons.on("click", function (e) {
         e.preventDefault();
         let $this = $(this),
           group = $this.data("group");
@@ -62,7 +63,7 @@ var shufflemeHackathons = (function ($) {
           });
       });
 
-      $btns = null;
+      $minorButtons = null;
     };
     // Re layout shuffle when images load. This is only needed
     // below 768 pixels because the .picture-item height is auto and therefore
