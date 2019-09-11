@@ -1,7 +1,7 @@
 var shufflemeHackathons = (function ($) {
   "use strict";
   let $grid = $("#about-hackathons #grid"); //locate what we want to sort
-  let $filterOptions = $("#about-hackathons .portfolio-sorting li"); //locate the filter categories
+  let $filterOptions = $("#about-hackathons .portfolio-minor-sorting li"); //locate the filter categories
   let $sizer = $grid.find(".shuffle_sizer"); //sizer stores the size of the items
   let shuffler;
   let init = function (onInit) {
@@ -29,13 +29,9 @@ var shufflemeHackathons = (function ($) {
         loadImages(group);
 
         // Hide current label, show current label in title
-        $("#about-hackathons .portfolio-sorting li a").removeClass("active");
+        $(".portfolio-hackathon-minor-label").removeClass("active");
         $this.addClass("active");
 
-        $("#about-hackathons .filter-elements").text(group);
-
-        $("#about-hackathons .portfolio-sorting").addClass("mobile-hidden");
-        $("#about-hackathons .portfolio-display-mobile-element").removeClass("selected");
         // Filter elements
         shuffler.filter(group);
 
@@ -67,7 +63,7 @@ var shufflemeHackathons = (function ($) {
       });
 
       $btns = null;
-    }
+    };
     // Re layout shuffle when images load. This is only needed
     // below 768 pixels because the .picture-item height is auto and therefore
     // the height of the picture-item is dependent on the image
@@ -109,11 +105,7 @@ var shufflemeHackathons = (function ($) {
 })(jQuery);
 
 $(function () {
-  $("#about-hackathons .portfolio-display-mobile-list").on("click", function () {
-    console.log("Clicked on", this);
-    $("#about-hackathons .portfolio-sorting").toggleClass("mobile-hidden");
-    $("#about-hackathons .portfolio-display-mobile-element").toggleClass("selected");
-  });
+
 
   $("#about-hackathons").one("inview", () => {
     $(this)
