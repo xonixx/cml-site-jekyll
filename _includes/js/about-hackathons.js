@@ -1,8 +1,8 @@
 var shufflemeHackathons = (function ($) {
   "use strict";
   let $grid = $("#about-hackathons #grid"); //locate what we want to sort
-  let $filterMajorOptions = $("#about-hackathons .portfolio-major-sorting li"); //locate the filter categories
-  let $filterMinorOptions = $("#about-hackathons .portfolio-minor-sorting li"); //locate the filter categories
+  let $filterMajorOptions = $("#portfolio-hackathon-major-sorting li"); //locate the filter categories
+  let $filterMinorOptions = $("#portfolio-hackathon-minor-sorting li"); //locate the filter categories
   let $sizer = $grid.find(".shuffle_sizer"); //sizer stores the size of the items
   let shuffler;
   let init = function (onInit) {
@@ -21,89 +21,94 @@ var shufflemeHackathons = (function ($) {
 
   // Set up button click
   let setupHackathonsFilters = function () {
-      let $majorButtons = $filterMajorOptions.children();
-      let $minorButtons = $filterMinorOptions.children();
-      $majorButtons.on("click", function (e) {
-        e.preventDefault();
-        const $this = $(this);
-        const group = $this.data("group");
-        console.log("$this = ", $this);
-        console.log("group = ", group);
+    let $majorButtons = $filterMajorOptions.children();
+    let $minorButtons = $filterMinorOptions.children();
+    $majorButtons.on("click", function (e) {
+      e.preventDefault();
+      $("#portfolio-hackathon-major-sorting a").removeClass("active");
+      $(this).addClass("active");
+      const group = $(this).data("group");
+      $filterMinorOptions.children(`[data-major-group*=${group}]`).show()
+      $filterMinorOptions.children(`:not([data-major-group*=${group}])`).hide()
+      $filterMinorOptions.children(`[data-major-group*=${group}]`).first().trigger("click")
+    });
+    $minorButtons.on("click", function (e) {
+      e.preventDefault();
+      let $this = $(this);
+      let group = $this.data("group");
 
-      });
-      $minorButtons.on("click", function (e) {
-        e.preventDefault();
-        let $this = $(this);
-        let group = $this.data("group");
+      loadImages(group);
 
-        loadImages(group);
+      $(".portfolio-hackathon-minor-label").removeClass("active");
+      $this.addClass("active");
 
-        // Filter elements
-        shuffler.filter(group);
+      // Filter elements
+      shuffler.filter(group);
 
-        $grid
-          .find("li")
-          .filter(function (i, e) {
-            let $img = $(this).find("img");
-            $img.removeAttr("data-bp");
-            let groups = $(e).data("groups");
-            if (!groups) return false;
-            let isSelectedGrp = groups.indexOf(group) >= 0;
-            if (isSelectedGrp && $img.length) {
-              $img.attr(
-                "data-bp",
-                ($img.attr("src") || $img.data("src")).replace("Converted120", "Converted300")
-              );
-            }
-            return isSelectedGrp;
-          })
-          .find(".portfolio-item a")
-          .off("click.bigpicture")
-          .on("click.bigpicture", function (e) {
-            e.preventDefault();
-            BigPicture({
-              el: e.target,
-              gallery: "#grid"
-            });
-          });
-      });
-
-      $minorButtons = null;
-    };
-    // Re layout shuffle when images load. This is only needed
-    // below 768 pixels because the .picture-item height is auto and therefore
-    // the height of the picture-item is dependent on the image
-    // I recommend using imagesloaded to determine when an image is loaded
-    // but that doesn't support IE7
-    let loadImages = function (insideGroup) {
-      let debouncedLayout = $.throttle(300, function () {
-        shuffler.update();
-      });
-
-      // Get all images inside shuffle selected group
       $grid
         .find("li")
         .filter(function (i, e) {
+          let $img = $(this).find("img");
+          $img.removeAttr("data-bp");
           let groups = $(e).data("groups");
           if (!groups) return false;
-          return groups.indexOf(insideGroup) >= 0;
+          let isSelectedGrp = groups.indexOf(group) >= 0;
+          if (isSelectedGrp && $img.length) {
+            $img.attr(
+              "data-bp",
+              ($img.attr("src") || $img.data("src")).replace("Converted120", "Converted300")
+            );
+          }
+          return isSelectedGrp;
         })
-        .find("img")
-        .each(function () {
-          // If none of the checks above matched, simulate loading on detached element.
-          $(this).on("load", function () {
-            $(this).off("load");
-            debouncedLayout();
+        .find(".portfolio-item a")
+        .off("click.bigpicture")
+        .on("click.bigpicture", function (e) {
+          e.preventDefault();
+          BigPicture({
+            el: e.target,
+            gallery: "#grid"
           });
+        });
+    });
 
-          this.src = $(this).data("src");
+    $majorButtons = null;
+    $minorButtons = null;
+  };
+  // Re layout shuffle when images load. This is only needed
+  // below 768 pixels because the .picture-item height is auto and therefore
+  // the height of the picture-item is dependent on the image
+  // I recommend using imagesloaded to determine when an image is loaded
+  // but that doesn't support IE7
+  let loadImages = function (insideGroup) {
+    let debouncedLayout = $.throttle(300, function () {
+      shuffler.update();
+    });
+
+    // Get all images inside shuffle selected group
+    $grid
+      .find("li")
+      .filter(function (i, e) {
+        let groups = $(e).data("groups");
+        if (!groups) return false;
+        return groups.indexOf(insideGroup) >= 0;
+      })
+      .find("img")
+      .each(function () {
+        // If none of the checks above matched, simulate loading on detached element.
+        $(this).on("load", function () {
+          $(this).off("load");
+          debouncedLayout();
         });
 
-      // Because this method doesn't seem to be perfect.
-      setTimeout(function () {
-        debouncedLayout();
-      }, 500);
-    };
+        this.src = $(this).data("src");
+      });
+
+    // Because this method doesn't seem to be perfect.
+    setTimeout(function () {
+      debouncedLayout();
+    }, 500);
+  };
 
   return {
     init: init
@@ -119,7 +124,7 @@ $(function () {
       .show();
 
     shufflemeHackathons.init(function () {
-      $('#about-hackathons a[data-group="EOS HK"]').click();
+      $("#portfolio-hackathon-major-sorting a").first().trigger("click")
     });
   });
 });
