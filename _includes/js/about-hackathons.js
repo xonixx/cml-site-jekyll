@@ -21,11 +21,20 @@ var shufflemeHackathons = (function ($) {
 
   // Set up button click
   let setupHackathonsFilters = function () {
+      let $majorButtons = $filterMajorOptions.children();
       let $minorButtons = $filterMinorOptions.children();
+      $majorButtons.on("click", function (e) {
+        e.preventDefault();
+        const $this = $(this);
+        const group = $this.data("group");
+        console.log("$this = ", $this);
+        console.log("group = ", group);
+
+      });
       $minorButtons.on("click", function (e) {
         e.preventDefault();
-        let $this = $(this),
-          group = $this.data("group");
+        let $this = $(this);
+        let group = $this.data("group");
 
         loadImages(group);
 
