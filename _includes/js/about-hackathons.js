@@ -28,8 +28,8 @@ var shufflemeHackathons = (function ($) {
       $("#portfolio-hackathon-major-sorting a").removeClass("active");
       $(this).addClass("active");
       const group = $(this).data("group");
-      $filterMinorOptions.children(`[data-major-group*=${group}]`).show()
-      $filterMinorOptions.children(`:not([data-major-group*=${group}])`).hide()
+      $filterMinorOptions.children(`[data-major-group*=${group}]`).parent().show()
+      $filterMinorOptions.children(`:not([data-major-group*=${group}])`).parent().hide()
       $filterMinorOptions.children(`[data-major-group*=${group}]`).first().trigger("click")
     });
     $minorButtons.on("click", function (e) {
