@@ -122,8 +122,12 @@ var shufflemeHackathons = (function ($) {
 
 $(function () {
 
+  $(window).on("click", function() {
+    closeMobileFilters()
+  });
+
   $("#about-hackathons .portfolio-display-mobile-list").on("click", function (event) {
-    console.log("Clicked on", this);
+    closeMobileFilters();
     event.stopPropagation();
     $(`#about-hackathons .${this.id}.portfolio-sorting`).toggleClass("mobile-hidden");
     $(`#about-hackathons #${this.id} .portfolio-display-mobile-element`).toggleClass("selected");
@@ -139,4 +143,9 @@ $(function () {
       $("#portfolio-hackathon-major-sorting a").first().trigger("click")
     });
   });
+
+  function closeMobileFilters() {
+    $(`#about-hackathons .portfolio-sorting`).addClass("mobile-hidden");
+    $(`#about-hackathons .portfolio-display-mobile-element`).removeClass("selected");
+  }
 });
