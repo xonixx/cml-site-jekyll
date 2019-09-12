@@ -49,7 +49,7 @@
 
     .portfolio-sorting {
         position: absolute;
-        top: 40px;
+        top: 47px;
         left: -15px;
         right: -15px;
         margin: auto;
@@ -66,7 +66,7 @@
     }
 
     .minor-hackathon-filter.portfolio-sorting {
-        top: 90px;
+        top: 97px;
     }
 
     .portfolio-display-mobile-list {
@@ -136,6 +136,10 @@
 
     #customers-content-wrapper {
         padding-top: 0;
+    }
+
+    .list-inline>li {
+        padding-bottom: 0.7rem;
     }
 }
 
