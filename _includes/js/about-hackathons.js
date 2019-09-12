@@ -122,10 +122,11 @@ var shufflemeHackathons = (function ($) {
 
 $(function () {
 
-  $("#about-hackathons .portfolio-display-mobile-list").on("click", function () {
+  $("#about-hackathons .portfolio-display-mobile-list").on("click", function (event) {
     console.log("Clicked on", this);
+    event.stopPropagation();
     $(`#about-hackathons .${this.id}.portfolio-sorting`).toggleClass("mobile-hidden");
-    $(`#about-hackathons .${this.id}.portfolio-display-mobile-element`).toggleClass("selected");
+    $(`#about-hackathons #${this.id} .portfolio-display-mobile-element`).toggleClass("selected");
   });
 
 
