@@ -44,9 +44,6 @@ var shufflemeHackathons = (function ($) {
       $this.addClass("active");
       $("#about-hackathons #minor-hackathon-filter .filter-element").text(group);
 
-      $("#about-hackathons .portfolio-sorting").addClass("mobile-hidden");
-      $("#about-hackathons .portfolio-display-mobile-element").removeClass("selected");
-
       // Filter elements
       shuffler.filter(group);
 
