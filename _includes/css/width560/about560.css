@@ -60,6 +60,11 @@
         z-index: 3 !important;
     }
 
+    #portfolio-hackathon-major-sorting a,
+    #portfolio-hackathon-minor-sorting a {
+        font-size: 10px;
+    }
+
     .minor-hackathon-filter.portfolio-sorting {
         top: 90px;
     }
