@@ -254,6 +254,9 @@ h2.portfolio-item-name:nth-child(1) {
 	display: none;
 }
 
+#customers-content-wrapper {
+	padding-top: 10px;
+}
 
 @media(max-width:996px)
 {

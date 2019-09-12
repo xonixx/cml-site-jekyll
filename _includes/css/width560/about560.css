@@ -125,6 +125,18 @@
     .subheader-a {
         display: none;
     }
+
+    section#about-hackathons {
+        padding: 15px 0;
+    }
+
+    section#about-hackathons h2.section-heading {
+        margin-bottom: 10px;
+    }
+
+    #customers-content-wrapper {
+        padding-top: 0;
+    }
 }
 
 @media (min-width: 561px) {

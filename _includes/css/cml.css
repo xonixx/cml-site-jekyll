@@ -321,6 +321,10 @@ margin-bottom: 15px;
 font-size: 40px;
 }
 
+section h2.section-heading.mobile-shown {
+    font-size: 26px;
+}
+
 section h3.section-subheading {
 margin-bottom: 75px;
 text-transform: none;
