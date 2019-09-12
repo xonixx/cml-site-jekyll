@@ -124,8 +124,8 @@ $(function () {
 
   $("#about-hackathons .portfolio-display-mobile-list").on("click", function () {
     console.log("Clicked on", this);
-    $("#about-hackathons .portfolio-sorting").toggleClass("mobile-hidden");
-    $("#about-hackathons .portfolio-display-mobile-element").toggleClass("selected");
+    $(`#about-hackathons .${this.id}.portfolio-sorting`).toggleClass("mobile-hidden");
+    $(`#about-hackathons .${this.id}.portfolio-display-mobile-element`).toggleClass("selected");
   });
 
 

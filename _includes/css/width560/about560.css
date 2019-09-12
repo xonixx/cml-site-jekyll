@@ -60,6 +60,10 @@
         z-index: 3 !important;
     }
 
+    .minor-hackathon-filter.portfolio-sorting {
+        top: 90px;
+    }
+
     .portfolio-display-mobile-list {
         display: flex;
         flex-direction: row;
