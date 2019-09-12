@@ -62,7 +62,7 @@
 
     #portfolio-hackathon-major-sorting a,
     #portfolio-hackathon-minor-sorting a {
-        font-size: 10px;
+        font-size: 1em;
     }
 
     .minor-hackathon-filter.portfolio-sorting {
