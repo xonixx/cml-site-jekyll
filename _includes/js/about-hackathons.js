@@ -27,10 +27,10 @@ var shufflemeHackathons = (function ($) {
       e.preventDefault();
       $("#portfolio-hackathon-major-sorting a").removeClass("active");
       $(this).addClass("active");
-      const group = $(this).data("group");
-      $filterMinorOptions.children(`[data-major-group*=${group}]`).parent().show()
-      $filterMinorOptions.children(`:not([data-major-group*=${group}])`).parent().hide()
-      $filterMinorOptions.children(`[data-major-group*=${group}]`).first().trigger("click")
+      const majorGroup = $(this).data("group");
+      $filterMinorOptions.children(`[data-major-group*=${majorGroup}]`).parent().show()
+      $filterMinorOptions.children(`:not([data-major-group*=${majorGroup}])`).parent().hide()
+      $filterMinorOptions.children(`[data-major-group*=${majorGroup}]`).first().trigger("click")
     });
     $minorButtons.on("click", function (e) {
       e.preventDefault();
