@@ -28,7 +28,7 @@ var shufflemeHackathons = (function ($) {
       $("#portfolio-hackathon-major-sorting a").removeClass("active");
       $(this).addClass("active");
       const majorGroup = $(this).data("group");
-      $("#about-hackathons #major-filter-element").text(majorGroup);
+      $("#about-hackathons #major-hackathon-filter .filter-element").text(majorGroup);
       $filterMinorOptions.children(`[data-major-group*=${majorGroup}]`).parent().show()
       $filterMinorOptions.children(`:not([data-major-group*=${majorGroup}])`).parent().hide()
       $filterMinorOptions.children(`[data-major-group*=${majorGroup}]`).first().trigger("click")
@@ -42,7 +42,7 @@ var shufflemeHackathons = (function ($) {
 
       $("#portfolio-hackathon-minor-sorting a").removeClass("active");
       $this.addClass("active");
-      $("#about-hackathons #minor-filter-element").text(group);
+      $("#about-hackathons #minor-hackathon-filter .filter-element").text(group);
 
       $("#about-hackathons .portfolio-sorting").addClass("mobile-hidden");
       $("#about-hackathons .portfolio-display-mobile-element").removeClass("selected");
