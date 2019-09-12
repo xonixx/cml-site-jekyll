@@ -61,7 +61,7 @@ var shufflemePortfolio = (function($) {
           portfolioFilterChosenConcat = portfolioFilterChosenConcat + "...";
         }
       }
-      $("#about-portfolio .filter-elements").text(portfolioFilterChosenConcat);
+      $("#about-portfolio .filter-element").text(portfolioFilterChosenConcat);
 
       /*
                      // Hide current label, show current label in title
