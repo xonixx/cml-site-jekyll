@@ -42,7 +42,15 @@ var shufflemeHackathons = (function ($) {
 
       $("#portfolio-hackathon-minor-sorting a").removeClass("active");
       $this.addClass("active");
-      $("#about-hackathons #minor-hackathon-filter .filter-element").text(group);
+      let symbolCount;
+      const windowWidth = $(window).width();
+      if (windowWidth <= 320) symbolCount = 10;
+      else if (windowWidth <= 375) symbolCount = 18;
+      else symbolCount = 20;
+      let filterText;
+      if(group.length > symbolCount) filterText = `${group.substring(0, symbolCount)}...`;
+      else filterText = group;
+      $("#about-hackathons #minor-hackathon-filter .filter-element").text(filterText);
 
       // Filter elements
       shuffler.filter(group);
