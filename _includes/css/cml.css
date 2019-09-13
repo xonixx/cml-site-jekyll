@@ -192,6 +192,7 @@ fieldset[disabled] .btn-xl.active {
 .navbar-default {
     border-color: transparent;
     background-color: rgba(32,32,32,0.2);
+    transition: top 0.3s;
 }
 
 .navbar-default.navbar-shrink {
