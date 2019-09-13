@@ -126,20 +126,6 @@ var shufflemeHackathons = (function ($) {
 })(jQuery);
 
 $(function () {
-
-  $(window).on("click", function() {
-    closeMobileFilters()
-  });
-
-  $("#about-hackathons .portfolio-display-mobile-list").on("click", function (event) {
-    event.stopPropagation();
-    if(this.id === "major-hackathon-filter") {
-      closeMinorFilter()
-    }
-    $(`#about-hackathons .${this.id}.portfolio-sorting`).toggleClass("mobile-hidden");
-    $(`#about-hackathons #${this.id} .portfolio-display-mobile-element`).toggleClass("selected");
-  });
-
   $("#about-hackathons").one("inview", () => {
     $(this)
       .find(".container")
@@ -149,14 +135,27 @@ $(function () {
       $("#portfolio-hackathon-major-sorting a").first().trigger("click")
     });
   });
-
-  function closeMobileFilters() {
-    $(`#about-hackathons .portfolio-sorting`).addClass("mobile-hidden");
-    $(`#about-hackathons .portfolio-display-mobile-element`).removeClass("selected");
-  }
-
-  function closeMinorFilter() {
-    $(`#about-hackathons .minor-hackathon-filter`).addClass("mobile-hidden");
-    $(`#about-hackathons #minor-hackathon-filter .portfolio-display-mobile-element`).removeClass("selected");
-  }
 });
+
+$(window).on("click", function() {
+  closeMobileFilters()
+});
+
+$("#about-hackathons .portfolio-display-mobile-list").on("click", function (event) {
+  event.stopPropagation();
+  if(this.id === "major-hackathon-filter") {
+    closeMinorFilter()
+  }
+  $(`#about-hackathons .${this.id}.portfolio-sorting`).toggleClass("mobile-hidden");
+  $(`#about-hackathons #${this.id} .portfolio-display-mobile-element`).toggleClass("selected");
+});
+
+function closeMobileFilters() {
+  $(`#about-hackathons .portfolio-sorting`).addClass("mobile-hidden");
+  $(`#about-hackathons .portfolio-display-mobile-element`).removeClass("selected");
+}
+
+function closeMinorFilter() {
+  $(`#about-hackathons .minor-hackathon-filter`).addClass("mobile-hidden");
+  $(`#about-hackathons #minor-hackathon-filter .portfolio-display-mobile-element`).removeClass("selected");
+}
