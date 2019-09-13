@@ -167,3 +167,18 @@ particlesJS("particles", {
     "retina_detect": true
 });
 
+$(function () {
+    let prevScrollPos = window.pageYOffset;
+    $(window).on("scroll", function () {
+        const currentScrollPos = window.pageYOffset;
+        const navbar = $("nav.navbar");
+        if($(window).width() < 768 && currentScrollPos > $( window ).height()) {
+            if (prevScrollPos > currentScrollPos) {
+                navbar.css("top", "0");
+            } else {
+                navbar.css("top", `-${navbar.height()}px`);
+            }
+        }
+        prevScrollPos = currentScrollPos;
+    })
+})
