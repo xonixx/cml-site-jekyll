@@ -158,4 +158,8 @@
         text-transform: uppercase;
         font-size: 16px;
     }
+
+    .mobile-shown {
+        display: none;
+    }
 }
