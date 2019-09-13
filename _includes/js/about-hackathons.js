@@ -42,15 +42,7 @@ var shufflemeHackathons = (function ($) {
 
       $("#portfolio-hackathon-minor-sorting a").removeClass("active");
       $this.addClass("active");
-      let symbolCount;
-      const windowWidth = $(window).width();
-      if (windowWidth <= 320) symbolCount = 10;
-      else if (windowWidth <= 375) symbolCount = 18;
-      else symbolCount = 20;
-      let filterText;
-      if(group.length > symbolCount) filterText = `${group.substring(0, symbolCount)}...`;
-      else filterText = group;
-      $("#about-hackathons #minor-hackathon-filter .filter-element").text(filterText);
+      $("#about-hackathons #minor-hackathon-filter .filter-element").text(shortenMobileFilterText(group, $(window).width()));
 
       // Filter elements
       shuffler.filter(group);
@@ -136,6 +128,17 @@ $(function () {
     });
   });
 });
+
+function shortenMobileFilterText(groupText, windowWidth) {
+  let symbolCount;
+  if (windowWidth <= 320) symbolCount = 10;
+  else if (windowWidth <= 375) symbolCount = 13;
+  else symbolCount = 20;
+  let filterText;
+  if(groupText.length > symbolCount) filterText = `${groupText.substring(0, symbolCount)}...`;
+  else filterText = groupText;
+  return filterText
+}
 
 $(window).on("click", function() {
   closeMobileFilters()
