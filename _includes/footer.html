@@ -1,10 +1,10 @@
 <footer>
   <div class="container">
     <div class="row">
-      <div class="col-md-3">
+      <div class="col-md-3 col-sm-4">
         <span class="copyright">Copyright &copy; {{ 'now' | date: "%Y" }} {{ site.full-name }}</span>
       </div>
-      <div class="col-md-3">
+      <div class="col-md-3 col-sm-4">
         <ul class="list-inline social-buttons">
           {% for network in site.social %}
           <li><a href="{{ network.url }}" target="_blank"><i class="fab fa-{{ network.title }}"></i></a>
@@ -13,7 +13,7 @@
 
         </ul>
       </div>
-      <div class="col-md-6 badges">
+      <div class="col-md-6 col-sm-4 badges">
         <div class="clutch-widget" data-url="https://widget.clutch.co" data-widget-type="2" data-height="50"
              data-clutchcompany-id="819284"></div>
         <a target="_blank" href="https://www.goodfirms.co/company/cml-team-ltd">
