@@ -1,4 +1,7 @@
 $((function () {
-  $('#customers-main').slick({});
+  $('#customers-main').slick({
+    infinite: false,
+    dots: true,
+  });
 }));
 
