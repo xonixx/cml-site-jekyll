@@ -1,3 +1,9 @@
+footer .badges {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 .clutch-widget {
     width: 205px;
 }
