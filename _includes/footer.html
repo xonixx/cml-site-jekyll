@@ -1,25 +1,35 @@
-  <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <span class="copyright">Copyright &copy; {{ 'now' | date: "%Y" }} {{ site.full-name }}</span>
-                </div>
-                <div class="col-md-4">
-                    <ul class="list-inline social-buttons">
-                        {% for network in site.social %}
-                        <li><a href="{{ network.url }}" target="_blank"><i class="fab fa-{{ network.title }}"></i></a>
-                        </li>
-                        {% endfor %}
-                    </ul>
-                </div>
-                <!--<div class="col-md-4">
-                    <ul class="list-inline quicklinks">
-                        <li><a href="#">Privacy Policy</a>
-                        </li>
-                        <li><a href="#">Terms of Use</a>
-                        </li>
-                    </ul>
-                </div>-->
-            </div>
-        </div>
-    </footer>
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <span class="copyright">Copyright &copy; {{ 'now' | date: "%Y" }} {{ site.full-name }}</span>
+      </div>
+      <div class="col-md-3">
+        <ul class="list-inline social-buttons">
+          {% for network in site.social %}
+          <li><a href="{{ network.url }}" target="_blank"><i class="fab fa-{{ network.title }}"></i></a>
+          </li>
+          {% endfor %}
+
+        </ul>
+      </div>
+      <div class="col-md-6 badges">
+        <div class="clutch-widget" data-url="https://widget.clutch.co" data-widget-type="2" data-height="50"
+             data-clutchcompany-id="819284"></div>
+        <a target="_blank" href="https://www.goodfirms.co/company/cml-team-ltd">
+          <img style="width:180px"
+               src="https://goodfirms.s3.amazonaws.com/badges/white-button/list-blockchain-technology-companies.svg"
+               alt="GoodFirms Badge">
+        </a>
+      </div>
+      <!--<div class="col-md-4">
+          <ul class="list-inline quicklinks">
+              <li><a href="#">Privacy Policy</a>
+              </li>
+              <li><a href="#">Terms of Use</a>
+              </li>
+          </ul>
+      </div>-->
+    </div>
+  </div>
+</footer>
