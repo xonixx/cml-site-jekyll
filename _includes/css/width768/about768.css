@@ -96,11 +96,6 @@
         background: #fffdf5;
     }
 
-    .customers-main .owl-stage {
-        display: flex;
-        align-items: center;
-    }
-
     .customers-main {
         background: #ffffff;
     }
