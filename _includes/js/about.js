@@ -20,7 +20,7 @@ function displaySubHeader() {
             display: "block"
           });
         }
-      }, 1000);
+      }, 500);
     } else {
       $(".subheader-section").css({
         display: "none"
