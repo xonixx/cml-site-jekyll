@@ -268,14 +268,6 @@ color: #fff;
 background-color: #{{ site.data.template.color.secondary }};
 }
 
-@media(min-width:996px) {
-    nav > .container
-    {
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
-}
-
 header {
     text-align: center;
     color: #fff;

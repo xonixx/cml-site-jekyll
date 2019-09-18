@@ -1,3 +1,33 @@
+@media (min-width: 768px) and (max-width: 1000px) {
+    nav ul {
+        font-size: 10px;
+    }
+}
+
+@media(min-width:768px) {
+    nav > .container
+    {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .calendar-button, .back-button-header.navbar-toggle, .calendar-button-callus {
+        margin-left: 60px;
+    }
+}
+
+@media (max-width: 767px) {
+    .navbar-brand-div {
+        margin-top: 4px;
+    }
+
+    nav .nav-mobile-hidden {
+        display: none;
+    }
+}
+
 @media (max-width: 320px) {
     #helicopter {
         width: 280px;
