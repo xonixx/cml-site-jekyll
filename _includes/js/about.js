@@ -12,7 +12,7 @@ function displaySubHeader() {
     $(window).scrollTop() + 101 >= $("#about-portfolio").offset().top &&
     $(window).scrollTop() + 160 < $("#team").offset().top;
 
-  $(window).scroll(function() {
+  $(window).on("scroll", (function() {
     if (inAboutSection()) {
       setTimeout(function() {
         if (inAboutSection()) {
@@ -36,10 +36,10 @@ function displaySubHeader() {
     } else {
       $("#portfolio-a")
         .removeClass("selected-a")
-        .blur();
+        .trigger("blur");
       $("#portfolio-a-mobile")
         .removeClass("selected-a")
-        .blur();
+        .trigger("blur");
     }
 
     if (
@@ -51,10 +51,10 @@ function displaySubHeader() {
     } else {
       $("#hackathon-a")
         .removeClass("selected-a")
-        .blur();
+        .trigger("blur");
       $("#hackathon-a-mobile")
         .removeClass("selected-a")
-        .blur();
+        .trigger("blur");
     }
 
     if (
@@ -66,10 +66,10 @@ function displaySubHeader() {
     } else {
       $("#customers-a")
         .removeClass("selected-a")
-        .blur();
+        .trigger("blur");
       $("#customers-a-mobile")
         .removeClass("selected-a")
-        .blur();
+        .trigger("blur");
     }
-  });
+  }));
 }
