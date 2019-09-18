@@ -495,6 +495,10 @@ text-transform: none;
     }
 }
 
+.team-description {
+    min-height: 120px;
+}
+
 .team-member {
     margin-bottom: 50px;
     text-align: center;
