@@ -182,7 +182,12 @@ h2.portfolio-item-name:nth-child(1) {
 	flex-grow: 1;
 }
 
-.subheader-a:hover, .subheader-a.selected-a
+.subheader-a.non-selected-subheader {
+	color: #fff;
+	text-decoration: none;
+}
+
+.subheader-a.selected-a
 {
 	color: #fff;
 	display: inline-block;
