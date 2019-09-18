@@ -195,7 +195,7 @@ fieldset[disabled] .btn-xl.active {
     transition: top 0.3s;
 }
 
-.navbar-default.navbar-shrink {
+.navbar-default.navbar-shrink, .navbar-callus {
     background-color: #{{ site.data.template.color.primary-bg }};
 }
 
