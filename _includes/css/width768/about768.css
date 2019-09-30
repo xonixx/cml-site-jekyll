@@ -102,10 +102,16 @@
 
     .customers-logo {
         margin-bottom: 15px;
+        display: flex;
+        justify-content: center;
     }
 }
 
 @media (max-width: 768px) {
+
+    .customers-logo img {
+        width: 100%;
+    }
 
     .customers-section {
         flex-direction: column;
