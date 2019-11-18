@@ -4,8 +4,8 @@ subtitle: Chatbot integration with Alexa
 layout: default
 modal-id: https://vimeo.com/194964682
 date: 2014-07-15
-img: escape.png
-thumbnail: alexa.jpg
+img: escape.webp
+thumbnail: alexa.webp
 alt: image-alt
 project-date: December 2016
 client: Start Bootstrap
