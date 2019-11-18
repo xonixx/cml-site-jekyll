@@ -4,8 +4,8 @@ subtitle: Facebook Chatbot that finds the best music on Spotify that fits your c
 layout: default
 modal-id: https://vimeo.com/194966196
 date: 2014-07-16
-img: moodic.jpg
-thumbnail: moodic.png
+img: moodic.webp
+thumbnail: moodic-thumbnail.webp
 alt: image-alt
 project-date: December 2016
 client: Start Bootstrap

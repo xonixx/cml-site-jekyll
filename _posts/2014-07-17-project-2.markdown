@@ -4,8 +4,8 @@ subtitle: Facebook Chatbot that allows you to register into Kyiv parties. <a hre
 layout: default
 modal-id: https://m.me/partyanimalsbot
 date: 2014-07-17
-img: treehouse.png
-thumbnail: partyanimal1.jpg
+img: treehouse.webp
+thumbnail: partyanimal1.webp
 alt: image-alt
 project-date: April 2014
 client: Start Bootstrap
