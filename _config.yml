@@ -1,6 +1,6 @@
 url: https://www.cmlteam.com
 baseurl:
-jare_cdn_proxy_url: https://cf.jare.io/?u=https://www.cmlteam.com
+image_server_url: https://www.cmlteam.com
 
 # Site settings
 short-name: CML
