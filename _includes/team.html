@@ -12,7 +12,7 @@
             {% for member in site.people %}
             <div class="col-sm-6">
                 <div class="team-member">
-                    <img src="https://cf.jare.io?u={{ site.baseurl }}/img/team/{{ member.pic }}.webp" class="img-responsive img-circle" alt="">
+                    <img src="{{ site.server_url }}/img/team/{{ member.pic }}.webp" class="img-responsive img-circle" alt="">
                     <h4 style="white-space: nowrap;">{{ member.name }}</h4>
                     <p class="section-heading text-muted"><b>{{ member.position }}</b></p>
                     <p class="team-description text-muted">{{ member.description }}</p>
@@ -47,16 +47,16 @@
 
                 <div class="team-photoes-column">
                     <div class="team-photoes">
-                        <img src="https://cf.jare.io?u={{ site.baseurl }}/img/portfolio/team1.webp" class="team-photo-img" alt="">
+                        <img src="{{ site.server_url }}/img/portfolio/team1.webp" class="team-photo-img" alt="">
                     </div>
                     <div class="team-photoes">
-                        <img src="https://cf.jare.io?u={{ site.baseurl }}/img/portfolio/team2.webp" class="team-photo-img" alt="">
+                        <img src="{{ site.server_url }}/img/portfolio/team2.webp" class="team-photo-img" alt="">
                     </div>
                 </div>
 
                 <div class="team-photoes-column">
                     <div class="team-photoes order-top">
-                        <img src="https://cf.jare.io?u={{ site.baseurl }}/img/portfolio/team3.webp" class="team-photo-img " alt="">
+                        <img src="{{ site.server_url }}/img/portfolio/team3.webp" class="team-photo-img " alt="">
                     </div>
                     <div class="team-btn" id="team-btn-click" type="button">
                         <div class="team-btn-title">
@@ -64,16 +64,16 @@
                         </div>
                     </div>
                     <div class="team-photoes order-bottom">
-                        <img src="https://cf.jare.io?u={{ site.baseurl }}/img/portfolio/team4.webp" class="team-photo-img" alt="">
+                        <img src="{{ site.server_url }}/img/portfolio/team4.webp" class="team-photo-img" alt="">
                     </div>
                 </div>
 
                 <div class="team-photoes-column">
                     <div class="team-photoes">
-                        <img src="https://cf.jare.io?u={{ site.baseurl }}/img/portfolio/team5.webp" class="team-photo-img" alt="">
+                        <img src="{{ site.server_url }}/img/portfolio/team5.webp" class="team-photo-img" alt="">
                     </div>
                     <div class="team-photoes">
-                        <img src="https://cf.jare.io?u={{ site.baseurl }}/img/portfolio/team6.webp" class="team-photo-img" alt="">
+                        <img src="{{ site.server_url }}/img/portfolio/team6.webp" class="team-photo-img" alt="">
                     </div>
                 </div>
             </div>
