@@ -15,7 +15,7 @@ $(".event-schedule").on("click", function() {
       "<div class='calendly-inline-widget hide-pop-up-events' data-url=' " +
       eventCalendly +
       "'></div>" +
-      "<script type='text/javascript' src='https://assets.calendly.com/assets/external/widget.js'></script>" +
+      "<script async type='text/javascript' src='https://assets.calendly.com/assets/external/widget.js'></script>" +
       "</div>"
   );
   $(".events-popup").css({ display: "block" });
