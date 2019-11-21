@@ -6,12 +6,15 @@ cache: bundler # speed up
 
 # Assume bundler is being used, therefore
 # the `install` step will run `bundle install` by default.
-script: ./.travis.build.sh
+script:
+  - if [ "$TRAVIS_BRANCH" = "master" ]; then ./.travis.build.sh ./_config_test.yml; fi
+  - if [ "$TRAVIS_BRANCH" = "stable" ]; then ./.travis.build.sh ./_config_prod.yml; fi
 
 # branch whitelist, only for GitHub Pages
 branches:
   only:
    - master
+   - stable
 #  - gh-pages     # test the gh-pages branch
 #  - /pages-(.*)/ # test every branch which starts with "pages-"
 
@@ -41,7 +44,16 @@ before_deploy:
 #    branch: master
 
 deploy:
-  provider: script
-  skip_cleanup: true
-#  script: ./.travis.deploy_prod.sh
-  script: ./.travis.deploy_test.sh
+  # Deploy latest approved code to TEST
+  - provider: script
+    skip_cleanup: true
+    script: ./.travis.deploy_test.sh
+    on:
+      branch: master
+
+  # Deploy stable version to PROD
+  - provider: script
+    skip_cleanup: true
+    script: ./.travis.deploy_prod.sh
+    on:
+      branch: stable
