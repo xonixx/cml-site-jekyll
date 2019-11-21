@@ -1,6 +1,6 @@
 url: https://www.cmlteam.com
 baseurl:
-image_server_url: https://www.cmlteam.com
+image_server_url:
 
 # Site settings
 short-name: CML
