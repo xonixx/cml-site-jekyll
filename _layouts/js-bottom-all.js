@@ -2,6 +2,8 @@
 {% include js/jquery.inview.min.js %};
 {% include js/classie.js %};
 {% include js/jqBootstrapValidation.js %};
+{% include js/particles.min.js %};
+{% include js/typed.min.js %};
 
 {% include js/cbpAnimatedHeader.js %};
 {% include js/about-hackathons.js %};
