@@ -2,7 +2,7 @@
 {% include js/jquery.inview.min.js %};
 {% include js/classie.js %};
 {% include js/jqBootstrapValidation.js %};
-{% include js/particles.2.0.0.min.js %};
+{% include js/particles.2.0.0.js %};
 {% include js/typed.1.1.7.min.js %};
 
 {% include js/cbpAnimatedHeader.js %};
