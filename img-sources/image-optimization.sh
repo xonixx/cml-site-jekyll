@@ -15,7 +15,11 @@ find "$SOURCE_FOLDER" -regextype sed -regex ".*\.\(jpg\|png\|jpeg\)" -print0 | #
   # feed all relpaths to image-magick
   xargs -L 1 -i \
     sh -c \
-      'echo "Converting $0/$2 to WebP..." && convert "$0/$2" -quality 100 -define webp:lossless=true "$1/${2%.*}.webp"' \
+      'echo "Converting $0/$2 to WebP..." &&
+      convert "$0/$2" \
+              -quality 100 \
+              -define webp:lossless=true \
+              "$1/${2%.*}.webp"' \
       "$SOURCE_FOLDER" \
       "$IMG_FOLDER" \
       {}
@@ -26,7 +30,13 @@ find "$SOURCE_FOLDER" -regextype sed -regex ".*\.\(jpg\|png\|jpeg\)" -print0 | #
   # feed all relpaths to image-magick
   xargs -L 1 -i \
     sh -c \
-      'echo "Converting $0/$2 to PNG..." && convert "$0/$2" -quality 100 -define webp:lossless=true "$1/${2%.*}.webp"' \
+      'echo "Converting $0/$2 to PNG..." &&
+      convert "$0/$2" \
+              -quality 100 \
+              -define png:compression-level=0 \
+              -define png:compression-filter=5 \
+              -define png:compression-strategy=2 \
+              "$1/${2%.*}.png"' \
       "$SOURCE_FOLDER" \
       "$IMG_FOLDER" \
       {}
