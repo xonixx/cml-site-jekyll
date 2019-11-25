@@ -73,9 +73,15 @@
         <div class="container">
             <div class="intro-text">
                 <!-- <div class="intro-lead-in">Welcome To CML!</div> -->
-                <img id="helicopter" src="{{ site.image_server_url }}/img/cml/transparent-logo-enhanced.webp" style="
-                    position: relative;/*make above canvas */
-                    pointer-events: none/* but events-transparent */">
+                <picture id="helicopter"
+                         style="position: relative;/*make above canvas */
+                                pointer-events: none/* but events-transparent */"
+                >
+                    <source srcset="{{ site.image_server_url }}/img/cml/transparent-logo-enhanced.webp"
+                            type="image/webp"
+                    />
+                    <img src="{{ site.image_server_url }}/img/cml/transparent-logo-enhanced.png">
+                </picture>
                 <div class="intro-heading" style="position: relative;pointer-events: none"><span id="typed-animation"></span></div>
                 <a href="#services"
                    style="position: relative/* make clickable over canvas */"
