@@ -14,7 +14,14 @@
                         <div class="modal-body">
                             <h2>{{ post.title }}</h2>
                             <hr class="star-primary">
-                            <img src="{{ site.image_server_url }}/img/portfolio/{{ post.img }}" class="img-responsive img-centered" alt="{{ post.alt }}">
+                            <picture>
+                                <source srcset="{{ site.image_server_url }}/img/portfolio/{{ {{ post.img }} | split '.' | first }}.webp"
+                                        type="image/webp">
+                                <img class="picture-description"
+                                     src="{{ site.image_server_url }}/img/portfolio/{{ post.img }}"
+                                     alt="{{ post.alt }}">
+                            </picture>
+                            <img src="{{ site.image_server_url }}/img" class="img-responsive img-centered" >
                             <p>{{ post.description }}</p>
                             <ul class="list-inline item-details">
                                 <li>Client:
