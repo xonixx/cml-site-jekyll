@@ -4,8 +4,8 @@ subtitle: Facebook Chatbot that allows you to find out about any parties that ha
 layout: default
 modal-id: https://m.me/partybunny
 date: 2014-07-18
-img: dreams.webp
-thumbnail: partybunny1.webp
+img: dreams.png
+thumbnail: partybunny1.png
 alt: image-alt
 project-date: December 2016
 client: Start Bootstrap
