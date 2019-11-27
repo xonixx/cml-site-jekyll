@@ -1,6 +1,6 @@
 
 
-let teamImages = $(".team-photo-img").clone();
+let teamImages = $(".team-photo-pictures").clone();
 let currentIndexTeam = 0;
 let stepTeam = 1;
 
