@@ -26,6 +26,7 @@
 {% include css/external/fontawesome/fontawesome.5.11.2.min.css %}
 {% include css/external/owl.theme.default.2.3.4.min.css %}
 {% include css/external/owl.carousel.2.3.4.min.css %}
-{% include css/external/slick-theme.1.9.0.css %}
+{% include css/external/slick-theme.1.8.1.css %}
+{% include css/external/slick.1.8.1.css %}
 {% include css/external/google-fonts.css %}
 {{ content }}
