@@ -15,7 +15,7 @@
                             <h2>{{ post.title }}</h2>
                             <hr class="star-primary">
                             <picture>
-                                <source srcset="{{ site.resources_server_url }}/img/portfolio/{{ {{ post.img }} | split '.' | first }}.webp"
+                                <source srcset="{{ site.resources_server_url }}/img/portfolio/{{ post.img | split:'.' | first }}.webp"
                                         type="image/webp">
                                 <img class="picture-description"
                                      src="{{ site.resources_server_url }}/img/portfolio/{{ post.img }}"
