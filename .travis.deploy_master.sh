@@ -4,9 +4,9 @@ set -v
 
 ssh -i /tmp/deploy_rsa apps1@prod.cmlteam.com "
     (echo \"\$(date) next.cmlteam.com \$(pwd)\" ;
-    rm -rf www.cmlteam.com/test                 ;
-    mkdir www.cmlteam.com/test                  ;
-    cd www.cmlteam.com/test                     ;
+    rm -rf next.cmlteam.com                     ;
+    mkdir next.cmlteam.com                      ;
+    cd next.cmlteam.com                         ;
     echo 'User-agent: *'    > robots.txt        ;
     echo 'Disallow: /'     >> robots.txt        ;
     echo                   >> robots.txt        ;
@@ -15,4 +15,4 @@ ssh -i /tmp/deploy_rsa apps1@prod.cmlteam.com "
     echo 'Disallow: /test/'>> robots.txt        ;
     echo                   >> robots.txt        ;
     ) >> /tmp/.deploy 2>&1"
-cd _site ; scp -i /tmp/deploy_rsa -C -r * apps1@prod.cmlteam.com:~/www.cmlteam.com/test
+cd _site ; scp -i /tmp/deploy_rsa -C -r * apps1@prod.cmlteam.com:~/next.cmlteam.com
