@@ -12,7 +12,13 @@
             {% for member in site.people %}
             <div class="col-sm-6">
                 <div class="team-member">
-                    <img src="img/team/{{ member.pic }}.jpg" class="img-responsive img-circle" alt="">
+                    <picture>
+                        <source srcset="{{ site.resources_server_url }}/img/team/{{ member.pic }}.webp"
+                                type="image/webp">
+                        <img class="img-responsive img-circle"
+                             src="{{ site.resources_server_url }}/img/team/{{ member.pic }}.jpg"
+                             alt="">
+                    </picture>
                     <h4 style="white-space: nowrap;">{{ member.name }}</h4>
                     <p class="section-heading text-muted"><b>{{ member.position }}</b></p>
                     <p class="team-description text-muted">{{ member.description }}</p>
@@ -47,16 +53,34 @@
 
                 <div class="team-photoes-column">
                     <div class="team-photoes">
-                        <img src="/img/portfolio/team1.jpg" class="team-photo-img" alt="">
+                        <picture class="team-photo-pictures">
+                            <source srcset="{{ site.resources_server_url }}/img/portfolio/team1.webp"
+                                    type="image/webp">
+                            <img src="{{ site.resources_server_url }}/img/portfolio/team1.jpg"
+                                 class="team-photo-img"
+                                 alt="">
+                        </picture>
                     </div>
                     <div class="team-photoes">
-                        <img src="/img/portfolio/team2.jpg" class="team-photo-img" alt="">
+                        <picture class="team-photo-pictures">
+                            <source srcset="{{ site.resources_server_url }}/img/portfolio/team2.webp"
+                                    type="image/webp">
+                            <img src="{{ site.resources_server_url }}/img/portfolio/team2.jpg"
+                                 class="team-photo-img"
+                                 alt="">
+                        </picture>
                     </div>
                 </div>
 
                 <div class="team-photoes-column">
                     <div class="team-photoes order-top">
-                        <img src="/img/portfolio/team3.jpg" class="team-photo-img " alt="">
+                        <picture class="team-photo-pictures">
+                            <source srcset="{{ site.resources_server_url }}/img/portfolio/team3.webp"
+                                    type="image/webp">
+                            <img src="{{ site.resources_server_url }}/img/portfolio/team3.jpg"
+                                 class="team-photo-img"
+                                 alt="">
+                        </picture>
                     </div>
                     <div class="team-btn" id="team-btn-click" type="button">
                         <div class="team-btn-title">
@@ -64,16 +88,34 @@
                         </div>
                     </div>
                     <div class="team-photoes order-bottom">
-                        <img src="/img/portfolio/team4.jpg" class="team-photo-img" alt="">
+                        <picture class="team-photo-pictures">
+                            <source srcset="{{ site.resources_server_url }}/img/portfolio/team4.webp"
+                                    type="image/webp">
+                            <img src="{{ site.resources_server_url }}/img/portfolio/team4.jpg"
+                                 class="team-photo-img"
+                                 alt="">
+                        </picture>
                     </div>
                 </div>
 
                 <div class="team-photoes-column">
                     <div class="team-photoes">
-                        <img src="/img/portfolio/team5.jpg" class="team-photo-img" alt="">
+                        <picture class="team-photo-pictures">
+                            <source srcset="{{ site.resources_server_url }}/img/portfolio/team5.webp"
+                                    type="image/webp">
+                            <img src="{{ site.resources_server_url }}/img/portfolio/team5.jpg"
+                                 class="team-photo-img"
+                                 alt="">
+                        </picture>
                     </div>
                     <div class="team-photoes">
-                        <img src="/img/portfolio/team6.jpg" class="team-photo-img" alt="">
+                        <picture class="team-photo-pictures">
+                            <source srcset="{{ site.resources_server_url }}/img/portfolio/team6.webp"
+                                    type="image/webp">
+                            <img src="{{ site.resources_server_url }}/img/portfolio/team6.jpg"
+                                 class="team-photo-img"
+                                 alt="">
+                        </picture>
                     </div>
                 </div>
             </div>

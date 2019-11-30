@@ -5,7 +5,7 @@ layout: default
 modal-id: https://vimeo.com/194966196
 date: 2014-07-16
 img: moodic.jpg
-thumbnail: moodic.png
+thumbnail: moodic-thumbnail.png
 alt: image-alt
 project-date: December 2016
 client: Start Bootstrap

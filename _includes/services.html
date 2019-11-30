@@ -37,7 +37,12 @@
             </div>
             <div class="row text-right">
                 <div style="width: 400px; height: 60px; float: right; background-color: #0077B5; border-radius: 5px;">
-                    <div style="display: inline; float:left; padding-left: 20px; padding-top: 9px;"><img src="img/pdf-icon.png" style="width: 40px;"/></div>
+                    <div style="display: inline; float:left; padding-left: 20px; padding-top: 9px;">
+                        <picture style="width: 40px;">
+                            <source srcset="{{ site.resources_server_url }}/img/pdf-icon.webp" type="image/webp" />
+                            <img src="{{ site.resources_server_url }}/img/pdf-icon.png" />
+                        </picture>
+                    </div>
                     <div style="display: inline; float:right; padding-right: 30px; padding-top: 15px;"><a href="img/cmlteam.pdf" download style="color: #ffffff; font-size: 20px;">Download Our Company Deck</a></div>
                     <div style="clear: both;"></div>
                 </div>

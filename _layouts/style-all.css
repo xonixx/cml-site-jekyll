@@ -1,3 +1,7 @@
+/*Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/*/
+{% include css/external/bootstrap.3.2.0.min.css %}
+
+/*Custom CSS*/
 {% include css/cml.css %}
 {% include css/about.css %}
 {% include css/calendar.css %}
@@ -16,4 +20,11 @@
 {% include css/width768/cml768.css %}
 {% include css/width900-901/calendar900.css %}
 {% include css/width900-901/events900.css %}
+
+/*Custom Fonts*/
+{% include css/external/owl.theme.default.2.3.4.min.css %}
+{% include css/external/owl.carousel.2.3.4.min.css %}
+{% include css/external/slick-theme.1.8.1.css %}
+{% include css/external/slick.1.8.1.css %}
+{% include css/external/google-fonts.css %}
 {{ content }}

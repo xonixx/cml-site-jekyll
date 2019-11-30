@@ -2,7 +2,13 @@
 <section id="calendar" style="margin-top: 20px; background-color: #ffffff">
         <div id="calendar-alex-info" class="calendar-element">
             <div class="calendar-picture">
-                <img class="picture-description" src="/img/team/1.jpg"/>
+                <picture>
+                    <source srcset="{{ site.resources_server_url }}/img/team/1.webp"
+                            type="image/webp">
+                    <img class="picture-description"
+                         src="{{ site.resources_server_url }}/img/team/1.jpg"
+                         alt="">
+                </picture>
             </div>
             <div class="calendar-story">
                 <h1 class="calendar-title">Oleksandr Shchetynin</h1>
@@ -13,7 +19,13 @@
 
         <div id="calendar-vlad-info" class="calendar-element">
             <div class="calendar-picture">
-                <img class="picture-description" src="/img/team/2.jpg"/>
+                <picture>
+                    <source srcset="{{ site.resources_server_url }}/img/team/2.webp"
+                            type="image/webp">
+                    <img class="picture-description"
+                         src="{{ site.resources_server_url }}/img/team/2.jpg"
+                         alt="">
+                </picture>
             </div>
             <div class="calendar-story">
                 <h1 class="calendar-title">Vladyslav Sikach</h1>
@@ -26,14 +38,14 @@
             <!-- Calendly inline widget begin -->
             <div class="calendly-inline-widget" data-url="https://calendly.com/shchetynin/30min?month-view=disabled">
             </div>
-            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
+            <script defer type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
             <!-- Calendly inline widget end -->
         </div>
         <div id="calendar-vlad-calendly" class="calendar-table">
             <!-- Calendly inline widget begin -->
             <div class="calendly-inline-widget" data-url="https://calendly.com/sikach/30min?month-view=disabled">
             </div>
-            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
+            <script defer type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
             <!-- Calendly inline widget end -->
         </div>
     </section>
