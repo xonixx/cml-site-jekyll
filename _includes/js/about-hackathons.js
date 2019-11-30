@@ -1,13 +1,13 @@
-var shufflemeHackathons = (function ($) {
+var shufflemeHackathons = (function($) {
   "use strict";
   let $grid = $("#about-hackathons #grid"); //locate what we want to sort
   let $filterMajorOptions = $("#portfolio-hackathon-major-sorting li"); //locate the filter categories
   let $filterMinorOptions = $("#portfolio-hackathon-minor-sorting li"); //locate the filter categories
   let $sizer = $grid.find(".shuffle_sizer"); //sizer stores the size of the items
   let shuffler;
-  let init = function (onInit) {
+  let init = function(onInit) {
     // None of these need to be executed synchronously
-    setTimeout(function () {
+    setTimeout(function() {
       setupHackathonsFilters();
       onInit();
     }, 100);
@@ -20,20 +20,29 @@ var shufflemeHackathons = (function ($) {
   };
 
   // Set up button click
-  let setupHackathonsFilters = function () {
+  let setupHackathonsFilters = function() {
     let $majorButtons = $filterMajorOptions.children();
     let $minorButtons = $filterMinorOptions.children();
-    $majorButtons.on("click", function (e) {
+    $majorButtons.on("click", function(e) {
       e.preventDefault();
       $("#portfolio-hackathon-major-sorting a").removeClass("active");
       $(this).addClass("active");
       const majorGroup = $(this).data("group");
       $("#about-hackathons #major-hackathon-filter .filter-element").text(majorGroup);
-      $filterMinorOptions.children(`[data-major-group*=${majorGroup}]`).parent().show()
-      $filterMinorOptions.children(`:not([data-major-group*=${majorGroup}])`).parent().hide()
-      $filterMinorOptions.children(`[data-major-group*=${majorGroup}]`).first().trigger("click")
+      $filterMinorOptions
+        .children(`[data-major-group*=${majorGroup}]`)
+        .parent()
+        .show();
+      $filterMinorOptions
+        .children(`:not([data-major-group*=${majorGroup}])`)
+        .parent()
+        .hide();
+      $filterMinorOptions
+        .children(`[data-major-group*=${majorGroup}]`)
+        .first()
+        .trigger("click");
     });
-    $minorButtons.on("click", function (e) {
+    $minorButtons.on("click", function(e) {
       e.preventDefault();
       const $this = $(this);
       const group = $this.data("group");
@@ -48,7 +57,7 @@ var shufflemeHackathons = (function ($) {
       else if (windowWidth <= 375) symbolCount = 18;
       else symbolCount = 20;
       let filterText;
-      if(group.length > symbolCount) filterText = `${group.substring(0, symbolCount)}...`;
+      if (group.length > symbolCount) filterText = `${group.substring(0, symbolCount)}...`;
       else filterText = group;
       $("#about-hackathons #minor-hackathon-filter .filter-element").text(filterText);
 
@@ -57,7 +66,7 @@ var shufflemeHackathons = (function ($) {
 
       $grid
         .find("li")
-        .filter(function (i, e) {
+        .filter(function(i, e) {
           let $img = $(this).find("img");
           $img.removeAttr("data-bp");
           let groups = $(e).data("groups");
@@ -73,7 +82,7 @@ var shufflemeHackathons = (function ($) {
         })
         .find(".portfolio-item a")
         .off("click.bigpicture")
-        .on("click.bigpicture", function (e) {
+        .on("click.bigpicture", function(e) {
           e.preventDefault();
           BigPicture({
             el: e.target,
@@ -90,32 +99,35 @@ var shufflemeHackathons = (function ($) {
   // the height of the picture-item is dependent on the image
   // I recommend using imagesloaded to determine when an image is loaded
   // but that doesn't support IE7
-  let loadImages = function (insideGroup) {
-    let debouncedLayout = $.throttle(300, function () {
+  let loadImages = function(insideGroup) {
+    let debouncedLayout = $.throttle(300, function() {
       shuffler.update();
     });
 
     // Get all images inside shuffle selected group
     $grid
       .find("li")
-      .filter(function (i, e) {
+      .filter(function(i, e) {
         let groups = $(e).data("groups");
         if (!groups) return false;
         return groups.indexOf(insideGroup) >= 0;
       })
       .find("img")
-      .each(function () {
+      .each(function() {
         // If none of the checks above matched, simulate loading on detached element.
-        $(this).on("load", function () {
+        const $img = $(this);
+        $img.on("load", function() {
           $(this).off("load");
           debouncedLayout();
         });
 
-        this.src = $(this).data("src");
+        const $source = $img.parent().find("source");
+        $source.attr("srcset", $source.data("srcset"));
+        this.src = $img.data("src");
       });
 
     // Because this method doesn't seem to be perfect.
-    setTimeout(function () {
+    setTimeout(function() {
       debouncedLayout();
     }, 500);
   };
@@ -125,16 +137,15 @@ var shufflemeHackathons = (function ($) {
   };
 })(jQuery);
 
-$(function () {
-
+$(function() {
   $(window).on("click", function() {
-    closeMobileFilters()
+    closeMobileFilters();
   });
 
-  $("#about-hackathons .portfolio-display-mobile-list").on("click", function (event) {
+  $("#about-hackathons .portfolio-display-mobile-list").on("click", function(event) {
     event.stopPropagation();
-    if(this.id === "major-hackathon-filter") {
-      closeMinorFilter()
+    if (this.id === "major-hackathon-filter") {
+      closeMinorFilter();
     }
     $(`#about-hackathons .${this.id}.portfolio-sorting`).toggleClass("mobile-hidden");
     $(`#about-hackathons #${this.id} .portfolio-display-mobile-element`).toggleClass("selected");
@@ -145,8 +156,10 @@ $(function () {
       .find(".container")
       .show();
 
-    shufflemeHackathons.init(function () {
-      $("#portfolio-hackathon-major-sorting a").first().trigger("click")
+    shufflemeHackathons.init(function() {
+      $("#portfolio-hackathon-major-sorting a")
+        .first()
+        .trigger("click");
     });
   });
 
@@ -157,6 +170,8 @@ $(function () {
 
   function closeMinorFilter() {
     $(`#about-hackathons .minor-hackathon-filter`).addClass("mobile-hidden");
-    $(`#about-hackathons #minor-hackathon-filter .portfolio-display-mobile-element`).removeClass("selected");
+    $(`#about-hackathons #minor-hackathon-filter .portfolio-display-mobile-element`).removeClass(
+      "selected"
+    );
   }
 });
