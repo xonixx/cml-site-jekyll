@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 set -v
+set -e
 
 ssh -i /tmp/deploy_rsa apps1@prod.cmlteam.com "
 (echo \"\$(date) www.cmlteam.com \$(pwd)\" ;
