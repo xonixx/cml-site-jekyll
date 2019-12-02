@@ -20,9 +20,9 @@ let stepTeam = 1;
 
     $(".right-button-team").on('click', function () {
             console.log("currentIndexFirst" + currentIndexTeam);
-            console.log("step" + step);
+            console.log("step" + stepTeam);
 
-            if (currentIndexTeam + step < teamImages.length) {
+            if (currentIndexTeam + stepTeam < teamImages.length) {
                 currentIndexTeam += 1;
                 showElementsTeamBlock(currentIndexTeam, stepTeam);
             }
