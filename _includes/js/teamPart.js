@@ -7,9 +7,6 @@ let stepTeam = 1;
 
 
     $(".left-button-team").on('click', function () {
-            console.log("currentIndexFirst" + currentIndexTeam);
-            console.log("step" + stepTeam);
-
             if (currentIndexTeam > 0) {
                 currentIndexTeam -= 1;
                 showElementsTeamBlock(currentIndexTeam, stepTeam);
@@ -19,10 +16,7 @@ let stepTeam = 1;
     );
 
     $(".right-button-team").on('click', function () {
-            console.log("currentIndexFirst" + currentIndexTeam);
-            console.log("step" + step);
-
-            if (currentIndexTeam + step < teamImages.length) {
+            if (currentIndexTeam + stepTeam < teamImages.length) {
                 currentIndexTeam += 1;
                 showElementsTeamBlock(currentIndexTeam, stepTeam);
             }
@@ -31,8 +25,6 @@ let stepTeam = 1;
     );
 
     function displayButtonsTeamBlock(currentIndexTeam, stepTeam) {
-        console.log("step" + stepTeam);
-        console.log("currentIndexTeam" + currentIndexTeam);
         if (currentIndexTeam === 0) {
             $(".left-button-team").css({
                 "visibility": "hidden"
@@ -59,11 +51,9 @@ let stepTeam = 1;
     }
 
 $(function () {
-    console.log("teamImages.length  " + teamImages.length);
     createTeamPictures();
     if(document.body.clientWidth < 560) {
         currentIndexTeam = 0;
-        console.log("team ready");
         showElementsTeamBlock(currentIndexTeam, stepTeam);
         $(".team-photoes-list").css({
             "display": "block"
@@ -84,7 +74,6 @@ $(function () {
 });
 
 function showElementsTeamBlock(indexElement, stepTeam) {
-    console.log("we create pictures");
     teamImages.css({"display": "none"});
     teamImages.slice(indexElement, stepTeam + indexElement).css({"display": "block"});
     displayButtonsTeamBlock(indexElement, stepTeam);
@@ -92,7 +81,6 @@ function showElementsTeamBlock(indexElement, stepTeam) {
 }
 
 function createTeamPictures() {
-    console.log("we create pictures");
     for (let i = 0; i < teamImages.length; i++) {
         $(".team-photoes-list").append(teamImages[i]);
     }
@@ -116,7 +104,6 @@ $(window).resize(function () {
         });
 
         currentIndexTeam = 0;
-        console.log("team resize");
         showElementsTeamBlock(currentIndexTeam, stepTeam);
     } else{
         $(".left-button-team").css({
