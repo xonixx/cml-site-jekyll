@@ -77,10 +77,10 @@
                          style="position: relative;/*make above canvas */
                                 pointer-events: none/* but events-transparent */"
                 >
-                    <source srcset="{{ site.resources_server_url }}/img/cml/transparent-logo-enhanced.webp"
+                    <source srcset="{{ 'img/cml/transparent-logo-enhanced.webp?1' | to_jare_cdn_url }}"
                             type="image/webp"
                     />
-                    <img src="{{ site.resources_server_url }}/img/cml/transparent-logo-enhanced.png">
+                    <img src="{{ 'img/cml/transparent-logo-enhanced.png' | to_jare_cdn_url }}">
                 </picture>
                 <div class="intro-heading" style="position: relative;pointer-events: none"><span id="typed-animation"></span></div>
                 <a href="#services"
