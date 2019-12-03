@@ -11,7 +11,7 @@ description: "CML Team, Full-Stack Development, IT-Consulting for Startups and E
 # Team names, titles and social links
 people:
 - name: Oleksandr Shchetynin
-  pic: 1
+  pic: img/team/1.jpg
   position: CVO & CO-FOUNDER
   description: Worked in companies of different sizes, from successful startups to Fortune 500 companies, performing mission-critical responsibilities, developing and implementing high-tech IT solutions for variety of industries.
   social:
@@ -25,7 +25,7 @@ people:
       url: https://www.linkedin.com/in/shchetynin/
 
 - name: Vladyslav Sikach
-  pic: 2
+  pic: img/team/2.jpg
   position: CEO & CO-FOUNDER
   description: Has extensive business development and quantitative analytics experience from Head of Process Development in one of CIS’s leaders in debt collection to Business Architect in large Asian bank.
   social:
@@ -39,7 +39,7 @@ people:
       url: https://www.linkedin.com/in/sikach/
 
 - name: Volodymyr Gubarkov
-  pic: 3
+  pic: img/team/3.jpg
   position: CTO & CO-FOUNDER
   description: Focused primarily on backend development and infrastructure setup. Possesses solid object oriented systems design and implementation, system architectures development experience.
   social:
@@ -51,7 +51,7 @@ people:
       url: https://www.linkedin.com/in/vladimirgubarkov/
 
 - name: Basil Gorin
-  pic: 4
+  pic: img/team/4.jpg
   position: CO-FOUNDER
   description: Focused primarily on smart contracts development, payments processing and security. Has strong experience with e-commerce software development and distributed storage systems.
   social:
