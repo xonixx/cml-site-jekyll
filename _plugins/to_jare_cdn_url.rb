@@ -19,7 +19,9 @@
 module Jekyll
   module JareCdnLink
     def to_jare_cdn_url(source)
-      "#{@context.registers[:site].config['resources_server_url']}/#{source}?#{Time.now.to_i}"
+      @now_string = "#{Time.now.to_i}"
+      @appendix = if source.include? "?" then :"&#{@now_string}" else :"?#{@now_string}" end
+      "#{@context.registers[:site].config['resources_server_url']}/#{source}#{@appendix}"
     end
   end
 end
