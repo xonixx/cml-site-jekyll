@@ -2,7 +2,7 @@
 /* Slider */
 .slick-loading .slick-list
 {
-    background: #fff url('{{ site.resources_server_url }}/ajax-loader.gif') center center no-repeat;
+    background: #fff url('{{ "ajax-loader.gif" | to_cdn_url }}') center center no-repeat;
 }
 
 /* Icons */
@@ -12,8 +12,8 @@
     font-weight: normal;
     font-style: normal;
 
-    src: url('{{ site.resources_server_url }}/fonts/slick.eot');
-    src: url('{{ site.resources_server_url }}/fonts/slick.eot?#iefix') format('embedded-opentype'), url('{{ site.resources_server_url }}/fonts/slick.woff') format('woff'), url('{{ site.resources_server_url }}/fonts/slick.ttf') format('truetype'), url('{{ site.resources_server_url }}/fonts/slick.svg#slick') format('svg');
+    src: url('{{ "fonts/slick.eot" | to_cdn_url }}');
+    src: url('{{ "fonts/slick.eot?#iefix" | to_cdn_url }}') format('embedded-opentype'), url('{{ "fonts/slick.woff" | to_cdn_url }}') format('woff'), url('{{ "fonts/slick.ttf" | to_cdn_url }}') format('truetype'), url('{{ "fonts/slick.svg#slick" | to_cdn_url }}') format('svg');
 }
 /* Arrows */
 .slick-prev,
