@@ -15,10 +15,10 @@
                             <h2>{{ post.title }}</h2>
                             <hr class="star-primary">
                             <picture>
-                                <source srcset="{{ 'img/portfolio/{{ post.img | split:'.' | first }}.webp' | to_jare_cdn_url }}"
+                                <source srcset="{{ 'img/portfolio/{{ post.img | split:'.' | first }}.webp' | to_cdn_url }}"
                                         type="image/webp">
                                 <img class="picture-description"
-                                     src="{{ 'img/portfolio/{{ post.img }}' | to_jare_cdn_url }}"
+                                     src="{{ 'img/portfolio/{{ post.img }}' | to_cdn_url }}"
                                      alt="{{ post.alt }}">
                             </picture>
                             <p>{{ post.description }}</p>

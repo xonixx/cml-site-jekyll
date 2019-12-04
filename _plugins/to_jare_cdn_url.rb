@@ -1,24 +1,24 @@
-# Liquid filter plugin for converting relative resource links to
-# Jare CDN links
+# Liquid filter plugin for converting relative resource links to CDN links
 #
 # A Unix time value is added at the end of the link as query param
 # in order to force CDN update upon redeployment
 #
 # Examples:
-#   {{ "img.png" | hex_to_rgb }}
+#   {{ "img.png" | to_cdn_url }}
 #   # => "https://cf.jare.io/?u=https://next.cmlteam.com/img.png?1575391869"
 #
-#   {{ "css/style-all.css" | hex_to_rgb }}
+#   {{ "css/style-all.css" | to_cdn_url }}
 #   # => "https://cf.jare.io/?u=https://next.cmlteam.com/css/style-all.css?1575391869"
 #
 # source - relative URL string for a resource present on the server
 #
-# Returns a Jare CDN proxy for a resource, respective to config
+# Returns the original URL with CDN proxy prefix from config and timestamp as
+# query param to force CDN cache refresh
 #
 
 module Jekyll
-  module JareCdnLink
-    def to_jare_cdn_url(source)
+  module CdnLink
+    def to_cdn_url(source)
       @now_string = "#{Time.now.to_i}"
       @appendix = if source.include? "?" then :"&#{@now_string}" else :"?#{@now_string}" end
       "#{@context.registers[:site].config['resources_server_url']}/#{source}#{@appendix}"
@@ -26,4 +26,4 @@ module Jekyll
   end
 end
 
-Liquid::Template.register_filter(Jekyll::JareCdnLink)
+Liquid::Template.register_filter(Jekyll::CdnLink)
