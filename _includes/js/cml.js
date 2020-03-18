@@ -49,7 +49,7 @@ $('div.modal').on('show.bs.modal', function() {
 });
 
 Typed.new("#typed-animation", {
-    strings: ["Full Stack^1500", "DevOps^1500", "Blockchain^1500", "IT Consulting^1500"]
+    strings: ["Full Stack^1500", "Mobile Development^1500", "Blockchain^1500", "IT Consulting^1500"]
     , typeSpeed: 50
     , startDelay: 100
     , loop: true
