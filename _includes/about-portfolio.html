@@ -26,7 +26,7 @@
             data-group='["all", "Java", "Spring Boot", "ReactJS", "NodeJS", "AWS", "Solidity", "EOS", "VueJS", "RxJS",
             "TypeScript","Google App Script", "Google Drive API", "PostgreSQL", "MySQL", "Kibana", "Elasticsearch",
             "React Native","Facebook Messenger API", "IBM Watson", "Flutter", "Alexa Skills Kit", "Ethereum",
-            "Solidity", "Metamask", "Firebase", "ELK", "REST API", "Websockets", "RabbitMQ", "Swift", "Kotlin", "MaterialUI"]'
+            "Solidity", "Metamask", "Firebase", "ELK", "REST API", "Websockets", "RabbitMQ", "Swift", "Kotlin", "MaterialUI", "SonarQube"]'
             >All</a
           >
         </li>
@@ -35,6 +35,7 @@
         <li class="portfolio-title"><a href="#" data-group="Spring Boot">Spring Boot</a></li>
         <li class="portfolio-title"><a href="#" data-group="VueJS">VueJS</a></li>
         <li class="portfolio-title"><a href="#" data-group="ReactJS">ReactJS</a></li>
+        <li class="portfolio-title"><a href="#" data-group="SonarQube">SonarQube</a></li>
         <li class="portfolio-title"><a href="#" data-group="RxJS">RxJS</a></li>
         <li class="portfolio-title"><a href="#" data-group="AWS">AWS</a></li>
         <li class="portfolio-title"><a href="#" data-group="TypeScript">TypeScript</a></li>
@@ -544,13 +545,94 @@
       </li>
       <li
               class="col-md-6 col-sm-6 col-xs-12"
+              data-groups='["Java", "ELK", "AWS", "PostgreSQL", "MaterialUI", "Spring Boot", "SonarQube", "ReactJS"]'
+      >
+        <div class="portfolio-item">
+          <div class="portfolio-item-title">REM - Real Estate Management Platform</div>
+          <div class="portfolio-item-first-section">
+            <div class="portfolio-image-wrap">
+              <div class="projects" id="sixth-project" title="Click to see details">
+                <picture>
+                  <source srcset="{{ 'img/portfolio/REMWeb.webp' | to_cdn_url }}"
+                          type="image/webp" />
+                  <img src="{{ 'img/portfolio/REMWeb.jpg' | to_cdn_url }}"
+                       alt="REM - Real Estate Management Platform"
+                       class="img-responsive img-portfolio"/>
+                </picture>
+              </div>
+            </div>
+            <h2 class="portfolio-item-solution portfolio-item-name hidden sixth-project">
+              Solution
+            </h2>
+            <div class="portfolio-item-description hidden sixth-project">
+              <br />Property Management System (PMS) for landlords.
+              <br />Enriched PMS we’ve built with the support of different workflows and processing logic (including invoicing, agreements’ signing, payments, etc.)
+              iOS/Android apps for landlords with access to most of the features accessible in the REM PMS (Property Management System).
+            </div>
+            <h2 class="portfolio-item-name hidden sixth-project">
+              Result
+            </h2>
+            <div class="portfolio-item-description hidden sixth-project">
+              Successful pilot currently running on hundreds of properties, where landlords and their managers widely use the REM PMS to manage their properties, units, tenants and a number of day-to-day workflows
+            </div>
+          </div>
+          <div class="portfolio-item-second-section hidden sixth-project">
+            <h2 class="portfolio-item-name">
+              Client
+            </h2>
+            <div class="portfolio-item-description">
+              Anlit Technologies LLC is successful IT company in multiple domains. With headquarters Anchorage, Alaska
+            </div>
+            <h2 class="portfolio-item-name">
+              Description
+            </h2>
+            <div class="portfolio-item-description">
+              Mr. Juan Pulido being a founder of Anlit Technologies he's invested significantly in dozens of properties in real estate properties.
+              <br />Knowing exactly from the customers and landlords' perspective what kind of challenges and routines they experience daily.
+              <br />He come up with the brilliant idea on how to organize all the individual puzzles together to ease the problem of real estate management
+            </div>
+            <h2 class="portfolio-item-name">
+              Role
+            </h2>
+            <div class="portfolio-item-description">
+              Design and full cycle development of cloud based software and rich web interface (SPA)
+            </div>
+            <h2 class="portfolio-item-name">
+              Team and duration
+            </h2>
+            <div class="portfolio-item-description">
+              Two full-stack developers in development team working for over 1 year (ongoing)
+            </div>
+            <h2 class="portfolio-item-name">
+              Industries
+            </h2>
+            <div class="portfolio-item-description">
+              Hospitality
+            </div>
+            <h2 class="portfolio-item-name">
+              Country
+            </h2>
+            <div class="portfolio-item-description">
+              United States
+            </div>
+            <h2 class="portfolio-item-name">
+              Technologies
+            </h2>
+            <div class="portfolio-item-description">
+              Java, Spring, React.js, Material UI, AWS S3, Sendgrid, Twilio, ELK (Kibana, Elastic Search), PostgreSQL, SonarQube, Jenkins
+            </div>
+          </div>
+        </div>
+      </li>
+      <li
+              class="col-md-6 col-sm-6 col-xs-12"
               data-groups='["Swift", "ELK", "Kotlin", "AWS", "PostgreSQL", "MaterialUI"]'
       >
         <div class="portfolio-item">
           <div class="portfolio-item-title">REM (Real Estate Management) iOS/Android</div>
           <div class="portfolio-item-first-section">
             <div class="portfolio-image-wrap">
-              <div class="projects" id="sixth-project" title="Click to see details">
+              <div class="projects" id="seventh-project" title="Click to see details">
                 <picture>
                   <source srcset="{{ 'img/portfolio/REMMobile.webp' | to_cdn_url }}"
                           type="image/webp" />
@@ -560,22 +642,21 @@
                 </picture>
               </div>
             </div>
-            <h2 class="portfolio-item-solution portfolio-item-name hidden sixth-project">
+            <h2 class="portfolio-item-solution portfolio-item-name hidden seventh-project">
               Solution
             </h2>
-            <div class="portfolio-item-description hidden sixth-project">
+            <div class="portfolio-item-description hidden seventh-project">
               <br /> iOS/Android apps for landlords with access to most of the features accessible in the REM PMS (Property Management System).
               <br /> The tenant mobile app was implemented to submit maintenance tickets, manage payments and communicate with the landlord.
-              <br /> Enriched PMS we’ve built with the support of different workflows and processing logic (including invoicing, agreements signing, payments, etc.)
             </div>
-            <h2 class="portfolio-item-name hidden sixth-project">
+            <h2 class="portfolio-item-name hidden seventh-project">
               Result
             </h2>
-            <div class="portfolio-item-description hidden sixth-project">
+            <div class="portfolio-item-description hidden seventh-project">
               Successful pilot currently running on hundreds of properties, where landlords and their managers widely use the mobile apps to execute their daily tasks and workflows
             </div>
           </div>
-          <div class="portfolio-item-second-section hidden sixth-project">
+          <div class="portfolio-item-second-section hidden seventh-project">
             <h2 class="portfolio-item-name">
               Client
             </h2>
