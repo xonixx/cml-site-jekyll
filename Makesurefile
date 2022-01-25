@@ -13,7 +13,7 @@
 @doc '[github] decrypts deploy_rsa'
   if [[ -z "$DEPLOY_RSA_KEY" ]]
   then
-    echo 'DEPLOY_RSA_KEY env variable missing (should be set in https://github.com/xonixx/cml-site-jekyll/settings/environments)'
+    echo 'DEPLOY_RSA_KEY env variable missing (should be set in https://github.com/xonixx/cml-site-jekyll/settings/secrets/actions)'
     exit 1
   fi
 
