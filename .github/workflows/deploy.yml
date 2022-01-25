@@ -25,4 +25,4 @@ jobs:
           # https://docs.github.com/en/actions/learn-github-actions/environment-variables
           #echo "branch=$GITHUB_REF_NAME"
           
-          ./makesure deploy
+          ./makesure deployed
