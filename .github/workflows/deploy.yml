@@ -9,6 +9,7 @@ jobs:
     runs-on: ubuntu-20.04
     env:
       DEPLOY_RSA_KEY: ${{ secrets.DEPLOY_RSA_KEY }} # https://damienaicheh.github.io/github/actions/2021/04/15/environment-variables-secrets-github-actions-en.html
+      TEST_KEY: ${{ secrets.TEST_KEY }} # TODO
     steps:
       - uses: actions/checkout@v2
 
@@ -21,7 +22,7 @@ jobs:
       - name: "deploy"
         run: |
           set -e
-          
+          echo "TEST_KEY=$TEST_KEY" 
           # https://docs.github.com/en/actions/learn-github-actions/environment-variables
           #echo "branch=$GITHUB_REF_NAME"
           
