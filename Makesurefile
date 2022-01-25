@@ -5,15 +5,17 @@
   bundle exec jekyll serve -w
 
 @goal deploy_rsa_encrypt
+@depends_on openssl_installed
 @doc 'prepares deploy_rsa.enc'
   echo 'Enter pass:'
   read PASS
-  openssl aes-256-cbc -e -in ~/Downloads/deploy_rsa -out ./deploy_rsa.enc -k "$PASS"
+  ./soft/openssl aes-256-cbc -e -iter 100 -in ~/Downloads/deploy_rsa -out ./deploy_rsa.enc -k "$PASS"
   echo $'File deploy_rsa.enc is changed. Don\'t forget to commit.'
 
 @define OPENSSL_URL='https://www.openssl.org/source/old/1.1.1/openssl-1.1.1l.tar.gz'
 
-@goal openssl_installed
+@goal openssl_installed @private
+@doc 'installs local openssl of latest version'
 @reached_if [[ -e ./soft/openssl ]]
 @depends_on soft_folder_created
   cd soft
@@ -43,8 +45,9 @@
     exit 1
   fi
 
-  openssl aes-256-cbc -k "$DEPLOY_RSA_KEY" \
-    -in deploy_rsa.enc                     \
+  openssl aes-256-cbc -iter 100 \
+    -k "$DEPLOY_RSA_KEY"        \
+    -in deploy_rsa.enc          \
     -out /tmp/deploy_rsa -d
 
 @goal deploy-master
