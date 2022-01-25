@@ -1,5 +1,18 @@
 # vim: syntax=bash
 
 @goal serve
-@doc Serves local development jekyll server
+@doc 'serves local development jekyll server'
   bundle exec jekyll serve -w
+
+@goal deploy_rsa_encrypt
+@doc 'prepares deploy_rsa.enc'
+  openssl aes-256-cbc -e -in ~/Downloads/deploy_rsa -out ./deploy_rsa.enc -p
+  
+@goal deploy-next
+@doc 'deploys test version of site at next.cmlteam.com'
+  echo 'Deploying next ...'
+
+@goal deploy-prod
+@doc 'deploys prod version of site at www.cmlteam.com'
+  echo 'Deploying prod ...'
+
