@@ -1,10 +1,10 @@
-on: [ "push" ]
+on: [ "push", "pull_request" ]
 
 name: "Deploy"
 
 jobs:
   deploy:
-    name: "Deploys next version"
+    name: "Deploys the site"
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
@@ -18,5 +18,5 @@ jobs:
       - name: "deploy"
         run: |
           # https://docs.github.com/en/actions/learn-github-actions/environment-variables
-          echo "$GITHUB_REF_NAME"
+          echo "branch=$GITHUB_REF_NAME"
           ./makesure deploy-next
