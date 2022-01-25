@@ -6,7 +6,9 @@
 
 @goal deploy_rsa_encrypt
 @doc 'prepares deploy_rsa.enc'
-  openssl aes-256-cbc -e -in ~/Downloads/deploy_rsa -out ./deploy_rsa.enc
+  echo 'Enter pass:'
+  read PASS
+  openssl aes-256-cbc -e -in ~/Downloads/deploy_rsa -out ./deploy_rsa.enc -k "$PASS"
   echo $'File deploy_rsa.enc is changed. Don\'t forget to commit.'
 
 @goal deploy_rsa_decrypted
