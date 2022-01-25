@@ -6,13 +6,27 @@
 
 @goal deploy_rsa_encrypt
 @doc 'prepares deploy_rsa.enc'
-  openssl aes-256-cbc -e -in ~/Downloads/deploy_rsa -out ./deploy_rsa.enc -p
-  
+  openssl aes-256-cbc -e -in ~/Downloads/deploy_rsa -out ./deploy_rsa.enc
+  echo $'File deploy_rsa.enc is changed. Don\'t forget to commit.'
+
+@goal deploy_rsa_decrypted
+@doc '[github] decrypts deploy_rsa'
+  if [[ -z "$DEPLOY_RSA_KEY" ]]
+  then
+    echo 'DEPLOY_RSA_KEY env variable missing (should be set in https://github.com/xonixx/cml-site-jekyll/settings/environments)'
+    exit 1
+  fi
+
+  openssl aes-256-cbc -k "$DEPLOY_RSA_KEY" \
+    -in deploy_rsa.enc                     \
+    -out /tmp/deploy_rsa -d
+
 @goal deploy-master
-@doc 'deploys test version of site at next.cmlteam.com'
+@doc '[github] deploys test version of site at next.cmlteam.com'
+@depends_on deploy_rsa_decrypted
   echo 'Deploying next ...'
 
 @goal deploy-prod
-@doc 'deploys prod version of site at www.cmlteam.com'
+@doc '[github] deploys prod version of site at www.cmlteam.com'
   echo 'Deploying prod ...'
 
