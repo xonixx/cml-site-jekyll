@@ -11,6 +11,30 @@
   openssl aes-256-cbc -e -in ~/Downloads/deploy_rsa -out ./deploy_rsa.enc -k "$PASS"
   echo $'File deploy_rsa.enc is changed. Don\'t forget to commit.'
 
+@define OPENSSL_URL='https://www.openssl.org/source/old/1.1.1/openssl-1.1.1l.tar.gz'
+
+@goal openssl_installed
+@reached_if [[ -e ./soft/openssl ]]
+@depends_on soft_folder_created
+  cd soft
+  wget "$OPENSSL_URL" -O openssl.tar.gz
+  tar xzvf openssl.tar.gz
+  cd openssl-1.*
+  ./config
+  make
+  cp \
+    ./apps/openssl \
+    libssl.so.1.1 \
+    libcrypto.so.1.1 \
+    ..
+  cd ..
+  ./openssl version
+  rm -r openssl.tar.gz openssl-1.*
+
+@goal soft_folder_created @private
+@reached_if [[ -d "soft" ]]
+  mkdir soft
+
 @goal deploy_rsa_decrypted
 @doc '[github] decrypts deploy_rsa'
   if [[ -z "$DEPLOY_RSA_KEY" ]]

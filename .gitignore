@@ -53,3 +53,5 @@ node_modules/
 
 # KDE's Dolphin file browser specific
 .directory
+
+soft/
