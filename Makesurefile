@@ -8,7 +8,7 @@
 @doc 'prepares deploy_rsa.enc'
   openssl aes-256-cbc -e -in ~/Downloads/deploy_rsa -out ./deploy_rsa.enc -p
   
-@goal deploy-next
+@goal deploy-master
 @doc 'deploys test version of site at next.cmlteam.com'
   echo 'Deploying next ...'
 

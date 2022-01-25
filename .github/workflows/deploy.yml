@@ -17,6 +17,9 @@ jobs:
 
       - name: "deploy"
         run: |
+          set -e
+          
           # https://docs.github.com/en/actions/learn-github-actions/environment-variables
-          echo "branch=$GITHUB_REF_NAME"
-          ./makesure deploy-next
+          #echo "branch=$GITHUB_REF_NAME"
+          
+          ./makesure deploy-"$GITHUB_REF_NAME"
