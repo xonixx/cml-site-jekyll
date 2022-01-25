@@ -50,12 +50,59 @@
     -in deploy_rsa.enc          \
     -out /tmp/deploy_rsa -d
 
-@goal deploy-master
-@doc '[github] deploys test version of site at next.cmlteam.com'
-@depends_on deploy_rsa_decrypted
-  echo 'Deploying next ...'
+#@goal deploy-master
+#@doc '[github] deploys test version of site at next.cmlteam.com'
+#@depends_on deployed
 
-@goal deploy-prod
-@doc '[github] deploys prod version of site at www.cmlteam.com'
-  echo 'Deploying prod ...'
+@goal deployed
+@doc '[github] deploy'
+@depends_on built
+@depends_on deploy_rsa_decrypted
+  set -v
+  BRANCH="$GITHUB_REF_NAME"
+
+  if [[ $BRANCH == master ]]
+  then
+    ssh -i /tmp/deploy_rsa apps1@prod.cmlteam.com "
+      (echo \"\$(date) next.cmlteam.com \$(pwd)\" ;
+      rm -rf next.cmlteam.com                     ;
+      mkdir next.cmlteam.com                      ;
+      cd next.cmlteam.com                         ;
+      echo 'User-agent: *'    > robots.txt        ;
+      echo 'Disallow: /'     >> robots.txt        ;
+      echo                   >> robots.txt        ;
+      ) >> /tmp/.deploy 2>&1"
+    cd _site ; scp -i /tmp/deploy_rsa -C -r * apps1@prod.cmlteam.com:~/next.cmlteam.com
+  elif [[ $BRANCH == prod ]]
+  then
+    ssh -i /tmp/deploy_rsa apps1@prod.cmlteam.com "
+    (echo \"\$(date) www.cmlteam.com \$(pwd)\" ;
+    rm -rf www.cmlteam.com                     ;
+    mkdir www.cmlteam.com) >> /tmp/.deploy 2>&1"
+    cd _site ; scp -i /tmp/deploy_rsa -C -r * apps1@prod.cmlteam.com:~/www.cmlteam.com
+  fi
+
+
+@goal built @private
+  BRANCH="$GITHUB_REF_NAME"
+  ENV_SPECIFIC_CONFIG_FILE="./_config_$BRANCH.yml"
+
+  if [[ ! -e "$ENV_SPECIFIC_CONFIG_FILE" ]]
+  then
+    echo "Please provide an existing environment-specific file!"
+    echo "Received: \"$ENV_SPECIFIC_CONFIG_FILE\""
+    echo
+    exit 1
+  fi
+
+  set -v
+
+  bundle exec jekyll build --config=./_config.yml,"$ENV_SPECIFIC_CONFIG_FILE"
+  #mv _site site # looks like deploy phase doesn't like underscores
+  #echo www.cmlteam.com > site/CNAME # custom domain
+  rm -f _site/*.sh _site/*.enc
+
+#@goal deploy-prod
+#@doc '[github] deploys prod version of site at www.cmlteam.com'
+#  echo 'Deploying prod ...'
 
