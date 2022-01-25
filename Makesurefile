@@ -1,4 +1,5 @@
 # vim: syntax=bash
+@options timing
 
 @goal serve
 @doc 'serves local development jekyll server'
@@ -83,7 +84,11 @@
   fi
 
 
+@goal bundle_installed @private
+  bundle install
+
 @goal built @private
+@depends_on bundle_installed
   BRANCH="$GITHUB_REF_NAME"
   ENV_SPECIFIC_CONFIG_FILE="./_config_$BRANCH.yml"
 
