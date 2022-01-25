@@ -51,6 +51,8 @@
     -in deploy_rsa.enc          \
     -out /tmp/deploy_rsa -d
 
+  chmod 600 /tmp/deploy_rsa
+
 #@goal deploy-master
 #@doc '[github] deploys test version of site at next.cmlteam.com'
 #@depends_on deployed
