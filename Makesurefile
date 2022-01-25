@@ -1,0 +1,5 @@
+# vim: syntax=bash
+
+@goal serve
+@doc Serves local development jekyll server
+  bundle exec jekyll serve -w
