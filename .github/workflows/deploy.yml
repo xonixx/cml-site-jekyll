@@ -7,6 +7,7 @@ jobs:
   deploy:
     name: "Deploys the site"
     runs-on: ubuntu-20.04
+    environment: "Deploy env" # https://github.com/xonixx/cml-site-jekyll/settings/environments/386618635/edit
     steps:
       - uses: actions/checkout@v2
 
