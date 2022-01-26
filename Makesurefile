@@ -53,10 +53,6 @@
 
   chmod 600 /tmp/deploy_rsa
 
-#@goal deploy-master
-#@doc '[github] deploys test version of site at next.cmlteam.com'
-#@depends_on deployed
-
 @goal deployed
 @doc '[github] deploy'
 @depends_on built
@@ -86,6 +82,9 @@
     rm -rf www.cmlteam.com                     ;
     mkdir www.cmlteam.com) >> /tmp/.deploy 2>&1"
     cd _site ; $SCP -C -r * apps1@prod.cmlteam.com:~/www.cmlteam.com
+  else
+    echo "Wrong branch: $BRANCH, won't deploy"
+    exit 1
   fi
 
 
@@ -111,8 +110,4 @@
   #mv _site site # looks like deploy phase doesn't like underscores
   #echo www.cmlteam.com > site/CNAME # custom domain
   rm -f _site/*.sh _site/*.enc
-
-#@goal deploy-prod
-#@doc '[github] deploys prod version of site at www.cmlteam.com'
-#  echo 'Deploying prod ...'
 
