@@ -2,12 +2,14 @@ on: [ "push", "pull_request" ]
 # TODO decide what to do with other branches than master/prod. Now the build will just fail (https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#using-filters)
 
 name: "Deploy"
+on:
+    push:
+        branches:
+            - master
+            - prod
 
 jobs:
   deploy:
-    branches:    
-        - master
-        - prod
     name: "Deploys the site"
     runs-on: ubuntu-20.04
     env:
