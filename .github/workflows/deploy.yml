@@ -5,9 +5,9 @@ name: "Deploy"
 
 jobs:
   deploy:
-  branches:    
-      - master
-      - prod
+    branches:    
+        - master
+        - prod
     name: "Deploys the site"
     runs-on: ubuntu-20.04
     env:
