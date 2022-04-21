@@ -302,6 +302,7 @@ font-family: {{ site.data.template.font.primary }};
 font-size: 40px;
 font-weight: 700;
 line-height: 40px;
+min-height: fit-content;
 }
 
 section {

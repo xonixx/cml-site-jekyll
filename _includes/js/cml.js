@@ -8,8 +8,17 @@
 $(function() {
     $('a.page-scroll').bind('click', function(event) {
         var $anchor = $(this);
-        $('html, body').stop().animate({
-            scrollTop: $($anchor.attr('href')).offset().top -100
+        var hightHeader = $("nav").height();
+        var heightHeaderMobileMenu = $(".navbar-shrink").height();
+
+        var subHeader = $('.subheader-section');
+        var heightSubHeader = subHeader.css('display') === 'block' ? subHeader.height() : 0;
+        var isMobile = $(window).width() < 768 
+        ? (hightHeader) - heightHeaderMobileMenu
+        : hightHeader + heightSubHeader;
+
+        $('html, body').stop().animate({ 
+          scrollTop: $($anchor.attr('href')).offset().top - isMobile
         }, 1500, 'easeInOutExpo');
         event.preventDefault();
 
