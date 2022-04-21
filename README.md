@@ -58,6 +58,9 @@ gem install bundler -v 1.16.6
 ```
 
 ## Run
+In the terminal: 
+1. ./makesure -l (list of commands)
+2. ./makesure serve
 
 ### Console
 ```bash
