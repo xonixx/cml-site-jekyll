@@ -11,11 +11,16 @@ $(function() {
         var hightHeader = $("nav").height();
         var heightHeaderMobileMenu = $(".navbar-shrink").height();
 
+        /**
+         * subheader appears when you are on the "about" section, 
+         * and for correct scroll from the navigation, 
+         * you need subtract height of subheader
+         */
         var subHeader = $('.subheader-section');
         var heightSubHeader = subHeader.css('display') === 'block' ? subHeader.height() : 0;
         var isMobile = $(window).width() < 768 
         ? (hightHeader) - heightHeaderMobileMenu
-        : hightHeader + heightSubHeader;
+        : hightHeader - heightSubHeader;
 
         $('html, body').stop().animate({ 
           scrollTop: $($anchor.attr('href')).offset().top - isMobile
