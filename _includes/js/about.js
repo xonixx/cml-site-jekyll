@@ -6,6 +6,14 @@ $((function () {
     dots: true,
   });
 
+  const customersSection = $('.customers-section');
+  customersSection.on("mouseenter", function() {
+    $(this).addClass("grab-cursor");
+  });
+  customersSection.on("mouseleave", function () {
+    $(this).removeClass("grab-cursor")
+  });
+
   const subheaderA = $(".subheader-a");
   subheaderA.on("mouseenter", function () {
     $(this).addClass("selected-a")

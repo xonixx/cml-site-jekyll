@@ -1,3 +1,8 @@
+.grab-cursor
+{
+	cursor: grab;
+}
+
 .portfolio
 {
 	margin: 0px;
@@ -290,7 +295,6 @@ h2.portfolio-item-name:nth-child(1) {
 	justify-content: center;
 	max-width: 400px;
 	flex: 1;
-
 }
 
 .customers-information
