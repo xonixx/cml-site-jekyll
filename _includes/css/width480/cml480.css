@@ -1,0 +1,5 @@
+@media (max-width: 414px) {
+    header .intro-text img {
+        height: 150px;
+    }
+}
