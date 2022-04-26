@@ -105,6 +105,10 @@
         display: flex;
         justify-content: center;
     }
+
+    .customers-image img {
+        width: 170px;
+    }
 }
 
 @media (max-width: 768px) {
