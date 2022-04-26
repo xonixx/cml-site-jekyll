@@ -131,9 +131,9 @@
         font-size: 18px;
     }
 
-    .customers-image {
-        padding-bottom: 10px;
-        width: 100%;
+    .customers-image img {
+        width: 160px;
+        margin-bottom: 10px;
     }
 
     .customers-media {

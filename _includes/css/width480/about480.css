@@ -1,0 +1,6 @@
+@media (max-width: 480px) {
+    .customers-image img {
+        width: 130px;
+        margin-bottom: 10px;
+    }
+}
