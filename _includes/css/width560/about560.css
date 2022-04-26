@@ -147,7 +147,7 @@
         padding-top: 0;
     }
 
-    .list-inline > li {
+    .list-inline>li {
         padding-bottom: 0.7rem;
     }
 }
