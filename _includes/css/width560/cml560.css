@@ -1,0 +1,5 @@
+@media (max-width: 560px) {
+  header .intro-text .intro-heading {
+    min-height: 83px;
+  }
+}
