@@ -13,4 +13,5 @@
 // {% include js/cml.js %};
 // {% include js/service.js %};
 // {% include js/events.js %};
-{% include js/teamPart.js %};
+// {% include js/teamPart.js %};
+console.log(1);
