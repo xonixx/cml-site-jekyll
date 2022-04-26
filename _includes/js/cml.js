@@ -70,7 +70,7 @@ Typed.new("#typed-animation", {
 });
 
 var particleColor = "#ffffff";
-particlesJS("particles", {
+particlesJS("introAnim", {
     "particles": {
         "number": {
             "value": 120,
