@@ -1,3 +1,16 @@
+//need for mobile in scrolling portfolio items
+var toTopScroll = false;
+if($(window).width() < 768) {
+  var lastScrollTop = 0;
+  window.addEventListener("scroll", function(){
+    var st = window.pageYOffset || document.documentElement.scrollTop;
+    if (st > lastScrollTop) toTopScroll = false;
+    else toTopScroll = true;
+
+    lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+  }, false);
+}
+
 var portfolioFiltersChosen = [];
 var shufflemePortfolio = (function($) {
   "use strict";
@@ -8,7 +21,6 @@ var shufflemePortfolio = (function($) {
     init = function(onInit) {
       // None of these need to be executed synchronously
       setTimeout(function() {
-        //listenPortfolioFilters();
         showPortfolioContent();
         setupPortfolioFilters();
         onInit();
@@ -44,10 +56,7 @@ var shufflemePortfolio = (function($) {
         $this.addClass("active");
       }
 
-      //console.log("arrayss " + portfolioFiltersChosen);
       let portfolioFilterChosenConcat = portfolioFiltersChosen.join(", ");
-      //console.log("portfolioFilterChosenConcat "+portfolioFilterChosenConcat);
-      //console.log("portfolioFilterChosenConcat.length "+portfolioFilterChosenConcat.length);
       let symbolCount;
       const windowWidth = $(window).width();
       if (windowWidth < 320) symbolCount = 10;
@@ -63,12 +72,6 @@ var shufflemePortfolio = (function($) {
       }
       $("#about-portfolio .filter-element").text(portfolioFilterChosenConcat);
 
-      /*
-                     // Hide current label, show current label in title
-                     $('.portfolio-sorting li a').removeClass('active');
-      
-                     $this.addClass('active');
-                    */
       // Filter elements
       shuffler.filter((element, shuffle) => {
         //console.log("elem: ", element);
@@ -84,31 +87,6 @@ var shufflemePortfolio = (function($) {
         return false;
       });
 
-      // $grid.find('li').filter(function (i, e) {
-      //     var $img = $(this).find('img');
-      //     $img.removeAttr('data-bp');
-      //     let groups = $(e).data('groups');
-      //     console.log("groups lalala " + groups);
-      //     if (!groups)
-      //         return false;
-      //
-      //     for(let j = 0; j < filtersChosen.length; j++) {
-      //         console.log('j: '+j+"; f: "+ filtersChosen[j]);
-      //         if(groups.indexOf(filtersChosen[j]) === -1) return false;
-      //     }
-      //     // if ($img.length) {
-      //     //     $img.attr('data-bp', $img.attr('src').replace('Converted120', 'Converted300'));
-      //     // }
-      //     return true;
-      // }).find('a')
-      //     .off('click.bigpicture')
-      //     .on('click.bigpicture', function (e) {
-      //         e.preventDefault();
-      //         BigPicture({
-      //             el: e.target,
-      //             gallery: '#grid'
-      //         })
-      //     });
       $("#about-portfolio .portfolio-display-mobile-list").click();
     });
 
@@ -121,6 +99,13 @@ var shufflemePortfolio = (function($) {
       let inGridOffset = 0;
       let id = this.id;
       let $elt = $("." + id);
+
+      let projectItem = $(this).closest(".portfolio-item");
+      let projectTitle = projectItem.find(".portfolio-item-title");
+      let heightTitle = projectTitle.height();
+
+      var openedPortfolio = document.querySelectorAll(".expanded > .portfolio-item");
+
       if ($elt.hasClass("hidden")) {
         $('[class*="-project"]').addClass("hidden");
         $("li.shuffle-item").removeClass("expanded");
@@ -146,13 +131,34 @@ var shufflemePortfolio = (function($) {
               .index() / 2
           ) * 480;
       }
-      $("html, body").animate(
-        {
-          scrollTop: gridOffset + inGridOffset - 250
-        },
-        500
-      );
+
       shuffler.update();
+
+      let isMobile = $(window).width() < 768;
+
+      setTimeout(() => {
+        let subHeader = $('.subheader-section');
+        let heightSubHeader = subHeader.css('display') === 'block' ? subHeader.height() : 0;
+        
+        let scrollTop;
+        if(isMobile) {
+          if(openedPortfolio.length > 0) {
+            if(toTopScroll) scrollTop = projectTitle.offset().top - heightTitle - heightSubHeader - 30;
+            else scrollTop = projectTitle.offset().top - 15;
+          } else {
+            scrollTop = projectTitle.offset().top - 15;
+          }
+        } else {
+          scrollTop = gridOffset + inGridOffset - heightTitle;
+        }
+
+        $("html, body").animate(
+          {
+            scrollTop
+          },
+          500
+        );
+      }, isMobile ? 500 : 0);
     });
   };
 
