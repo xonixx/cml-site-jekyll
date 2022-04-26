@@ -1,3 +1,20 @@
+.prev-arrow:before {
+	content: "<";
+	color: red;
+	font-size: 30px;
+}
+
+.next-arrow:before {
+	content: ">";
+	color: red;
+	font-size: 30px;
+}
+
+.slide-arrow{
+	position: absolute;
+	top: 50%;
+}
+
 .grab-cursor
 {
 	cursor: grab;
