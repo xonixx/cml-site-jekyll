@@ -2,4 +2,7 @@
     header .intro-text img {
         height: 150px;
     }
+    header .intro-text #typed-animation {
+        font-size: 30px;
+    }
 }
