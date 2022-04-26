@@ -1,3 +1,0 @@
----
-layout: js-bottom-all
----
