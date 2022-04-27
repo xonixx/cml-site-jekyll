@@ -1,6 +1,5 @@
-.grab-cursor
-{
-	cursor: grab;
+.pointer-cursor {
+	cursor: pointer;
 }
 
 .portfolio
