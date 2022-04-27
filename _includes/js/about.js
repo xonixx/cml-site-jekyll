@@ -13,11 +13,11 @@ $((function () {
       '<img class="slider-arrow next-arrow" src="/img/about/next-arrow.svg" alt="Next Arrow"/>' : '',
   });
 
-  const customersSection = $('.slider-arrow');
-  customersSection.on("mouseenter", function() {
+  const sliderArrow = $('.slider-arrow');
+  sliderArrow.on("mouseenter", function() {
     $(this).addClass("pointer-cursor");
   });
-  customersSection.on("mouseleave", function () {
+  sliderArrow.on("mouseleave", function () {
     $(this).removeClass("pointer-cursor")
   });
 
