@@ -1,19 +1,24 @@
 $((function () {
   displaySubHeader();
 
+  const isDraggable = window.innerWidth <= 1230;
+
   $('#customers-main').slick({
-    infinite: false,
+    infinite: true,
     dots: true,
-    prevArrow: '<button class="slide-arrow prev-arrow"></button>',
-    nextArrow: '<button class="slide-arrow next-arrow"></button>',
+    draggable: isDraggable,
+    prevArrow: !isDraggable ?
+      '<img class="slider-arrow prev-arrow" src="/img/about/prev-arrow.svg" alt="Prev Arrow"/>' : '',
+    nextArrow: !isDraggable ?
+      '<img class="slider-arrow next-arrow" src="/img/about/next-arrow.svg" alt="Next Arrow"/>' : '',
   });
 
-  const customersSection = $('.customers-section');
+  const customersSection = $('.slider-arrow');
   customersSection.on("mouseenter", function() {
-    $(this).addClass("grab-cursor");
+    $(this).addClass("pointer-cursor");
   });
   customersSection.on("mouseleave", function () {
-    $(this).removeClass("grab-cursor")
+    $(this).removeClass("pointer-cursor")
   });
 
   const subheaderA = $(".subheader-a");

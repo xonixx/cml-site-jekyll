@@ -1,0 +1,23 @@
+@media (min-width: 1231px) {
+    .prev-arrow {
+        left: 20px;
+        z-index: 1;
+    }
+
+    .next-arrow {
+        right: 20px;
+    }
+
+    .slider-arrow {
+        position: absolute;
+        top: 50%;
+    }
+}
+
+@media (max-width: 1230px) {
+    .slider-arrow {
+        display: none;
+    }
+}
+
+
