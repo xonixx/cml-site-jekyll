@@ -1,4 +1,4 @@
-@media (max-width: 560px) {
+@media (max-width: 768px) {
 
     .subheader-list {
         padding-left: 0;
@@ -152,7 +152,7 @@
     }
 }
 
-@media (min-width: 561px) {
+@media (min-width: 769px) {
     .portfolio-sorting li a {
 
         text-transform: uppercase;
