@@ -7,6 +7,10 @@
     .service-btn-image {
         height: 37px;
     }
+    .service-btn-image img {
+        height: 40px;
+        padding-left: 20px;
+    }
     .service-btn-name {
         font-size: 17px;
         padding-left: 15px;
