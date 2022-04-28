@@ -54,7 +54,7 @@ function displaySubHeader() {
 
     if (
       $(window).scrollTop() + 120 >= $("#about-portfolio").offset().top &&
-      $(window).scrollTop() + 200 < $("#about-hackathons").offset().top
+      $(window).scrollTop() + 200 < $("#about-customers").offset().top
     ) {
       $("#portfolio-a").addClass("selected-a");
       $("#portfolio-a-mobile").addClass("selected-a");
@@ -68,23 +68,8 @@ function displaySubHeader() {
     }
 
     if (
-      $(window).scrollTop() + 120 >= $("#about-hackathons").offset().top &&
-      $(window).scrollTop() + 200 < $("#about-customers").offset().top
-    ) {
-      $("#hackathon-a").addClass("selected-a");
-      $("#hackathon-a-mobile").addClass("selected-a");
-    } else {
-      $("#hackathon-a")
-        .removeClass("selected-a")
-        .trigger("blur");
-      $("#hackathon-a-mobile")
-        .removeClass("selected-a")
-        .trigger("blur");
-    }
-
-    if (
-      $(window).scrollTop() + 180 >= $("#about-customers").offset().top &&
-      $(window).scrollTop() + 200 < $("#team").offset().top
+      $(window).scrollTop() + 200 >= $("#about-customers").offset().top &&
+      $(window).scrollTop() + 200 < $("#about-hackathons").offset().top
     ) {
       $("#customers-a").addClass("selected-a");
       $("#customers-a-mobile").addClass("selected-a");
@@ -93,6 +78,21 @@ function displaySubHeader() {
         .removeClass("selected-a")
         .trigger("blur");
       $("#customers-a-mobile")
+        .removeClass("selected-a")
+        .trigger("blur");
+    }
+
+    if (
+      $(window).scrollTop() + 180 >= $("#about-hackathons").offset().top &&
+      $(window).scrollTop() + 200 < $("#events").offset().top
+    ) {
+      $("#hackathon-a").addClass("selected-a");
+      $("#hackathon-a-mobile").addClass("selected-a");
+    } else {
+      $("#hackathon-a")
+        .removeClass("selected-a")
+        .trigger("blur");
+      $("#hackathon-a-mobile")
         .removeClass("selected-a")
         .trigger("blur");
     }
