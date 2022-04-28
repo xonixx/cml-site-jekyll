@@ -1,0 +1,27 @@
+.portfolio-project-item {
+  display: flex !important;
+}
+
+.portfolio-project-item .img {
+  padding: 15px;
+}
+
+.portfolio-project-item .img img {
+  position: relative;
+  width: 100%;
+  top: 0;
+  right: 0;
+
+  -webkit-box-shadow: -7px 7px 0px 0px #E8A621; 
+  box-shadow: -7px 7px 0px 0px #E8A621;
+
+  transition: all .25s ease-in-out;
+}
+
+.portfolio-project-item .img img:hover {
+  top: -4px;
+  right: -4px;
+
+  -webkit-box-shadow: -14px 14px 0px 0px #E8A621; 
+  box-shadow: -14px 14px 0px 0px #E8A621;
+}

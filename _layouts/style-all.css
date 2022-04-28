@@ -9,6 +9,7 @@
 {% include css/events.css %}
 {% include css/team.css %}
 {% include css/portfolio.css %}
+{% include css/hackathons-carusel.css %}
 {% include css/footer.css %}
 {% include css/width320/header320.css %}
 {% include css/width320/portfolio320.css %}
