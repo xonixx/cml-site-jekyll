@@ -19,4 +19,17 @@
     .fa-stack {
         margin-top: 20px;
     }
+    .fas.fa-caret-right
+    {
+        margin-left: -30px;
+        color: #E8A621;
+        font-size: 50px;
+    }
+
+    .fas.fa-caret-left
+    {
+        margin-right: -30px;
+        color: #E8A621;
+        font-size: 50px;
+    }
 }
