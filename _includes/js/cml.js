@@ -8,22 +8,21 @@
 $(function() {
     $('a.page-scroll').bind('click', function(event) {
         var $anchor = $(this);
-        var hightHeader = $("nav").height();
-        var heightHeaderMobileMenu = $(".navbar-shrink").height();
+        var heightHeader = $("nav").height();
 
         /**
-         * subheader appears when you are on the "about" section, 
-         * and for correct scroll from the navigation, 
+         * subheader appears when you are on the "about" section,
+         * and for correct scroll from the navigation,
          * you need subtract height of subheader
          */
         var subHeader = $('.subheader-section');
         var heightSubHeader = subHeader.css('display') === 'block' ? subHeader.height() : 0;
-        var isMobile = $(window).width() < 768 
-        ? (hightHeader) - heightHeaderMobileMenu
-        : hightHeader - heightSubHeader;
+        var isDesktop = $(window).width() < 768
+        ? 0
+        : heightHeader - heightSubHeader;
 
-        $('html, body').stop().animate({ 
-          scrollTop: $($anchor.attr('href')).offset().top - isMobile
+        $('html, body').stop().animate({
+          scrollTop: $($anchor.attr('href')).offset().top - isDesktop
         }, 1500, 'easeInOutExpo');
         event.preventDefault();
 
