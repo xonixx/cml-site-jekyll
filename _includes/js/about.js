@@ -1,15 +1,15 @@
 $((function () {
   displaySubHeader();
 
-  const isDraggable = window.innerWidth <= 1230;
+  const isMobile = $(window).width() <= 1230;
 
   $('#customers-main').slick({
     infinite: true,
     dots: true,
-    draggable: isDraggable,
-    prevArrow: !isDraggable ?
+    draggable: isMobile,
+    prevArrow: !isMobile ?
       '<img class="slider-arrow prev-arrow" src="/img/about/prev-arrow.svg" alt="Prev Arrow"/>' : '',
-    nextArrow: !isDraggable ?
+    nextArrow: !isMobile ?
       '<img class="slider-arrow next-arrow" src="/img/about/next-arrow.svg" alt="Next Arrow"/>' : '',
   });
 
@@ -35,7 +35,7 @@ $((function () {
 function displaySubHeader() {
   let inAboutSection = () =>
     $(window).scrollTop() + 101 >= $("#about-portfolio").offset().top &&
-    $(window).scrollTop() + 160 < $("#team").offset().top;
+    $(window).scrollTop() + 160 < $("#events").offset().top;
 
   $(window).on("scroll", (function () {
     if (inAboutSection()) {
