@@ -87,7 +87,15 @@ function createTeamPictures() {
 }
 
 $("#team-btn-click").on('click', function () {
-        $("#contact")[0].scrollIntoView();
+        const heightHeader = $("nav").height();
+        const isMobile = $(window).width() < 768
+          ? 0
+          : heightHeader;
+
+        $("html, body").animate({
+            scrollTop: $('#contact').offset().top - isMobile
+        }, 1500, 'easeInOutExpo');
+
         $("#message").val("Applying for FullStack Position");
     }
 );
