@@ -5,6 +5,7 @@
 {% include js/introAnim.2.0.0.js %};
 {% include js/typed.1.1.7.min.js %};
 
+{% include js/lazyload.js %};
 {% include js/cbpAnimatedHeader.js %};
 {% include js/about-hackathons.js %};
 {% include js/about-portfolio.js %};
