@@ -10,6 +10,14 @@
 	padding-bottom: 50px;
 }
 
+#customers-main {
+	-webkit-user-select: text;
+	-khtml-user-select: text;
+	-moz-user-select: text;
+	-ms-user-select: text;
+	user-select: text;
+}
+
 .portfolio-item
 {
 	margin-bottom: 30px;

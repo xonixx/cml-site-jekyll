@@ -7,6 +7,10 @@
     .service-btn-image {
         height: 37px;
     }
+    .service-btn-image img {
+        height: 40px;
+        padding-left: 20px;
+    }
     .service-btn-name {
         font-size: 17px;
         padding-left: 15px;
@@ -14,5 +18,18 @@
     }
     .fa-stack {
         margin-top: 20px;
+    }
+    .fas.fa-caret-right
+    {
+        margin-left: -30px;
+        color: #E8A621;
+        font-size: 50px;
+    }
+
+    .fas.fa-caret-left
+    {
+        margin-right: -30px;
+        color: #E8A621;
+        font-size: 50px;
     }
 }
