@@ -1,0 +1,32 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.full-name }}{% endif %}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <meta name="description" content="{{ site.description }}">
+
+  <link rel="preload stylesheet" href="{{ 'css/critical-fonts.css' | to_cdn_url }}" as="style" />
+
+  <!-- Critical CSS -->
+  <style>
+    /*Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/*/
+    {% include css/external/bootstrap.3.2.0.min.css %}
+
+    {% include css/critical-css.css %}
+    {% include css/width768/critical-css768.css %}
+  </style> 
+
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" as="style" />
+  <link rel="stylesheet"  href="{{ 'css/style-all.css' | to_cdn_url }}" as="style" />
+
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-104508827-1', 'auto');
+      ga('send', 'pageview');
+  </script>
+</head>
