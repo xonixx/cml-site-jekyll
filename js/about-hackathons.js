@@ -151,16 +151,14 @@ $(function() {
     $(`#about-hackathons #${this.id} .portfolio-display-mobile-element`).toggleClass("selected");
   });
 
-  $("#about-hackathons").one("inview", () => {
-    $(this)
-      .find(".container")
-      .show();
+  $(this)
+    .find(".container")
+    .show();
 
-    shufflemeHackathons.init(function() {
-      $("#portfolio-hackathon-major-sorting a")
-        .first()
-        .trigger("click");
-    });
+  shufflemeHackathons.init(function() {
+    $("#portfolio-hackathon-major-sorting a")
+      .first()
+      .trigger("click");
   });
 
   function closeMobileFilters() {
