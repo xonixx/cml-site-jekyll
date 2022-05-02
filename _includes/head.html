@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="description" content="{{ site.description }}">
 
+    <link rel="preload stylesheet" href="{{ 'css/critical-fonts.css' }}" as="style" />
+
     <!-- Critical CSS -->
     <style>
       /*Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/*/
@@ -12,7 +14,6 @@
 
       {% include css/critical-css.css %}
       {% include css/width768/critical-css768.css %}
-      {% include css/critical-fonts.css %}
     </style> 
 
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
