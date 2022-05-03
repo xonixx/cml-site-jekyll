@@ -212,6 +212,10 @@
         width: 55%;
     }
 
+    .portfolio-item-title {
+      display: block;
+    }
+
     .portfolio-item-first-section {
         min-width: 320px;
     }

@@ -1,0 +1,12 @@
+@media(max-width: 991px) {
+  .portfolio-item-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70px;
+  }
+
+  .portfolio-item-first-section {
+    min-width: auto;
+  }
+}
