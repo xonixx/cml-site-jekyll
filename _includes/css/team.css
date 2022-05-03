@@ -3,6 +3,10 @@
     flex-direction: column;
 }
 
+.title-team {
+  margin-bottom: 35px;
+}
+
 .team-photo-img {
     max-width: 400px;
     width: 100%;
