@@ -110,6 +110,7 @@ var shufflemePortfolio = (function($) {
         $('[class*="-project"]').addClass("hidden");
         $("li.shuffle-item").removeClass("expanded");
         $elt.removeClass("hidden");
+
         $(this)
           .closest("li")
           .addClass("expanded");
@@ -118,9 +119,10 @@ var shufflemePortfolio = (function($) {
             $(this)
               .closest("li.shuffle-item")
               .index() / 2
-          ) * 480;
+          ) * 526;
       } else {
         $elt.addClass("hidden");
+
         $(this)
           .closest("li")
           .removeClass("expanded");
@@ -129,7 +131,7 @@ var shufflemePortfolio = (function($) {
             $(this)
               .closest("li.shuffle-item")
               .index() / 2
-          ) * 480;
+          ) * 526;
       }
 
       shuffler.update();
@@ -149,7 +151,7 @@ var shufflemePortfolio = (function($) {
             scrollTop = projectTitle.offset().top - 15;
           }
         } else {
-          scrollTop = gridOffset + inGridOffset - heightTitle;
+          scrollTop = gridOffset + inGridOffset - heightTitle - 2 * heightSubHeader;
         }
 
         $("html, body").animate(
