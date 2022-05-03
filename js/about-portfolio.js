@@ -110,6 +110,7 @@ var shufflemePortfolio = (function($) {
         $('[class*="-project"]').addClass("hidden");
         $("li.shuffle-item").removeClass("expanded");
         $elt.removeClass("hidden");
+
         $(this)
           .closest("li")
           .addClass("expanded");
@@ -121,6 +122,7 @@ var shufflemePortfolio = (function($) {
           ) * 526;
       } else {
         $elt.addClass("hidden");
+
         $(this)
           .closest("li")
           .removeClass("expanded");
@@ -131,9 +133,6 @@ var shufflemePortfolio = (function($) {
               .index() / 2
           ) * 526;
       }
-
-      let length = $('ul#grid-portfolio .col-md-6').length - 1;
-      console.log(length)
 
       shuffler.update();
 
