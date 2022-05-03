@@ -311,7 +311,7 @@ h2.portfolio-item-name:nth-child(1) {
 	flex: 1;
 	display: flex;
 	flex-wrap: wrap;
-	flex-direction: row;
+	flex-direction: column;
 	justify-content: center;
 
 }
