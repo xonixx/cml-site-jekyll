@@ -20,6 +20,7 @@
 {% include css/width900-901/calendar900.css %}
 {% include css/width900-901/events900.css %}
 {% include css/width1230-1231/about1230.css %}
+{% include css/width1230-1231/cml1200.css %}
 
 /* libs */
 {% include css/external/owl.theme.default.2.3.4.min.css %}
