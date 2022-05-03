@@ -118,7 +118,7 @@ var shufflemePortfolio = (function($) {
             $(this)
               .closest("li.shuffle-item")
               .index() / 2
-          ) * 480;
+          ) * 526;
       } else {
         $elt.addClass("hidden");
         $(this)
@@ -129,8 +129,11 @@ var shufflemePortfolio = (function($) {
             $(this)
               .closest("li.shuffle-item")
               .index() / 2
-          ) * 480;
+          ) * 526;
       }
+
+      let length = $('ul#grid-portfolio .col-md-6').length - 1;
+      console.log(length)
 
       shuffler.update();
 
@@ -149,7 +152,7 @@ var shufflemePortfolio = (function($) {
             scrollTop = projectTitle.offset().top - 15;
           }
         } else {
-          scrollTop = gridOffset + inGridOffset - heightTitle;
+          scrollTop = gridOffset + inGridOffset - heightTitle - 2 * heightSubHeader;
         }
 
         $("html, body").animate(
