@@ -1,0 +1,9 @@
+@media (max-width: 1200px) {
+  .header-items h2 {
+    font-size: 58px;
+  }
+
+  .header-items p {
+    font-size: 14px;
+  }
+}

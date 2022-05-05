@@ -1,0 +1,6 @@
+---
+title: Augment your team
+description: Our highly qualified and proactive engineers work directly with you and in line with your company culture and goals. It helps to fulfill the lack of developers, QA, or expertise.
+img: 1.png
+alt: Augment your team
+---

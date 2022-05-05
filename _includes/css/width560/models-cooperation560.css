@@ -1,0 +1,24 @@
+@media (max-width: 560px) {
+  .models-cooperation-items.desktop {
+    display: none;
+  }
+
+  .models-cooperation-items.mobile {
+    display: flex;
+    align-items: center;
+  }
+
+  .models-cooperation-items.mobile .models-cooperation-item {
+    max-width: 96%;
+    margin: 0 2%;
+  }
+
+  .models-cooperation-items.mobile .slick-list {
+    width: 100%;
+    max-width: 70%;
+  }
+
+  #models-cooperation .slick-dots {
+    bottom: -45px;
+  }
+}
