@@ -214,6 +214,7 @@
 
     .portfolio-item-title {
       display: block;
+      height: auto;
     }
 
     .portfolio-item-first-section {

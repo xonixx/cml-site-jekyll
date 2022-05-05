@@ -99,6 +99,10 @@
 	font-size: 24px;
 	font-weight: bold;
 	margin-bottom: 12px;
+  height: 70px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
 }
 
 .portfolio-item-first-section
@@ -108,7 +112,6 @@
 	flex-direction: column;
 	justify-content: stretch;
 	flex: 1;
-	min-width: 450px;
 	margin-bottom: 20px;
 }
 
