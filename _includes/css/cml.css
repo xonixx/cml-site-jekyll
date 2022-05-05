@@ -302,6 +302,11 @@ fieldset[disabled] .btn-xl.active {
     margin-bottom: 0;
 }
 
+.main-title-sesction {
+  text-transform: uppercase;
+  font-size: 40px;
+}
+
 @media(min-width:992px) {
     .timeline>li {
         min-height: 150px;
