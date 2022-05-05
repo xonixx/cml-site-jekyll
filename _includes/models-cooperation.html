@@ -1,0 +1,32 @@
+<section class="models-cooperation">
+
+  <div class="container">
+
+    <!-- hedaer -->
+    {% 
+      include components/header-service.html 
+        title="Models of <br />cooperation"
+        description="Our software development services include QA and DevOps consulting, 
+        discrete product development, 3rd party system integration, data science, 
+        and gamification."
+    %}
+
+    <!-- items for desktop -->
+    <div class="models-cooperation-items desktop">
+      {% for item in site.models-cooperation %}
+        {% include components/model-cooperation-block.html item=item %}
+      {% endfor %}
+    </div> <!-- /items for desktop -->
+
+    <!-- items for mobile -->
+    <div id="models-cooperation" class="models-cooperation-items mobile">
+      {% for item in site.models-cooperation %}
+        <div class="slick-adjust-div">
+          {% include components/model-cooperation-block.html item=item %}
+        </div>
+      {% endfor %}
+    </div>
+
+  </div>
+
+</section>

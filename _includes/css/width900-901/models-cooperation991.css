@@ -1,0 +1,11 @@
+@media (max-width: 991px) {
+  .models-cooperation-items {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .models-cooperation-item {
+    max-width: 48%;
+    margin: 0 auto 2% auto;
+  }
+}
