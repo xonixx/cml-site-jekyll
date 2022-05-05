@@ -1,6 +1,6 @@
 ---
-title: Lorem ipsum
-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus in elit faucibus nisi scelerisque sapien, pulvinar.
+title: Develop customized solution
+description: We gather the requirements and implement your idea from scratch. The whole process is transparent, so you can keep your focus on customer satisfaction and core business.
 img: 2.png
-alt: 2
+alt: Develop customized solution
 ---

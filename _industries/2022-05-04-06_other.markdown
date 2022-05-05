@@ -1,4 +1,4 @@
 ---
 title: Other
-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+description: If we missed your industry just let us know. We have different projects in our portfolio, so we find a way to make the world better.
 ---

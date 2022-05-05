@@ -1,6 +1,6 @@
 ---
-title: Lorem ipsum
-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus in elit faucibus nisi scelerisque sapien, pulvinar.
+title: Augment your team
+description: Our highly qualified and proactive engineers work directly with you and in line with your company culture and goals. It helps to fulfill the lack of developers, QA, or expertise.
 img: 1.png
-alt: 1
+alt: Augment your team
 ---

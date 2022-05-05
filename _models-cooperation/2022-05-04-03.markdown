@@ -1,6 +1,6 @@
 ---
-title: Lorem ipsum
-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus in elit faucibus nisi scelerisque sapien, pulvinar.
+title: Scale your business
+description: CML Team provides management from our side and brings together people with proper hard and soft skills. A dedicated team is a good option for growing businesses.
 img: 3.png
-alt: 3
+alt: Scale your business
 ---

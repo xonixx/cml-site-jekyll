@@ -1,4 +1,4 @@
 ---
 title: Entertainment
-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+description: We are experienced in building attractive and interactive solutions which allow people to make their life more interesting and involve them in different activities.
 ---

@@ -1,4 +1,4 @@
 ---
 title: Blockchain
-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+description: We develop safe and secure blockchain-based software solutions for advanced financial and other decentralized services.
 ---

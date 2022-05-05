@@ -1,4 +1,4 @@
 ---
 title: Travel & Hospitality
-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+description: We provide user-friendly mobile applications and web services for the travel community which allow them to find something interesting inside the building and outside.
 ---
