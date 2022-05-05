@@ -1,4 +1,4 @@
 ---
-title: Other
-description: If we missed your industry just let us know. We have different projects in our portfolio, so we find a way to make the world better.
+title: And many others
+description: Take a look at our portfolio where we tackle a wide range of interesting industries such as marketing, education, logistics, enterprise solutions, and many others.
 ---

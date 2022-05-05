@@ -1,4 +1,4 @@
 ---
 title: Real estate
-description: We build a reliable, scalable, customizable, and RESO-compatible platform. That platform helps  real estate owners, brokers, and buyers meet each other and achieve their common goals.
+description: Robust, scalable, customizable, and RESO-compatible platforms to help real estate owners, brokers, and buyers meet each other and achieve their common goals.
 ---
