@@ -26,9 +26,8 @@
 
 .portfolio-modal .modal-content p.item-intro {
     margin: 20px 0 30px;
-font-family: {{ site.data.template.font.secondary }};
-font-size: 16px;
-font-style: italic;
+  font-size: 16px;
+  font-style: italic;
 }
 
 .portfolio-modal .modal-content ul.list-inline {

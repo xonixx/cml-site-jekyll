@@ -10,7 +10,7 @@ html {
 
 body {
     overflow-x: hidden;
-    font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: {{ site.data.template.font.primary }};
     color: #{{ site.data.template.color.secondary-dark }};
 }
 
@@ -69,8 +69,8 @@ h4,
 h5,
 h6 {
     text-transform: uppercase;
-    font-family: {{ site.data.template.font.primary }};
     font-weight: 700;
+    font-family: {{ site.data.template.font.primary }};
 }
 
 .img-centered {
@@ -89,12 +89,12 @@ h6 {
 }
 
 .btn-primary {
-    border-color: #{{ site.data.template.color.primary }};
     text-transform: uppercase;
-    font-family: {{ site.data.template.font.primary }};
     font-weight: 700;
     color: #fff;
     background-color: #{{ site.data.template.color.primary }};
+    font-family: {{ site.data.template.font.primary }};
+    border-color: #{{ site.data.template.color.primary }};
 }
 
 .btn-primary:hover,
