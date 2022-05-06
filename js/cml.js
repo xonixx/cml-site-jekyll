@@ -35,20 +35,8 @@ $(function() {
     $('a.page-scroll').bind('click', function(event) {
         var $anchor = $(this);
 
-        /**
-         * subheader appears when you are on the "about" section,
-         * and for correct scroll from the navigation,
-         * you need subtract height of subheader
-         */
-        var subHeader = $('.subheader-section');
-        var heightSubHeader = subHeader.css('display') === 'block' ? subHeader.height() : 0;
-        var isDesktop = $(window).width() < 768
-        ? 0
-        : heightHeader - heightSubHeader;
-
-
         $('html, body').stop().animate({
-          scrollTop: $($anchor.attr('href')).offset().top - isDesktop
+          scrollTop: $($anchor.attr('href')).offset().top - heightHeader
         }, 1500, 'easeInOutExpo');
         event.preventDefault();
 

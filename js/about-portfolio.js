@@ -152,19 +152,16 @@ var shufflemePortfolio = (function($) {
       let isMobile = $(window).width() < 768;
 
       setTimeout(() => {
-        let subHeader = $('.subheader-section');
-        let heightSubHeader = subHeader.css('display') === 'block' ? subHeader.height() : 0;
-        
         let scrollTop;
         if(isMobile) {
           if(openedPortfolio.length > 0) {
-            if(toTopScroll) scrollTop = projectTitle.offset().top - heightTitle - heightSubHeader - 30;
+            if(toTopScroll) scrollTop = projectTitle.offset().top - heightTitle - 30;
             else scrollTop = projectTitle.offset().top - 15;
           } else {
             scrollTop = projectTitle.offset().top - 15;
           }
         } else {
-          scrollTop = gridOffset + inGridOffset - heightTitle - 2 * heightSubHeader;
+          scrollTop = gridOffset + inGridOffset - heightTitle - 2;
         }
 
         $("html, body").animate(

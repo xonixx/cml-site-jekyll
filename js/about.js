@@ -20,16 +20,6 @@ $((function () {
   sliderArrow.on("mouseleave", function () {
     $(this).removeClass("pointer-cursor")
   });
-
-  const subheaderA = $(".subheader-a");
-  subheaderA.on("mouseenter", function () {
-    $(this).addClass("selected-a")
-    $(this).removeClass("non-selected-subheader")
-  });
-  subheaderA.on("mouseleave", function () {
-    $(this).removeClass("selected-a");
-    $(this).addClass("non-selected-subheader")
-  })
 }));
 
 function displaySubHeader() {
@@ -38,20 +28,6 @@ function displaySubHeader() {
     $(window).scrollTop() + 160 < $("#events").offset().top;
 
   $(window).on("scroll", (function () {
-    if (inAboutSection()) {
-      setTimeout(function () {
-        if (inAboutSection()) {
-          $(".subheader-section").css({
-            display: "block"
-          });
-        }
-      }, 500);
-    } else {
-      $(".subheader-section").css({
-        display: "none"
-      });
-    }
-
     if (
       $(window).scrollTop() + 120 >= $("#about-portfolio").offset().top &&
       $(window).scrollTop() + 200 < $("#about-customers").offset().top
