@@ -41,8 +41,24 @@ var shufflemePortfolio = (function($) {
       let $this = $(this),
         group = $this.data("group");
       console.log("this element of active class " + $this);
-
       console.log("group " + group);
+
+
+      // close all projects
+      const projects = document.querySelectorAll(".projects");
+      projects.forEach(project => {
+        const item = project.closest("li");
+        const isOpened = item.classList.contains("expanded");
+        if(isOpened) {
+          item.classList.remove("expanded");
+          const elms = document.querySelectorAll(`.${project.id}`);
+          elms.forEach(el => el.classList.add("hidden"));
+        }
+      });
+      $("li.shuffle-item").removeClass("expanded");
+      shuffler.update();
+      // end <close all projects>
+
 
       if ($this.hasClass("active")) {
         return;
@@ -99,18 +115,15 @@ var shufflemePortfolio = (function($) {
       let inGridOffset = 0;
       let id = this.id;
       let $elt = $("." + id);
-
       let projectItem = $(this).closest(".portfolio-item");
       let projectTitle = projectItem.find(".portfolio-item-title");
       let heightTitle = projectTitle.height();
 
       var openedPortfolio = document.querySelectorAll(".expanded > .portfolio-item");
-
       if ($elt.hasClass("hidden")) {
         $('[class*="-project"]').addClass("hidden");
         $("li.shuffle-item").removeClass("expanded");
         $elt.removeClass("hidden");
-
         $(this)
           .closest("li")
           .addClass("expanded");
