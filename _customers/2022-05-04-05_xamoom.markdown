@@ -1,0 +1,9 @@
+---
+company-img: xamoom/xamoom.png
+company-img-alt: Xamoom GmbH
+client-img: xamoom/georg-hozler.png
+client-name: Georg Holzer
+client-position: CEO, xamoom GmbH
+client-comment: We’re looking forward to more interesting and challenging tasks together. The company is satisfied with the outcome of the project. The company was most impressed by the team's wide and profound expertise in various tech stacks and programming languages. 
+link-read-more: https://clutch.co/profile/cml-team?utm_source=widget&utm_medium=2&utm_campaign=widget&utm_content=logo#review-1551188
+---

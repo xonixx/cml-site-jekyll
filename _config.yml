@@ -94,6 +94,8 @@ collections:
     output: true
   models-cooperation:
     output: true
+  customers:
+    output: true
     
 # Build settings
 markdown: kramdown
