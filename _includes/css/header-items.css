@@ -6,7 +6,7 @@
   margin: 30px 0;
 }
 
-.header-items h2 {
+.header-items .service-title {
   width: 100%;
   max-width: 50%;
 
@@ -16,6 +16,10 @@
 
   margin: 0;
   padding: 0;
+}
+
+.header-items .section-heading {
+  margin-bottom: 0;
 }
 
 .header-items p {
