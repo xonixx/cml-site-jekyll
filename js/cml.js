@@ -33,16 +33,16 @@ if (location.href.indexOf("#") != -1) {
 // jQuery for page scrolling feature - requires jQuery Easing plugin
 $(function() {
     $('a.page-scroll').bind('click', function(event) {
-        var $anchor = $(this);
+      event.preventDefault();
+      var $anchor = $(this);
 
-        $('html, body').stop().animate({
-          scrollTop: $($anchor.attr('href')).offset().top - heightHeader
-        }, 1500, 'easeInOutExpo');
-        event.preventDefault();
+      $('html, body').stop().animate({
+        scrollTop: $($anchor.attr('href')).offset().top - heightHeader
+      }, 1500, 'easeInOutExpo');
 
-        // GA track clicks
-        console.info('send', 'event', 'Link', 'click', $anchor.text());
-        ga('send', 'event', 'Link', 'click', $anchor.text())
+      // GA track clicks
+      console.info('send', 'event', 'Link', 'click', $anchor.text());
+      ga('send', 'event', 'Link', 'click', $anchor.text())
     });
 
     var introText = $('.intro-text');
