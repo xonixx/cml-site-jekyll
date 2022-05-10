@@ -9,4 +9,5 @@ color:
 # Font Families
 font:
   primary: '"Lato", Montserrat, "Helvetica Neue",Helvetica,Arial,sans-serif'
+  secondary: '"Bebas", "Lato", Montserrat, "Helvetica Neue",Helvetica,Arial,sans-serif'
 

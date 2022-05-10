@@ -96,13 +96,14 @@
 .portfolio-item-title {
 	width: 100%;
 	text-align: center;
-	font-size: 24px;
+	font-size: 36px;
 	font-weight: bold;
 	margin-bottom: 12px;
   height: 70px;
   display: flex;
   align-items: flex-end;
   justify-content: center;
+  font-family: {{ site.data.template.font.secondary }};
 }
 
 .portfolio-item-first-section
@@ -156,11 +157,6 @@ h2.portfolio-item-name:nth-child(1) {
 
 .portfolio-main-title
 {
-	font-size: 28px;
-	font-weight: bold;
-	font-stretch: normal;
-	line-height: normal;
-	letter-spacing: normal;
 	color: #000000;
 	text-transform: capitalize;
 	text-align: center;

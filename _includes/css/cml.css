@@ -361,6 +361,10 @@ fieldset[disabled] .btn-xl.active {
     min-height: 147px;
 }
 
+.subheader-team {
+  font-size: 20px;
+}
+
 .team-member {
     margin-bottom: 50px;
     text-align: center;
@@ -375,6 +379,8 @@ fieldset[disabled] .btn-xl.active {
     margin-top: 25px;
     margin-bottom: 0;
     text-transform: none;
+    font-size: 23px;
+    font-family: {{ site.data.template.font.secondary }};
 }
 
 .team-member p {

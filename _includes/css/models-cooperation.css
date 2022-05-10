@@ -38,12 +38,12 @@
   align-items: center;
 
   font-weight: bold;
-  font-size: 20px;
-  margin: 30px 0;
+  font-size: 30px;
+  margin: 30px 0 15px 0;
   text-align: center;
 
   color: #{{ site.data.template.color.primary }};
-  font-family: {{ site.data.template.font.primary }};
+  font-family: {{ site.data.template.font.secondary }};
 }
 
 .models-cooperation-item-desc {
