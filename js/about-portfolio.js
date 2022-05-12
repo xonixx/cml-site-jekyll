@@ -28,21 +28,89 @@ var shufflemePortfolio = (function($) {
 
       // instantiate the plugin
       shuffler = new Shuffle($grid[0], {
-        itemSelector: '[class*="col-"][data-groups]',
+        itemSelector: '[data-groups]',
         sizer: $sizer[0]
       });
     };
 
-  // Set up button clicks
+  // Set up button clicks & filter portfolio projects
   let setupPortfolioFilters = function() {
+    // set category from section of industrial
+    let selectedCategory;
+    const categoryBtns = document.querySelectorAll(".industries-item");
+
+     // clean category from section of industrial
+     const cleanCategory = document.getElementById("clean-category");
+
+    categoryBtns.forEach((categoryBlock) => {
+      categoryBlock.addEventListener('click', function() {
+        selectedCategory = this.dataset.category;
+        cleanCategory.style.display = "block";
+
+        const filterNow = document
+          .querySelector(".portfolio-title .active")
+          .dataset.groups;
+        const filterNowArr = Array.isArray(filterNow) ? filterNow : [filterNow];
+        
+        // Filter elements
+        shuffler.filter((element, shuffle) => {
+          let isInGroup = false;
+          const parseStrGroupsInArr = JSON.parse(element.dataset.groups);
+  
+          /*
+          * if previous filter of el. was found from has already choosen filter el. of frilter => break loop
+          * else get next filter of element & check it from filters was choosen
+          */
+          for (let j = 0; j < filterNowArr.length; j++) {
+            if(isInGroup) break;
+            isInGroup = parseStrGroupsInArr.indexOf(filterNowArr[j]) >= 0;
+          }
+
+          const elCategories = element.dataset.categories;
+          const isInCategory = elCategories.includes(selectedCategory);
+
+          return isInCategory && isInGroup;
+        });
+
+        $("#another-filter").click();
+        $("#filter-all").click();
+      });
+    });
+
+   
+    cleanCategory.addEventListener('click', function() {
+      cleanCategory.style.display = "none";
+      selectedCategory = null;
+
+      // Filter elements
+      shuffler.filter((element, shuffle) => {
+        let isInGroup = false;
+        const parseStrGroupsInArr = JSON.parse(element.dataset.groups);
+
+        /*
+         * if previous filter of el. was found from has already choosen filter el. of frilter => break loop
+         * else get next filter of element & check it from filters was choosen
+         */
+        for (let j = 0; j < portfolioFiltersChosen.length; j++) {
+          if(isInGroup) break;
+          isInGroup = parseStrGroupsInArr.indexOf(portfolioFiltersChosen[j]) >= 0;
+        }
+        
+        return isInGroup;
+      });
+
+      $("#another-filter").click();
+      $("#filter-all").click();
+    });
+
+
     let $btns = $filterOptions.children();
     $btns.on("click", function(e) {
       e.preventDefault();
+
+      // which a filter was clicked(All, Java, Reactjs)
       let $this = $(this),
         group = $this.data("group");
-      console.log("this element of active class " + $this);
-      console.log("group " + group);
-
 
       // close all projects
       const projects = document.querySelectorAll(".projects");
@@ -57,7 +125,7 @@ var shufflemePortfolio = (function($) {
       });
       $("li.shuffle-item").removeClass("expanded");
       shuffler.update();
-      // end <close all projects>
+      // end code of category <close all projects>
 
 
       if ($this.hasClass("active")) {
@@ -90,23 +158,33 @@ var shufflemePortfolio = (function($) {
 
       // Filter elements
       shuffler.filter((element, shuffle) => {
-        //console.log("elem: ", element);
+        let isInGroup = false;
+        const parseStrGroupsInArr = JSON.parse(element.dataset.groups);
+
+        /*
+         * if previous filter of el. was found from has already choosen filter el. of frilter => break loop
+         * else get next filter of element & check it from filters was choosen
+         */
         for (let j = 0; j < portfolioFiltersChosen.length; j++) {
-          console.log("j: " + j + "; f: " + portfolioFiltersChosen[j]);
-          if (
-            $(element)
-              .data("groups")
-              .indexOf(portfolioFiltersChosen[j]) >= 0
-          )
-            return true;
+          if(isInGroup) break;
+          isInGroup = parseStrGroupsInArr.indexOf(portfolioFiltersChosen[j]) >= 0;
         }
-        return false;
+
+        /**
+         * selectedCategory, this categories from "industrial" section (Blockchain, fintech, etc.)
+         */
+        if(selectedCategory) {
+          const elCategories = element.dataset.categories;
+          const isInCategory = elCategories.includes(selectedCategory);
+
+          return isInCategory && isInGroup;
+        }
+        
+        return isInGroup;
       });
 
       $("#about-portfolio .portfolio-display-mobile-list").click();
     });
-
-    $btns = null;
   };
 
   let showPortfolioContent = function() {
@@ -179,8 +257,6 @@ var shufflemePortfolio = (function($) {
   };
 })(jQuery);
 
-//Set up subheader for portfolio section
-
 $(function() {
   shufflemePortfolio.init(function() {
     $("#about-portfolio .portfolio-display-mobile-list")
@@ -190,6 +266,7 @@ $(function() {
       })
       .click();
 
+    // init on the start "Show all projects"
     $("#filter-all").click();
   });
 });

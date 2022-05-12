@@ -26,6 +26,12 @@
   margin-bottom: 2%;
 
   padding: 35px 30px;
+
+  color: black;
+}
+
+.industries-item:hover {
+  text-decoration: none;
 }
 
 .industries-item-title {

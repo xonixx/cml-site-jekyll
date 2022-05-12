@@ -27,21 +27,24 @@
             >Show all projects</a
           >
         </li>
-        <li class="portfolio-title"><a class="page-scroll" href="#grid-portfolio" data-group="Java">Java</a></li>
+        <li class="portfolio-title"><a class="page-scroll" href="#grid-portfolio" data-group="Java" id="another-filter">Java</a></li>
         <li class="portfolio-title"><a class="page-scroll" href="#grid-portfolio" data-group="Swift">Swift</a></li>
         <li class="portfolio-title"><a class="page-scroll" href="#grid-portfolio" data-group="NodeJS">NodeJS</a></li>
         <li class="portfolio-title"><a class="page-scroll" href="#grid-portfolio" data-group="ReactJS">ReactJS</a></li>
         <li class="portfolio-title"><a class="page-scroll" href="#grid-portfolio" data-group="React Native">React Native</a></li>
         <li class="portfolio-title"><a class="page-scroll" href="#grid-portfolio" data-group="Flutter">Flutter</a></li>
         <li class="portfolio-title"><a class="page-scroll" href="#grid-portfolio" data-group="Kotlin">Kotlin</a></li>
+        <li class="portfolio-title"><a class="page-scroll" href="#grid-portfolio" id="clean-category">Clean category</a></li>
       </ul>
       <!--end portfolio sorting -->
     </div>
     <ul class="portfolio-items list-unstyled" id="grid-portfolio">
       <!-- eoshk section started -->
+      <!-- data-categories="title1, title2" has taken from "_industries/someFile.markdown -> title" -->
       <li
         class="col-md-6 col-sm-6 col-xs-12"
         data-groups='["Java", "ReactJS", "Flutter", "NodeJS"]'
+        data-categories="Blockchain" 
       >
         <div class="portfolio-item">
           <div class="portfolio-item-title">CryptoTax</div>
@@ -125,6 +128,7 @@
       <li
         class="col-md-6 col-sm-6 col-xs-12"
         data-groups='["Java", "ReactJS"]'
+        data-categories="Entertainment"
       >
         <div class="portfolio-item">
           <div class="portfolio-item-title">Party Bunny</div>
@@ -212,6 +216,7 @@
       <li
         class="col-md-6 col-sm-6 col-xs-12"
         data-groups='["Java", "ReactJS"]'
+        data-categories="Blockchain"
       >
         <div class="portfolio-item">
           <div class="portfolio-item-title">CryptoMiner World</div>
@@ -311,6 +316,7 @@
       <li
         class="col-md-6 col-sm-6 col-xs-12"
         data-groups='["Java", "ReactJS"]'
+        data-categories="FinTech"
       >
         <div class="portfolio-item">
           <div class="portfolio-item-title">Layer</div>
@@ -410,8 +416,9 @@
       </li>
 
       <li
-              class="col-md-6 col-sm-6 col-xs-12"
-              data-groups='["ReactJS"]'
+        class="col-md-6 col-sm-6 col-xs-12"
+        data-groups='["ReactJS"]'
+        data-categories="Travel & Hospitality"
       >
         <div class="portfolio-item">
           <div class="portfolio-item-title">REM - Real Estate Management Platform</div>
@@ -490,8 +497,9 @@
         </div>
       </li>
       <li
-              class="col-md-6 col-sm-6 col-xs-12"
-              data-groups='["Swift", "Kotlin"]'
+        class="col-md-6 col-sm-6 col-xs-12"
+        data-groups='["Swift", "Kotlin"]'
+        data-categories="Travel & Hospitality"
       >
         <div class="portfolio-item">
           <div class="portfolio-item-title">REM (Real Estate Management) iOS/Android</div>
@@ -569,8 +577,9 @@
         </div>
       </li>
       <li
-              class="col-md-6 col-sm-6 col-xs-12"
-              data-groups='["Swift", "Kotlin"]'
+        class="col-md-6 col-sm-6 col-xs-12"
+        data-groups='["Swift", "Kotlin"]'
+        data-categories="Travel & Hospitality"
       >
         <div class="portfolio-item">
           <div class="portfolio-item-title">Xamoom - Mobile First Location CMS</div>
@@ -648,8 +657,9 @@
         </div>
       </li>
       <li
-              class="col-md-6 col-sm-6 col-xs-12"
-              data-groups='["Flutter", "AWS", "ELK", "PostgreSQL"]'
+        class="col-md-6 col-sm-6 col-xs-12"
+        data-groups='["Flutter", "AWS", "ELK", "PostgreSQL"]'
+        data-categories="Blockchain"
       >
         <div class="portfolio-item">
           <div class="portfolio-item-title">CryptoTax iOS/Android apps</div>
@@ -737,6 +747,7 @@
       <li
         class="col-md-6 col-sm-6 col-xs-12"
         data-groups='["Java", "ReactJS"]'
+        data-categories="FinTech, And many others"
       >
         <div class="portfolio-item">
           <div class="portfolio-item-title">EZChoice</div>
@@ -813,7 +824,8 @@
       </li>
       <li
         class="col-md-6 col-sm-6 col-xs-12"
-        data-groups='["React Native", "MySQL", "TypeScript", "AWS", "REST API", "VueJS"]'
+        data-groups='["React Native"]'
+        data-categories="And many others"
       >
         <div class="portfolio-item">
           <div class="portfolio-item-title">Translit</div>
@@ -887,6 +899,7 @@
       <li
         class="col-md-6 col-sm-6 col-xs-12"
         data-groups='["ReactJS"]'
+        data-categories="And many others"
       >
         <div class="portfolio-item">
           <div class="portfolio-item-title">WoonModule</div>
@@ -961,6 +974,7 @@
       <li
         class="col-md-6 col-sm-6 col-xs-12"
         data-groups='["ReactJS", "React Native"]'
+        data-categories="Travel & Hospitality"
       >
         <div class="portfolio-item">
           <div class="portfolio-item-title">Travelot</div>
@@ -1036,6 +1050,7 @@
       <li
         class="col-md-6 col-sm-6 col-xs-12"
         data-groups='["Flutter", "NodeJS"]'
+        data-categories="And many others"
       >
         <div class="portfolio-item">
           <div class="portfolio-item-title">Prototype You</div>
@@ -1109,6 +1124,7 @@
       <li
         class="col-md-6 col-sm-6 col-xs-12"
         data-groups='["ReactJS"]'
+        data-categories="FinTech, Blockchain"
       >
         <div class="portfolio-item">
           <div class="portfolio-item-title">Bison</div>

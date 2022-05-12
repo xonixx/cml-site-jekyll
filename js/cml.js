@@ -41,7 +41,6 @@ $(function() {
       }, 1500, 'easeInOutExpo');
 
       // GA track clicks
-      console.info('send', 'event', 'Link', 'click', $anchor.text());
       ga('send', 'event', 'Link', 'click', $anchor.text())
     });
 

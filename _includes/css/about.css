@@ -57,6 +57,11 @@
 .portfolio-sorting li a
 {
 	padding-bottom: 1px;
+  text-transform: uppercase;
+}
+
+#clean-category {
+  display: none;
 }
 
 #about-portfolio .portfolio-item
