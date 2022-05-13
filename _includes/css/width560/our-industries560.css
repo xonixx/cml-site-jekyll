@@ -21,4 +21,8 @@
   #our-industries .slick-dots {
     bottom: -45px;
   }
+
+  .industries-item {
+    border: none;
+  }
 }
