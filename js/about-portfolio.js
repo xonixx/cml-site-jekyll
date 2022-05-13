@@ -38,14 +38,13 @@ var shufflemePortfolio = (function($) {
     // set category from section of industrial
     let selectedCategory;
     const categoryBtns = document.querySelectorAll(".industries-item");
-
+    
      // clean category from section of industrial
-     const cleanCategory = document.getElementById("clean-category");
+     const cleanCategory = document.getElementById("filter-all");
 
     categoryBtns.forEach((categoryBlock) => {
       categoryBlock.addEventListener('click', function() {
         selectedCategory = this.dataset.category;
-        cleanCategory.style.display = "block";
 
         const filterNow = document
           .querySelector(".portfolio-title .active")
@@ -66,20 +65,14 @@ var shufflemePortfolio = (function($) {
             isInGroup = parseStrGroupsInArr.indexOf(filterNowArr[j]) >= 0;
           }
 
-          const elCategories = element.dataset.categories;
-          const isInCategory = elCategories.includes(selectedCategory);
-
-          return isInCategory && isInGroup;
+          return isInGroup;
         });
 
-        $("#another-filter").click();
-        $("#filter-all").click();
+        $("#filter-all-inner-project").click();
       });
     });
 
-   
     cleanCategory.addEventListener('click', function() {
-      cleanCategory.style.display = "none";
       selectedCategory = null;
 
       // Filter elements
@@ -98,9 +91,6 @@ var shufflemePortfolio = (function($) {
         
         return isInGroup;
       });
-
-      $("#another-filter").click();
-      $("#filter-all").click();
     });
 
 
@@ -112,7 +102,7 @@ var shufflemePortfolio = (function($) {
       let $this = $(this),
         group = $this.data("group");
 
-      // close all projects
+      // close all projects when switch between: Java, Swift, etc.
       const projects = document.querySelectorAll(".projects");
       projects.forEach(project => {
         const item = project.closest("li");

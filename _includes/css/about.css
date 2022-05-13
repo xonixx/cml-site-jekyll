@@ -60,10 +60,6 @@
   text-transform: uppercase;
 }
 
-#clean-category {
-  display: none;
-}
-
 #about-portfolio .portfolio-item
 {
 	display: flex;
