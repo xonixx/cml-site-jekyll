@@ -188,6 +188,16 @@ var shufflemePortfolio = (function($) {
       let projectItem = $(this).closest(".portfolio-item");
       let projectTitle = projectItem.find(".portfolio-item-title");
       let heightTitle = projectTitle.height();
+      
+      /**
+       * close filter(Java, Swift, NodeJS, ReactJs, etc.)
+       * only for mobile(when filter changes to another interface)
+       */
+      if(window.screen.width < 768) {
+        const btnFilterMenu = document.querySelector(".portfolio-display-mobile-element");
+        const isOpenedMunu = btnFilterMenu.classList.contains("selected");
+        if(isOpenedMunu) btnFilterMenu.click();
+      }      
 
       var openedPortfolio = document.querySelectorAll(".expanded > .portfolio-item");
       if ($elt.hasClass("hidden")) {
