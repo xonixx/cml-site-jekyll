@@ -23,10 +23,6 @@ $((function () {
 }));
 
 function displaySubHeader() {
-  let inAboutSection = () =>
-    $(window).scrollTop() + 101 >= $("#about-portfolio").offset().top &&
-    $(window).scrollTop() + 160 < $("#events").offset().top;
-
   $(window).on("scroll", (function () {
     if (
       $(window).scrollTop() + 120 >= $("#about-portfolio").offset().top &&

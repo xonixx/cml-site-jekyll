@@ -39,11 +39,12 @@ var shufflemePortfolio = (function($) {
     let selectedCategory;
     const categoryBtns = document.querySelectorAll(".industries-item");
     
-     // clean category from section of industrial
-     const cleanCategory = document.getElementById("filter-all");
+    // clean category from section of industrial
+    const cleanCategory = document.getElementById("filter-all");
 
     categoryBtns.forEach((categoryBlock) => {
       categoryBlock.addEventListener('click', function() {
+        cleanCategory.click();
         selectedCategory = this.dataset.category;
 
         const filterNow = document
@@ -67,6 +68,7 @@ var shufflemePortfolio = (function($) {
 
           return isInGroup;
         });
+        
 
         $("#filter-all-inner-project").click();
       });
