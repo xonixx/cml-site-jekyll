@@ -60,6 +60,10 @@
   text-transform: uppercase;
 }
 
+#filter-all:hover {
+  cursor: pointer;
+}
+
 #about-portfolio .portfolio-item
 {
 	display: flex;
