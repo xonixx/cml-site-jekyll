@@ -1,8 +1,8 @@
 //need for mobile in scrolling portfolio items
 var toTopScroll = false;
-if($(window).width() < 768) {
+if ($(window).width() < 768) {
   var lastScrollTop = 0;
-  window.addEventListener("scroll", function(){
+  window.addEventListener("scroll", function() {
     var st = window.pageYOffset || document.documentElement.scrollTop;
     if (st > lastScrollTop) toTopScroll = false;
     else toTopScroll = true;
@@ -12,6 +12,8 @@ if($(window).width() < 768) {
 }
 
 var portfolioFiltersChosen = [];
+var portfolioProjectsChosen = new Map();
+
 var shufflemePortfolio = (function($) {
   "use strict";
   let $grid = $("#grid-portfolio"), //locate what we want to sort
@@ -28,7 +30,7 @@ var shufflemePortfolio = (function($) {
 
       // instantiate the plugin
       shuffler = new Shuffle($grid[0], {
-        itemSelector: '[data-groups]',
+        itemSelector: "[data-groups]",
         sizer: $sizer[0]
       });
     };
@@ -38,12 +40,12 @@ var shufflemePortfolio = (function($) {
     // set category from section of industrial
     let selectedCategory;
     const categoryBtns = document.querySelectorAll(".industries-item");
-    
+
     // clean category from section of industrial
     const cleanCategory = document.getElementById("filter-all");
 
     categoryBtns.forEach((categoryBlock) => {
-      categoryBlock.addEventListener('click', function() {
+      categoryBlock.addEventListener("click", function() {
         cleanCategory.click();
         selectedCategory = this.dataset.category;
 
@@ -51,30 +53,30 @@ var shufflemePortfolio = (function($) {
           .querySelector(".portfolio-title .active")
           .dataset.groups;
         const filterNowArr = Array.isArray(filterNow) ? filterNow : [filterNow];
-        
+
         // Filter elements
         shuffler.filter((element, shuffle) => {
           let isInGroup = false;
           const parseStrGroupsInArr = JSON.parse(element.dataset.groups);
-  
+
           /*
           * if previous filter of el. was found from has already choosen filter el. of frilter => break loop
           * else get next filter of element & check it from filters was choosen
           */
           for (let j = 0; j < filterNowArr.length; j++) {
-            if(isInGroup) break;
+            if (isInGroup) break;
             isInGroup = parseStrGroupsInArr.indexOf(filterNowArr[j]) >= 0;
           }
 
           return isInGroup;
         });
-        
+
 
         $("#filter-all-inner-project").click();
       });
     });
 
-    cleanCategory.addEventListener('click', function() {
+    cleanCategory.addEventListener("click", function() {
       selectedCategory = null;
 
       // Filter elements
@@ -87,10 +89,10 @@ var shufflemePortfolio = (function($) {
          * else get next filter of element & check it from filters was choosen
          */
         for (let j = 0; j < portfolioFiltersChosen.length; j++) {
-          if(isInGroup) break;
+          if (isInGroup) break;
           isInGroup = parseStrGroupsInArr.indexOf(portfolioFiltersChosen[j]) >= 0;
         }
-        
+
         return isInGroup;
       });
     });
@@ -98,6 +100,7 @@ var shufflemePortfolio = (function($) {
 
     let $btns = $filterOptions.children();
     $btns.on("click", function(e) {
+      portfolioProjectsChosen.clear();
       e.preventDefault();
 
       // which a filter was clicked(All, Java, Reactjs)
@@ -106,10 +109,11 @@ var shufflemePortfolio = (function($) {
 
       // close all projects when switch between: Java, Swift, etc.
       const projects = document.querySelectorAll(".projects");
+
       projects.forEach(project => {
         const item = project.closest("li");
         const isOpened = item.classList.contains("expanded");
-        if(isOpened) {
+        if (isOpened) {
           item.classList.remove("expanded");
           const elms = document.querySelectorAll(`.${project.id}`);
           elms.forEach(el => el.classList.add("hidden"));
@@ -158,20 +162,22 @@ var shufflemePortfolio = (function($) {
          * else get next filter of element & check it from filters was choosen
          */
         for (let j = 0; j < portfolioFiltersChosen.length; j++) {
-          if(isInGroup) break;
+          if (isInGroup) break;
           isInGroup = parseStrGroupsInArr.indexOf(portfolioFiltersChosen[j]) >= 0;
         }
 
         /**
          * selectedCategory, this categories from "industrial" section (Blockchain, fintech, etc.)
          */
-        if(selectedCategory) {
+        if (selectedCategory) {
           const elCategories = element.dataset.categories;
           const isInCategory = elCategories.includes(selectedCategory);
 
           return isInCategory && isInGroup;
         }
-        
+
+        if (isInGroup) portfolioProjectsChosen.set(element.id, portfolioProjectsChosen.size);
+
         return isInGroup;
       });
 
@@ -188,20 +194,21 @@ var shufflemePortfolio = (function($) {
       let projectItem = $(this).closest(".portfolio-item");
       let projectTitle = projectItem.find(".portfolio-item-title");
       let heightTitle = projectTitle.height();
-      
+
       /**
        * close filter(Java, Swift, NodeJS, ReactJs, etc.)
        * only for mobile(when filter changes to another interface)
        */
-      if(window.screen.width < 768) {
+      if (window.screen.width < 768) {
         const btnFilterMenu = document.querySelector(".portfolio-display-mobile-element");
         const isOpenedMunu = btnFilterMenu.classList.contains("selected");
-        if(isOpenedMunu) btnFilterMenu.click();
-      }      
+        if (isOpenedMunu) btnFilterMenu.click();
+      }
 
       var openedPortfolio = document.querySelectorAll(".expanded > .portfolio-item");
+      let projectIndex = portfolioProjectsChosen.get($(this).closest("li.shuffle-item").index().toString());
       if ($elt.hasClass("hidden")) {
-        $('[class*="-project"]').addClass("hidden");
+        $("[class*=\"-project\"]").addClass("hidden");
         $("li.shuffle-item").removeClass("expanded");
         $elt.removeClass("hidden");
         $(this)
@@ -209,9 +216,7 @@ var shufflemePortfolio = (function($) {
           .addClass("expanded");
         inGridOffset =
           Math.ceil(
-            $(this)
-              .closest("li.shuffle-item")
-              .index() / 2
+            projectIndex / 2
           ) * 526;
       } else {
         $elt.addClass("hidden");
@@ -221,9 +226,7 @@ var shufflemePortfolio = (function($) {
           .removeClass("expanded");
         inGridOffset =
           Math.floor(
-            $(this)
-              .closest("li.shuffle-item")
-              .index() / 2
+            projectIndex / 2
           ) * 526;
       }
 
@@ -233,15 +236,15 @@ var shufflemePortfolio = (function($) {
 
       setTimeout(() => {
         let scrollTop;
-        if(isMobile) {
-          if(openedPortfolio.length > 0) {
-            if(toTopScroll) scrollTop = projectTitle.offset().top - heightTitle - 30;
+        if (isMobile) {
+          if (openedPortfolio.length > 0) {
+            if (toTopScroll) scrollTop = projectTitle.offset().top - heightTitle - 30;
             else scrollTop = projectTitle.offset().top - 15;
           } else {
             scrollTop = projectTitle.offset().top - 15;
           }
         } else {
-          scrollTop = gridOffset + inGridOffset - heightTitle - 2;
+          scrollTop = gridOffset + inGridOffset + projectIndex * 19 - heightTitle;
         }
 
         $("html, body").animate(
