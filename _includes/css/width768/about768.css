@@ -9,7 +9,6 @@
     flex: 2;
     flex-direction: column;
     margin: 0 30px;
-    font-family: 'Special Elite', cursive;
 
     align-items: center;
     justify-content: center;
@@ -89,8 +88,6 @@
 @media (min-width: 769px) {
 
     .portfolio-sorting li a {
-
-        text-transform: uppercase;
         font-size: 16px;
     }
 
@@ -122,24 +119,6 @@
 }
 
 @media (max-width: 768px) {
-
-    .subheader-list {
-        padding-left: 0;
-    }
-
-    .subheader-a {
-        font-size: 18px;
-    }
-
-    .subheader-a:hover {
-        border-bottom: 4px solid white;
-    }
-
-    .subheader-section {
-        height: 51px;
-    }
-
-
     .filter-element {
         text-transform: capitalize;
     }
@@ -212,6 +191,11 @@
         width: 55%;
     }
 
+    .portfolio-item-title {
+      display: block;
+      height: auto;
+    }
+
     .portfolio-item-first-section {
         min-width: 320px;
     }
@@ -232,30 +216,6 @@
 
     .portfolio-display-mobile-element.selected i {
         color: white;
-    }
-
-    .subheader-a-hidden {
-        font-size: 20px;
-        padding: 10px 0;
-        color: #fff;
-        display: inline-block;
-        line-height: 1.35;
-    }
-
-    .subheader-a-hidden.selected-a {
-        border-bottom: 4px solid white;
-        padding-bottom: 2px;
-    }
-
-    .subheader-a-hidden:hover {
-        border-bottom: 4px solid;
-        padding-bottom: 2px;
-        text-decoration: none;
-        color: #fff;
-    }
-
-    .subheader-a {
-        display: none;
     }
 
     section#about-hackathons {

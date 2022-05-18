@@ -1,0 +1,32 @@
+<section id="services" class="our-industries">
+
+  <div class="container">
+
+    <!-- hedaer -->
+    {%
+      include components/header-service.html 
+        title="industries"
+        description="Profound knowledge and expertise in wide range of 
+        industries allows us to build a reliable bridge between your 
+        ideas and theirs’ tech realization"
+    %}
+
+    <!-- items for desktop -->
+    <div class="industries-items desktop">
+      {% for item in site.industries %}
+        {% include components/idustries-block.html item=item %}
+      {% endfor %}
+    </div> <!-- /items -->
+
+    <!-- items for monile -->
+    <div id="our-industries" class="industries-items mobile">
+      {% for item in site.industries %}
+        <div class="slick-adjust-div">
+          {% include components/idustries-block.html item=item %}
+        </div>
+      {% endfor %}
+    </div>
+
+  </div>
+
+</section>

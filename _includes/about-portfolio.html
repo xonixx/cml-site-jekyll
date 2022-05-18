@@ -6,7 +6,7 @@
       <section id="about_photos_only" style="padding: 0"></section>
       <!-- just to jump exactly to photos -->
     </div>
-    <h2 class="portfolio-main-title">Meet our customers</h2>
+    <h2 class="portfolio-main-title section-heading">Meet our customers</h2>
     <div class="filter-list-wrap">
       <ul class="portfolio-display-mobile-list">
         <li>Filter:</li>
@@ -21,62 +21,38 @@
       >
         <li class="portfolio-title">
           <a
-            href="#"
             id="filter-all"
-            data-group='["all", "Java", "Spring Boot", "ReactJS", "NodeJS", "AWS", "Solidity", "EOS", "VueJS", "RxJS",
-            "TypeScript","Google App Script", "Google Drive API", "PostgreSQL", "MySQL", "Kibana", "Elasticsearch",
-            "React Native","Facebook Messenger API", "IBM Watson", "Flutter", "Alexa Skills Kit", "Ethereum", "Mapbox", "Firebase",
-            "Solidity", "Metamask", "Firebase", "ELK", "REST API", "Websockets", "RabbitMQ", "Swift", "Kotlin", "MaterialUI", "SonarQube"]'
+            data-group='["all", "Java", "ReactJS", "NodeJS", "React Native", "Flutter", "Swift", "Kotlin"]'
             >All</a
           >
         </li>
-        <li class="portfolio-title"><a href="#" data-group="Java">Java</a></li>
-        <li class="portfolio-title"><a href="#" data-group="Swift">Swift</a></li>
-        <li class="portfolio-title"><a href="#" data-group="NodeJS">NodeJS</a></li>
-        <li class="portfolio-title"><a href="#" data-group="Spring Boot">Spring Boot</a></li>
-        <li class="portfolio-title"><a href="#" data-group="VueJS">VueJS</a></li>
-        <li class="portfolio-title"><a href="#" data-group="ReactJS">ReactJS</a></li>
-        <li class="portfolio-title"><a href="#" data-group="SonarQube">SonarQube</a></li>
-        <li class="portfolio-title"><a href="#" data-group="RxJS">RxJS</a></li>
-        <li class="portfolio-title"><a href="#" data-group="AWS">AWS</a></li>
-        <li class="portfolio-title"><a href="#" data-group="TypeScript">TypeScript</a></li>
-        <li class="portfolio-title"><a href="#" data-group="Solidity">Solidity</a></li>
-        <li class="portfolio-title">
-          <a href="#" data-group="Google App Script">Google App Script</a>
-        </li>
-        <li class="portfolio-title"><a href="#" data-group="PostgreSQL">PostgreSQL</a></li>
-        <li class="portfolio-title"><a href="#" data-group="Firebase">Firebase</a></li>
-        <li class="portfolio-title"><a href="#" data-group="Mapbox">Mapbox</a></li>
-        <li class="portfolio-title"><a href="#" data-group="MySQL">MySQL</a></li>
-        <li class="portfolio-title"><a href="#" data-group="Firebase">Firebase</a></li>
-        <li class="portfolio-title"><a href="#" data-group="IBM Watson">IBM Watson</a></li>
-        <li class="portfolio-title"><a href="#" data-group="Metamask">Metamask</a></li>
-        <li class="portfolio-title"><a href="#" data-group="React Native">React Native</a></li>
-        <li class="portfolio-title">
-          <a href="#" data-group="Facebook Messenger API">Facebook Messenger API</a>
-        </li>
-        <li class="portfolio-title"><a href="#" data-group="Flutter">Flutter</a></li>
-        <li class="portfolio-title">
-          <a href="#" data-group="Alexa Skills Kit">Alexa Skills Kit</a>
-        </li>
-        <li class="portfolio-title"><a href="#" data-group="RabbitMQ">RabbitMQ</a></li>
-        <li class="portfolio-title">
-          <a href="#" data-group="Google Drive API">Google Drive API</a>
-        </li>
-        <li class="portfolio-title"><a href="#" data-group="REST API">REST API</a></li>
-        <li class="portfolio-title"><a href="#" data-group="ELK">ELK</a></li>
-        <li class="portfolio-title"><a href="#" data-group="Websockets">Websockets</a></li>
-        <li class="portfolio-title"><a href="#" data-group="Ethereum">Ethereum</a></li>
-        <li class="portfolio-title"><a href="#" data-group="Kotlin">Kotlin</a></li>
-        <li class="portfolio-title"><a href="#" data-group="MaterialUI">Material UI</a></li>
+        <li class="portfolio-title"><a class="page-scroll" href="#grid-portfolio" data-group="Java" id="another-filter">Java</a></li>
+        <li class="portfolio-title"><a class="page-scroll" href="#grid-portfolio" data-group="Swift">Swift</a></li>
+        <li class="portfolio-title"><a class="page-scroll" href="#grid-portfolio" data-group="NodeJS">NodeJS</a></li>
+        <li class="portfolio-title"><a class="page-scroll" href="#grid-portfolio" data-group="ReactJS">ReactJS</a></li>
+        <li class="portfolio-title"><a class="page-scroll" href="#grid-portfolio" data-group="React Native">React Native</a></li>
+        <li class="portfolio-title"><a class="page-scroll" href="#grid-portfolio" data-group="Flutter">Flutter</a></li>
+        <li class="portfolio-title"><a class="page-scroll" href="#grid-portfolio" data-group="Kotlin">Kotlin</a></li>
+
+        <!-- need for display all project if choose category like Blockchain, Fintech, etc. -->
+        <li class="portfolio-title" style="display: none;">
+          <a
+            class="page-scroll" href="#grid-portfolio"
+            data-group='["all", "Java", "ReactJS", "NodeJS", "React Native", "Flutter", "Swift", "Kotlin"]'
+            id="filter-all-inner-project"
+            ></a>
+          </li>
       </ul>
       <!--end portfolio sorting -->
     </div>
     <ul class="portfolio-items list-unstyled" id="grid-portfolio">
       <!-- eoshk section started -->
+      <!-- data-categories="title1, title2" has taken from "_industries/someFile.markdown -> title" -->
       <li
+        id="0"
         class="col-md-6 col-sm-6 col-xs-12"
-        data-groups='["Java", "ReactJS", "Flutter", "React Native", "ELK", "PostgreSQL", "AWS", "Spring Boot", "TypeScript"]'
+        data-groups='["Java", "ReactJS"]'
+        data-categories="Blockchain, FinTech" 
       >
         <div class="portfolio-item">
           <div class="portfolio-item-title">CryptoTax</div>
@@ -158,8 +134,10 @@
         </div>
       </li>
       <li
+        id="1"
         class="col-md-6 col-sm-6 col-xs-12"
-        data-groups='["Java", "Spring Boot", "Facebook Messenger API", "IBM Watson", "Alexa Skills Kit", "ELK", "MySQL"]'
+        data-groups='["Java"]'
+        data-categories="Entertainment"
       >
         <div class="portfolio-item">
           <div class="portfolio-item-title">Party Bunny</div>
@@ -221,7 +199,7 @@
               Team and duration
             </h2>
             <div class="portfolio-item-description">
-              Two Full-Stack Engineers in development team
+              Two Full-Stack Engineers in development team.
             </div>
             <h2 class="portfolio-item-name">
               Industries
@@ -245,8 +223,10 @@
         </div>
       </li>
       <li
+        id="2"
         class="col-md-6 col-sm-6 col-xs-12"
-        data-groups='["Ethereum", "Solidity", "Metamask", "ReactJS", "Firebase"]'
+        data-groups='["Java", "ReactJS"]'
+        data-categories="Blockchain, Entertainment"
       >
         <div class="portfolio-item">
           <div class="portfolio-item-title">CryptoMiner World</div>
@@ -332,7 +312,7 @@
               Team and duration
             </h2>
             <div class="portfolio-item-description">
-              Blockchain Solution Architect and Full-Stack Engineer in development team
+              Blockchain Solution Architect and Full-Stack Engineer in development team.
             </div>
             <h2 class="portfolio-item-name">
               Country
@@ -344,8 +324,10 @@
         </div>
       </li>
       <li
+        id="3"
         class="col-md-6 col-sm-6 col-xs-12"
-        data-groups='["Java", "Spring Boot", "ReactJS", "Google App Script", "Google Drive API", "ELK"]'
+        data-groups='["Java", "ReactJS"]'
+        data-categories="FinTech"
       >
         <div class="portfolio-item">
           <div class="portfolio-item-title">Layer</div>
@@ -426,7 +408,7 @@
               Team and duration
             </h2>
             <div class="portfolio-item-description">
-              One Full-Stack Engineer in development team working for 10 weeks.
+              One Full-Stack Engineer in development team.
             </div>
             <h2 class="portfolio-item-name">
               Country
@@ -445,8 +427,10 @@
       </li>
 
       <li
-              class="col-md-6 col-sm-6 col-xs-12"
-              data-groups='["Java", "ELK", "AWS", "PostgreSQL", "MaterialUI", "Spring Boot", "SonarQube", "ReactJS"]'
+        id="4"
+        class="col-md-6 col-sm-6 col-xs-12"
+        data-groups='["ReactJS"]'
+        data-categories="Real estate"
       >
         <div class="portfolio-item">
           <div class="portfolio-item-title">REM - Real Estate Management Platform</div>
@@ -501,7 +485,7 @@
               Team and duration
             </h2>
             <div class="portfolio-item-description">
-              Two full-stack developers in development team
+              Two full-stack developers in development team.
             </div>
             <h2 class="portfolio-item-name">
               Industries
@@ -525,8 +509,10 @@
         </div>
       </li>
       <li
-              class="col-md-6 col-sm-6 col-xs-12"
-              data-groups='["Swift", "ELK", "Kotlin", "AWS", "PostgreSQL", "MaterialUI"]'
+        id="5"
+        class="col-md-6 col-sm-6 col-xs-12"
+        data-groups='["Swift", "Kotlin"]'
+        data-categories="Real estate"
       >
         <div class="portfolio-item">
           <div class="portfolio-item-title">REM (Real Estate Management) iOS/Android</div>
@@ -580,7 +566,7 @@
               Team and duration
             </h2>
             <div class="portfolio-item-description">
-              iOS and Android developers in development team
+              iOS and Android developers in development team.
             </div>
             <h2 class="portfolio-item-name">
               Industries
@@ -604,8 +590,10 @@
         </div>
       </li>
       <li
-              class="col-md-6 col-sm-6 col-xs-12"
-              data-groups='["Swift", "Mapbox", "Kotlin", "Firebase"]'
+        id="6"
+        class="col-md-6 col-sm-6 col-xs-12"
+        data-groups='["Swift", "Kotlin"]'
+        data-categories="Travel & Hospitality"
       >
         <div class="portfolio-item">
           <div class="portfolio-item-title">Xamoom - Mobile First Location CMS</div>
@@ -659,7 +647,7 @@
               Team and duration
             </h2>
             <div class="portfolio-item-description">
-              iOS and Android developers in development team
+              iOS and Android developers in development team.
             </div>
             <h2 class="portfolio-item-name">
               Industries
@@ -683,8 +671,10 @@
         </div>
       </li>
       <li
-              class="col-md-6 col-sm-6 col-xs-12"
-              data-groups='["Flutter", "AWS", "ELK", "PostgreSQL"]'
+        id="7"
+        class="col-md-6 col-sm-6 col-xs-12"
+        data-groups='["Flutter", "AWS", "ELK", "PostgreSQL"]'
+        data-categories="Blockchain"
       >
         <div class="portfolio-item">
           <div class="portfolio-item-title">CryptoTax iOS/Android apps</div>
@@ -770,8 +760,10 @@
         </div>
       </li>
       <li
+        id="8"
         class="col-md-6 col-sm-6 col-xs-12"
-        data-groups='["Java", "Spring Boot", "ReactJS", "TypeScript", "ELK", "PostgreSQL", "AWS", "REST API"]'
+        data-groups='["Java", "ReactJS"]'
+        data-categories="FinTech, And many others"
       >
         <div class="portfolio-item">
           <div class="portfolio-item-title">EZChoice</div>
@@ -847,8 +839,10 @@
         </div>
       </li>
       <li
+        id="9"
         class="col-md-6 col-sm-6 col-xs-12"
-        data-groups='["React Native", "MySQL", "TypeScript", "AWS", "REST API", "VueJS"]'
+        data-groups='["React Native"]'
+        data-categories="And many others"
       >
         <div class="portfolio-item">
           <div class="portfolio-item-title">Translit</div>
@@ -920,8 +914,10 @@
         </div>
       </li>
       <li
+        id="10"
         class="col-md-6 col-sm-6 col-xs-12"
-        data-groups='["ReactJS", "MaterialUI", "TypeScript", "Firebase"]'
+        data-groups='["ReactJS"]'
+        data-categories="Real estate"
       >
         <div class="portfolio-item">
           <div class="portfolio-item-title">WoonModule</div>
@@ -994,8 +990,10 @@
         </div>
       </li>
       <li
+        id="11"
         class="col-md-6 col-sm-6 col-xs-12"
-        data-groups='["React Native", "Firebase"]'
+        data-groups='["ReactJS", "React Native"]'
+        data-categories="Travel & Hospitality"
       >
         <div class="portfolio-item">
           <div class="portfolio-item-title">Travelot</div>
@@ -1069,8 +1067,10 @@
         </div>
       </li>
       <li
+        id="12"
         class="col-md-6 col-sm-6 col-xs-12"
         data-groups='["Flutter"]'
+        data-categories="And many others"
       >
         <div class="portfolio-item">
           <div class="portfolio-item-title">Prototype You</div>
@@ -1142,8 +1142,10 @@
         </div>
       </li>
       <li
+        id="13"
         class="col-md-6 col-sm-6 col-xs-12"
-        data-groups='["ReactJS", "TypeScript"]'
+        data-groups='["ReactJS"]'
+        data-categories="FinTech, Blockchain"
       >
         <div class="portfolio-item">
           <div class="portfolio-item-title">Bison</div>

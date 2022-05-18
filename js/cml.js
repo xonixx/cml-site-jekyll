@@ -4,31 +4,44 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
+var heightHeader = $("nav").height();
+
+// if user opened a website with a anchor(#service, #contact, etc.) 
+if (location.href.indexOf("#") != -1) {
+  const urlAnchor = location.href.split('/#')[1];
+  console.log(`The user came to the site by anchor(${urlAnchor})`);
+
+  // store the hash (DON'T put this code inside the $() function, it has to be executed 
+  // right away before the browser can start scrolling!
+  var target = window.location.hash,
+  target = target.replace('#', '');
+
+  // delete hash so the page won't scroll to it
+  window.location.hash = "";
+
+  // now whenever you are ready do whatever you want
+  // (in this case I use jQuery to scroll to the tag after the page has loaded)
+  $(window).on('load', function() {
+    if (target) {
+        $('html, body').animate({
+            scrollTop: $("#" + target).offset().top - heightHeader
+        }, 1500, 'easeInOutExpo', function () {});
+    }
+  });
+}
+
 // jQuery for page scrolling feature - requires jQuery Easing plugin
 $(function() {
     $('a.page-scroll').bind('click', function(event) {
-        var $anchor = $(this);
-        var heightHeader = $("nav").height();
+      event.preventDefault();
+      var $anchor = $(this);
 
-        /**
-         * subheader appears when you are on the "about" section,
-         * and for correct scroll from the navigation,
-         * you need subtract height of subheader
-         */
-        var subHeader = $('.subheader-section');
-        var heightSubHeader = subHeader.css('display') === 'block' ? subHeader.height() : 0;
-        var isDesktop = $(window).width() < 768
-        ? 0
-        : heightHeader - heightSubHeader;
+      $('html, body').stop().animate({
+        scrollTop: $($anchor.attr('href')).offset().top - heightHeader
+      }, 1500, 'easeInOutExpo');
 
-        $('html, body').stop().animate({
-          scrollTop: $($anchor.attr('href')).offset().top - isDesktop
-        }, 1500, 'easeInOutExpo');
-        event.preventDefault();
-
-        // GA track clicks
-        console.info('send', 'event', 'Link', 'click', $anchor.text());
-        ga('send', 'event', 'Link', 'click', $anchor.text())
+      // GA track clicks
+      ga('send', 'event', 'Link', 'click', $anchor.text())
     });
 
     var introText = $('.intro-text');

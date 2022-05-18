@@ -9,18 +9,15 @@
 }
 
 .navbar-default .navbar-brand {
-  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,cursive;
-  /*letter-spacing: 0.3em;*/
   font-weight: bold;
-  /*color: #{{ site.data.template.color.primary }};*/
   color: #ffffff;
+  font-family: {{ site.data.template.font.primary }};
 }
 
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus,
 .navbar-default .navbar-brand:active,
 .navbar-default .navbar-brand.active {
-/*color: #{{ site.data.template.color.secondary }};*/
 color: #ffffff;
 }
 
@@ -45,7 +42,6 @@ background-color: #fff;
 .navbar-default .nav li a, .calendar-a {
   text-transform: uppercase;
   text-decoration: none;
-  font-family: {{ site.data.template.font.primary }};
   font-weight: 700;
   letter-spacing: 1px;
   color: #fff;
@@ -54,6 +50,7 @@ background-color: #fff;
   transition: all ease .35s;
   transition-delay: .6s;
   -webkit-transition-delay: .6s;
+  font-family: {{ site.data.template.font.primary }};
 }
 
 .navbar-default .nav li a:hover,
@@ -97,7 +94,6 @@ header .intro-text img {
 }
 header .intro-text .intro-lead-in {
   margin-bottom: 25px;
-  font-family: {{ site.data.template.font.secondary }};
   font-size: 22px;
   font-style: italic;
   line-height: 22px;
@@ -106,31 +102,28 @@ header .intro-text .intro-lead-in {
 header .intro-text .intro-heading {
   margin-bottom: 25px;
   text-transform: uppercase;
-  font-family: {{ site.data.template.font.primary }};
   font-size: 40px;
   font-weight: 700;
   line-height: 40px;
   min-height: fit-content;
+  font-family: {{ site.data.template.font.primary }};
 }
 
 section {
   padding: 20px 0;
 }
-  
-section h2.section-heading {
+
+.section-heading  {
   margin-top: 0;
   margin-bottom: 15px;
-  font-size: 40px;
-}
-
-section h2.section-heading.mobile-shown {
-  font-size: 26px;
+  font-size: 60px;
+  text-transform: uppercase;
+  font-family: 'Bebas', {{ site.data.template.font.primary }};
 }
 
 section h3.section-subheading {
   margin-bottom: 75px;
   text-transform: none;
-  font-family: {{ site.data.template.font.secondary }};
   font-size: 24px;
   /*font-style: italic;*/
   font-weight: 300;

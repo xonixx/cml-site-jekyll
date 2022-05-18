@@ -1,0 +1,38 @@
+.header-items {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  margin: 30px 0;
+}
+
+.header-items .service-title {
+  width: 100%;
+  max-width: 50%;
+
+  font-weight: bold;
+  color: #0077B5;
+  text-transform: uppercase;
+
+  margin: 0;
+  padding: 0;
+}
+
+.header-items .section-heading {
+  margin-bottom: 0;
+}
+
+.header-items p {
+  width: 100%;
+  max-width: 50%;
+  
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 18px;
+  text-align:right;
+
+  margin: 0;
+  padding: 0;
+
+  font-family: {{ site.data.template.font.primary }};
+}

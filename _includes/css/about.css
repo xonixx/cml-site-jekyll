@@ -57,6 +57,11 @@
 .portfolio-sorting li a
 {
 	padding-bottom: 1px;
+  text-transform: uppercase;
+}
+
+#filter-all:hover {
+  cursor: pointer;
 }
 
 #about-portfolio .portfolio-item
@@ -96,9 +101,14 @@
 .portfolio-item-title {
 	width: 100%;
 	text-align: center;
-	font-size: 24px;
+	font-size: 36px;
 	font-weight: bold;
 	margin-bottom: 12px;
+  height: 70px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  font-family: {{ site.data.template.font.secondary }};
 }
 
 .portfolio-item-first-section
@@ -108,7 +118,6 @@
 	flex-direction: column;
 	justify-content: stretch;
 	flex: 1;
-	min-width: 450px;
 	margin-bottom: 20px;
 }
 
@@ -151,76 +160,8 @@ h2.portfolio-item-name:nth-child(1) {
 	margin: 5px;
 }
 
-.subheader-section
-{
-	height: 46px;
-	background-color: #66ccff;
-	text-align: center;
-	align-items: center;
-	justify-content: center;
-	display: none;
-}
-
-.subheader-list
-{
-	display: flex;
-	flex-direction: row;
-	text-align: center;
-	height: 33px;
-	font-size: 18px;
-	font-weight: bold;
-	font-style: normal;
-	font-stretch: normal;
-	line-height: normal;
-	letter-spacing: normal;
-	color: #fff;
-	text-transform: capitalize;
-}
-
-.subheader-a
-{
-	font-family: {{ site.data.template.font.primary }};
-	padding: 10px 0;
-	color: #fff;
-	display: inline-block;
-	line-height: 1.34;
-
-}
-
-.subheader-li
-{
-	list-style-type: none;
-	flex-basis: auto;
-	flex-grow: 1;
-}
-
-.subheader-a.non-selected-subheader {
-	color: #fff;
-	text-decoration: none;
-}
-
-.subheader-a.selected-a
-{
-	color: #fff;
-	display: inline-block;
-	border-bottom: 5px solid;
-	padding-bottom: 7px;
-	text-decoration: none;
-}
-
-
-.subheader-a-hidden.selected-a {
-	border-bottom: 5px solid white;
-	padding-bottom: 2px;
-}
-
 .portfolio-main-title
 {
-	font-size: 28px;
-	font-weight: bold;
-	font-stretch: normal;
-	line-height: normal;
-	letter-spacing: normal;
 	color: #000000;
 	text-transform: capitalize;
 	text-align: center;
@@ -266,26 +207,8 @@ h2.portfolio-item-name:nth-child(1) {
 	font-weight: bold;
 }
 
-.subheader-a-hidden
-{
-	display: none;
-}
-
 #customers-content-wrapper {
 	padding-top: 10px;
-}
-
-@media(max-width:996px)
-{
-	.subheader-a {
-		font-size: 18px;
-	}
-
-	.subheader-a-hidden.selected-a {
-		border-bottom: 4px solid white;
-		padding-bottom: 2px;
-	}
-
 }
 
 @media(max-width: 945px) {
@@ -322,6 +245,10 @@ h2.portfolio-item-name:nth-child(1) {
 	max-width: 170px;
 	padding-right: 8px;
 	padding-left: 8px;
+}
+
+.customers-picture img {
+  border-radius: 50%;
 }
 
 .customers-name,

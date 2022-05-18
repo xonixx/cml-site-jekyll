@@ -1,0 +1,6 @@
+---
+title: Develop customized solution
+description: We gather the requirements and implement your idea from scratch. The whole process is transparent, so you can keep the focus on customer satisfaction and core business.
+img: 2.png
+alt: Develop customized solution
+---

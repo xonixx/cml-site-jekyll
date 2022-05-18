@@ -88,6 +88,15 @@ social:
 address: Suite 6, 5 Percy Street, London, Fitzrovia, United Kingdom, W1T 1DG
 address2: 3 Mala Zhytomyrska St, Kyiv, 01001
 
+# Collections
+collections:
+  industries:
+    output: true
+  models-cooperation:
+    output: true
+  customers:
+    output: true
+    
 # Build settings
 markdown: kramdown
 permalink: pretty

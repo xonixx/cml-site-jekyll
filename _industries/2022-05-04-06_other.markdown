@@ -1,0 +1,4 @@
+---
+title: And many others
+description: Take a look at our portfolio where we tackle a wide range of interesting industries such as marketing, education, logistics, enterprise solutions, and many others.
+---

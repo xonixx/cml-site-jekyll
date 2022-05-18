@@ -1,0 +1,9 @@
+---
+company-img: blockpit/blockpit-lg-white.svg
+company-img-alt: Blockpit AG
+client-img: blockpit/magnus-berchtold.png
+client-name: Magnus Berchtold
+client-position: CPO & Co-Founder, Blockpit AG
+client-comment: Throughout the years, they are showing a full dedication to us. Since 2018, we've been working with CML Team LTD, and they are still providing the same amount of dedication to helping the client succeed and valuable guidance to accommodate issues and questions
+link-read-more: https://clutch.co/profile/cml-team?utm_source=widget&utm_medium=2&utm_campaign=widget&utm_content=logo#review-1915517
+---

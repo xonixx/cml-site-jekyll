@@ -1,113 +1,82 @@
 .calendar-table {
-    position: relative;
-    min-width: 90vw;
+  position: relative;
+  min-width: 90vw;
 }
 
 .calendly-inline-widget {
-    overflow-y: hidden !important;
-}
-
-.calendar-element
-{
-    align-items: center;
-    display: flex;
-    min-width: 90vw;
-    max-width: 45vw;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-    padding-right: 8px;
-    padding-left: 8px;
-    padding-bottom: 30px;
-
+  overflow-y: hidden !important;
 }
 
 @media(max-width:900px) {
-    .calendly-inline-widget {
-        position: relative;
-        height: 100%;
-        min-width: 320px;
-    }
-    .calendar-table {
-        flex: 1;
-        height: 940px;
-        padding: 0;
-    }
-    .calendar-story {
-        align-self: self-start !important;
-    }
-    .back-button-a {
-        text-transform: uppercase;
-        text-decoration: none;
-        font-family: Montserrat, "Helvetica Neue", Helvetica,Arial, sans-serif;
-        letter-spacing: 1px;
-        color: white;
-        padding: 0 10px;
-        font-weight: bold;
-    }
+  .calendly-inline-widget {
+    position: relative;
+    height: 100%;
+    min-width: 320px;
+  }
+
+  .calendar-table {
+    flex: 1;
+    height: 940px;
+    padding: 0;
+  }
+
+  .back-button-a {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    letter-spacing: 1px;
+    color: white;
+    padding: 0 10px;
+    font-weight: bold;
+  }
 }
 
 
 @media(min-width:901px) {
-    .calendly-inline-widget {
-        height: 767px;
-    }
+  .calendly-inline-widget {
+    height: 767px;
+  }
 
-    .calendar-table {
-        height: 764px;
-        min-width: 45vw;
-    }
-    .back-button-header {
-        display: none !important;
-    }
-    .close-button-calendar {
-        position: fixed;
-        top: -536px;
-        bottom: 0;
-        margin: auto;
-        height: 49px;
-        left: 0;
-        right: -772px;
-        width: 120px;
-        cursor: pointer;
-        color: white;
-        font-size: 24px;
-        text-transform: uppercase;
-    }
-    .close-button-calendar i {
-        vertical-align: bottom;
-        font-size: 40px;
-    }
-}
+  .calendar-table {
+    height: 764px;
+    min-width: 45vw;
+  }
 
+  .back-button-header {
+    display: none !important;
+  }
 
-@media(max-width: 1299px) {
+  .close-button-calendar {
+    position: fixed;
+    top: -536px;
+    bottom: 0;
+    margin: auto;
+    height: 49px;
+    left: 0;
+    right: -772px;
+    width: 120px;
+    cursor: pointer;
+    color: white;
+    font-size: 24px;
+    text-transform: uppercase;
+  }
 
-    #calendar-vlad-info {
-        order: 2;
-    }
-    #calendar-vlad-calendly {
-        order: 4;
-    }
+  .close-button-calendar i {
+    vertical-align: bottom;
+    font-size: 40px;
+  }
 }
 
 @media(min-width: 1300px) {
-    .calendar-element {
-        min-width: 26vw;
-        max-width: 45vw;
-    }
+  .calendar-element {
+    min-width: 26vw;
+    max-width: 45vw;
+  }
 }
 
 
 @media (min-width: 1400px) {
-    .calendly-inline-widget {
+  .calendly-inline-widget {
     height: 970px;
+  }
 }
-
-}
-
-
-
-
-
-
