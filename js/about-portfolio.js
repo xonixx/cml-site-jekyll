@@ -173,10 +173,14 @@ var shufflemePortfolio = (function($) {
           const elCategories = element.dataset.categories;
           const isInCategory = elCategories.includes(selectedCategory);
 
+          if (isInCategory && isInGroup && !portfolioProjectsChosen.get(element.id))
+            portfolioProjectsChosen.set(element.id, portfolioProjectsChosen.size);
+
           return isInCategory && isInGroup;
         }
 
-        if (isInGroup) portfolioProjectsChosen.set(element.id, portfolioProjectsChosen.size);
+        if (isInGroup && !portfolioProjectsChosen.get(element.id))
+          portfolioProjectsChosen.set(element.id, portfolioProjectsChosen.size);
 
         return isInGroup;
       });
