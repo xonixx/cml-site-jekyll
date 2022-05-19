@@ -4,7 +4,7 @@
  *
  * Licensed under the MIT license.
  * http://www.opensource.org/licenses/mit-license.php
- * 
+ *
  * Copyright 2013, Codrops
  * http://www.codrops.com
  */
@@ -13,7 +13,7 @@ var cbpAnimatedHeader = (function() {
 	var docElem = document.documentElement,
 		header = document.querySelector( '.navbar-fixed-top' ),
 		didScroll = false,
-		changeHeaderOn = Math.max(100, $(window).height()-100);
+		changeHeaderOn = location.href.indexOf("callus") !== -1 ? 1 : Math.max(100, $(window).height()-100);
 
 	function init() {
 		window.addEventListener( 'scroll', function( event ) {
