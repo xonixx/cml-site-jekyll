@@ -7,10 +7,8 @@ $((function () {
     infinite: true,
     dots: true,
     draggable: isMobile,
-    prevArrow: !isMobile ?
-      '<img class="slider-arrow prev-arrow" src="/img/about/prev-arrow.svg" alt="Prev Arrow"/>' : '',
-    nextArrow: !isMobile ?
-      '<img class="slider-arrow next-arrow" src="/img/about/next-arrow.svg" alt="Next Arrow"/>' : '',
+    autoplay: true,
+    autoplaySpeed: 3000,
   });
 
   const sliderArrow = $('.slider-arrow');
