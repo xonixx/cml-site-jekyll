@@ -39,10 +39,3 @@
 	background: #e8a621;
 }
 
-.calendar-block
-{
-	justify-content: center;
-	display: flex;
-	flex-wrap: wrap;
-	padding: 15px;
-}
