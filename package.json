@@ -1,6 +1,6 @@
 {
   "name": "cml-site-jekyll",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "CML Website",
   "main": "index.js",
   "scripts": {
