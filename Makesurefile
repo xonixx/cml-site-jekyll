@@ -78,10 +78,10 @@
   elif [[ $BRANCH == prod ]]
   then
     $SSH apps1@prod.cmlteam.com "
-    (echo \"\$(date) www.cmlteam.com \$(pwd)\" ;
-    rm -rf www.cmlteam.com                     ;
-    mkdir www.cmlteam.com) >> /tmp/.deploy 2>&1"
-    cd _site ; $SCP -C -r * apps1@prod.cmlteam.com:~/www.cmlteam.com
+    (echo \"\$(date) prev.cmlteam.com \$(pwd)\" ;
+    rm -rf prev.cmlteam.com                     ;
+    mkdir prev.cmlteam.com) >> /tmp/.deploy 2>&1"
+    cd _site ; $SCP -C -r * apps1@prod.cmlteam.com:~/prev.cmlteam.com
   else
     echo "Wrong branch: $BRANCH, won't deploy"
     exit 1
@@ -108,6 +108,5 @@
 
   bundle exec jekyll build --config=./_config.yml,"$ENV_SPECIFIC_CONFIG_FILE"
   #mv _site site # looks like deploy phase doesn't like underscores
-  #echo www.cmlteam.com > site/CNAME # custom domain
   rm -f _site/*.sh _site/*.enc
 
